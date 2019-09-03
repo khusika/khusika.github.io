@@ -1,0 +1,92 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>khusika on khusika</title>
+    <link>https://khusika.com/</link>
+    <description>Recent content in khusika on khusika</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://khusika.com/2019/my-first-post/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://khusika.com/2019/my-first-post/</guid>
+      <description>&lt;p&gt;Hi everyone! this is my first post. I&amp;rsquo;m start to writing about my experiences, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://khusika.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://khusika.com/about/</guid>
+      <description>
+&lt;style&gt;
+    .about-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .about-info-left li {
+        list-style-type: none;
+    }
+
+    .about-info-right {
+        margin: .5em 1.25em;
+    }
+
+    .about-info-right img {
+        width: 130px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .about-info {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .about-info-right {
+            margin: auto auto 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+&lt;/style&gt;
+
+
+&lt;div class=&#34;about-info&#34;&gt;
+    &lt;div class=&#34;about-info-left&#34;&gt;
+        &lt;p&gt;Hello, I&#39;m an amateur android developer from Indonesia. I&#39;m working with android linux kernel and mostly with android open source codes. Beside that, i am a student of Agroindustrial Technology in Brawijaya University&lt;/p&gt;
+        &lt;p&gt;Contact me:&lt;/p&gt;
+        &lt;ul&gt;
+	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;fas fa-envelope&#34;&gt;&lt;/span&gt; Email: &lt;a href=&#34;mailto:mail@khusika.com&#34;
+                    rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;mail@khusika.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;fab fa-github&#34;&gt;&lt;/span&gt; Github: &lt;a href=&#34;https://github.com/khusika&#34;
+                        rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;khusika&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;about-info-right&#34;&gt;
+        &lt;img alt=&#34;Khusika&#34; src=&#34;https://avatars1.githubusercontent.com/u/5193379&#34;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;My Github chart:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ghchart.rshah.org/khusika&#34; alt=&#34;Khusika&#39;s Github chart&#34; style=&#34;width: 100%;&#34;&gt;&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
