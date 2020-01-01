@@ -34,6 +34,9 @@ jQuery(function($) {
     };
 
     _Blog.toggleTheme = function() {
+        if(!window.localStorage.getItem('theme')){
+                window.localStorage.setItem('theme', 'dark');
+        }
         const currentTheme = window.localStorage && window.localStorage.getItem('theme')
         const isDark = currentTheme === 'dark'
         var toggleVisibility = function(getDark) {
