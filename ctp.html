@@ -47,6 +47,14 @@
 
 
   <body class="">
+    <script>
+         if (!window.localStorage || !window.localStorage.getItem('theme')) {
+             window.isDark = 'dark' === 'dark';
+         } else {
+             window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+         }
+         window.isDark && document.body.classList.add('dark-theme');
+    </script>
     <div class="wrapper">
         <nav class="navbar">
     <div class="container">
@@ -58,11 +66,11 @@
         <div class="menu navbar-right">
                 
                 
-                <a class="menu-item" href="/posts/" title="">Blog</a>
+                <a class="menu-item" href="/posts/" title="">Blogs</a>
                 
                 <a class="menu-item" href="/categories/" title="">Categories</a>
                 
-                <a class="menu-item" href="/about/" title="About">About</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
         </div>
     </div>
@@ -83,17 +91,17 @@
           <div class="menu" id="mobile-menu">
                 
                 
-                <a class="menu-item" href="/posts/" title="">Blog</a>
+                <a class="menu-item" href="/posts/" title="">Blogs</a>
                 
                 <a class="menu-item" href="/categories/" title="">Categories</a>
                 
-                <a class="menu-item" href="/about/" title="About">About</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
         </div>
     </div>
 </nav>
 
-    	 <main class="main">
+         <main class="main">
           <div class="container">
       		
  <div class="ctp">
@@ -105,7 +113,7 @@
  </div>
 
           </div>
-		   </main>
+         </main>
       <footer class="footer">
     <div class="copyright">
         &copy;
@@ -200,4 +208,3 @@ function myFunction() {
   alert("Copied the text: " + copyText.value);
 }
 </script>
-<script
