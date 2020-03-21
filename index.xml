@@ -1,90 +1,109 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>khusika on khusika</title>
-    <link>https://khusika.com/</link>
-    <description>Recent content in khusika on khusika</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://khusika.com/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hello World!</title>
-      <link>https://khusika.com/2019/my-first-post/</link>
-      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://khusika.com/2019/my-first-post/</guid>
-      <description>&lt;p&gt;Hi everyone! this is my first post. I&amp;rsquo;m start to writing about my experiences, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://khusika.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://khusika.com/about/</guid>
-      <description>
-&lt;style&gt;
-    .about-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .about-info-left li {
-        list-style-type: none;
-    }
-
-    .about-info-right {
-        margin: .5em 1.25em;
-    }
-
-    .about-info-right img {
-        width: 130px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-    }
-
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .about-info {
-            flex-direction: column-reverse;
-            align-items: center;
-        }
-
-        .about-info-right {
-            margin: auto auto 2em;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-&lt;/style&gt;
-
-
-&lt;div class=&#34;about-info&#34;&gt;
-    &lt;div class=&#34;about-info-left&#34;&gt;
-        &lt;p&gt;Hello, I&#39;m an amateur android developer from Indonesia. I&#39;m working with android linux kernel and mostly with android open source codes. Beside that, i am a student of &lt;a href=&#34;https://tip.ub.ac.id&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Agroindustrial Technology&lt;/a&gt; in Brawijaya University.&lt;/p&gt;
-	&lt;hr&gt;
-        &lt;p&gt;Contact me:&lt;/p&gt;
-        &lt;ul&gt;
-	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;fas fa-envelope&#34;&gt;&lt;/span&gt; Email: &lt;a href=&#34;mailto:mail@khusika.com&#34;
-                    rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;mail@khusika.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;fab fa-github&#34;&gt;&lt;/span&gt; Github: &lt;a href=&#34;https://github.com/khusika&#34;
-                        rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;khusika&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;about-info-right&#34;&gt;
-        &lt;img alt=&#34;Khusika&#34; src=&#34;https://avatars1.githubusercontent.com/u/5193379&#34;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;My Github chart:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ghchart.rshah.org/khusika&#34; alt=&#34;Khusika&#39;s Github chart&#34; style=&#34;width: 100%;&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>khusika on khusika</title><link>https://khusika.com/</link><description>Recent content in khusika on khusika</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://khusika.com/" rel="self" type="application/rss+xml"/><item><title>Hello World!</title><link>https://khusika.com/2019/my-first-post/</link><pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate><guid>https://khusika.com/2019/my-first-post/</guid><description>&lt;p>Hi everyone! this is my first post. I&amp;rsquo;m start to writing about my experiences, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.&lt;/p></description></item><item><title>About</title><link>https://khusika.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/about/</guid><description>
+&lt;style>
+.about-info {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+.about-info-left li {
+list-style-type: none;
+}
+.about-info-right {
+margin: .5em 1.25em;
+}
+.about-info-right img {
+width: 130px;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+.about-info {
+flex-direction: column-reverse;
+align-items: center;
+}
+.about-info-right {
+margin: auto auto 2em;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+}
+&lt;/style>
+&lt;div class="about-info">
+&lt;div class="about-info-left">
+&lt;p>Hello, I'm an amateur android developer from Indonesia. I'm working with android linux kernel and mostly with android open source codes. Beside that, i am a student of &lt;a href="https://tip.ub.ac.id" rel="nofollow noreferrer" target="_blank">Agroindustrial Technology&lt;/a> in Brawijaya University.&lt;/p>
+&lt;hr>
+&lt;p>Contact me:&lt;/p>
+&lt;ul>
+&lt;li>&lt;p>&lt;span class="fas fa-envelope">&lt;/span>&amp;nbsp;Email:&amp;nbsp;&lt;a href="mailto:mail@khusika.com"
+rel="nofollow noreferrer" target="_blank">mail@khusika.com&lt;/a>&lt;/p>&lt;/li>
+&lt;li>&lt;p>&lt;span class="fab fa-github">&lt;/span>&amp;nbsp;Github:&amp;nbsp;&lt;a href="https://github.com/khusika"
+rel="nofollow noreferrer" target="_blank">khusika&lt;/a>&lt;/p>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="about-info-right">
+&lt;img alt="Khusika" src="https://avatars1.githubusercontent.com/u/5193379">
+&lt;/div>
+&lt;/div>
+&lt;p>My Github chart:&lt;/p>
+&lt;p>&lt;img src="https://ghchart.rshah.org/khusika" alt="Khusika's Github chart" style="width: 100%;">&lt;/p></description></item><item><title>CahTypeTeam</title><link>https://khusika.com/ctp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/ctp/</guid><description>&lt;style>
+.ctp {
+transform: translateY(20vh);
+text-align: center;
+}
+.tooltip {
+position: relative;
+display: inline-block;
+}
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 140px;
+background-color: #555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px;
+position: absolute;
+z-index: 1;
+bottom: 150%;
+left: 50%;
+margin-left: -75px;
+opacity: 0;
+transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}
+&lt;/style>
+&lt;script>
+function myFunction() {
+/* Get the text field */
+var copyText = document.getElementById("myInput");
+/* Select the text field */
+copyText.select();
+copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+/* Copy the text inside the text field */
+document.execCommand("copy");
+/* Alert the copied text */
+alert("Copied the text: " + copyText.value);
+}
+&lt;/script>
+&lt;div class="ctp">
+&lt;input type="text" value="ℭƬⱣ〆Cah" id="myInput">
+&lt;button onclick="myFunction()">Copy me!&lt;/button>
+&lt;hr class="garis">
+&lt;/hr>
+&lt;p class="error-link">&lt;a href="https://khusika.com">↑ Back Home ↑&lt;/a>&lt;/p>
+&lt;/div></description></item></channel></rss>
