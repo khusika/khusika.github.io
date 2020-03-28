@@ -180,4 +180,11 @@ x.style.display = "block";
 x.style.display = "none";
 }
 }
+function externalLinks() {
+for (var c = document.getElementsByTagName("a"), a = 0; a &lt; c.length; a++) {
+var b = c[a];
+b.getAttribute("href") &amp;&amp; b.hostname !== location.hostname &amp;&amp; (b.target = "_blank")
+}
+};
+externalLinks();
 &lt;/script></description></item></channel></rss>
