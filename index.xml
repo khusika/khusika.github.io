@@ -109,16 +109,17 @@ alert("Copied the text: " + copyText.value);
 &lt;/div></description></item><item><title>Projects</title><link>https://khusika.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/projects/</guid><description>&lt;h2>TOOLCHAINS&lt;/h2>
 &lt;h3>CLANG&lt;/h3>
 &lt;span>A prebuilt clang toolchain built for kernel compiler targeting ARM,AArch64,X86 as architectur.&lt;/span>
-&lt;li>Clang-9.x: &lt;a href="https://github.com/khusika/canting_prebuilts_clang/archive/9.x.zip">download here&lt;/a>&lt;/li>
+&lt;li>Clang-9.x: &lt;a target="_blank" href="https://github.com/khusika/canting_prebuilts_clang/archive/9.x.zip">download here&lt;/a>&lt;/li>
+&lt;li>Clang-10.x: &lt;a target="_blank" href="https://github.com/khusika/canting_prebuilts_clang/archive/10.x.zip">download here&lt;/a>&lt;/li>
 &lt;h2>ANDROID APPS&lt;/h2>
 &lt;h3>RAJAPPS&lt;/h3>
-&lt;span>An android apps build by &lt;a href="https://github.com/thomasaryanto">Thomas Ariyanto&lt;/a> as back-end and &lt;a href="https://khusika.com">Khusika Dhamar Gusti&lt;/a> as front-end under &lt;a href="https://rajabrawijaya.ub.ac.id">Rajabrawijaya Organization&lt;/a>. This app builds to provide an attendance system based on QR-Codes scanner.&lt;/span>
-&lt;li>Source Codes: &lt;a href="https://github.com/khusika/RAJApps">here&lt;/a>&lt;/li>
-&lt;li>Google Playstore: &lt;a href="https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya">here&lt;/a>&lt;/li>
+&lt;span>An android apps build by &lt;a target="_blank" href="https://github.com/thomasaryanto">Thomas Ariyanto&lt;/a> as back-end and &lt;a target="_blank" href="https://khusika.com">Khusika Dhamar Gusti&lt;/a> as front-end under &lt;a target="_blank" href="https://rajabrawijaya.ub.ac.id">Rajabrawijaya Organization&lt;/a>. This app builds to provide an attendance system based on QR-Codes scanner.&lt;/span>
+&lt;li>Source Codes: &lt;a target="_blank" href="https://github.com/khusika/RAJApps">here&lt;/a>&lt;/li>
+&lt;li>Google Playstore: &lt;a target="_blank" href="https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya">here&lt;/a>&lt;/li>
 &lt;h3>KA-Advance&lt;/h3>
-&lt;span>Kernel Adiutor - Advanced based on &lt;a href="https://forum.xda-developers.com/android/apps-games/app-kernel-adiutor-t2986129">Kernel Adiutor by Grarak&lt;/a>. Nothing special with this apps and i just implement the useful features which is mostly used by Xiaomi devices.&lt;/span>
-&lt;li>Source Codes: &lt;a href="https://github.com/khusika/KA-Advanced">here&lt;/a>&lt;/li>
-&lt;li>XDA Thread: &lt;a href="https://forum.xda-developers.com/mi-a1/themes/app-ka-advanced-v1-0-t3835475">here&lt;/a>&lt;/li>
+&lt;span>Kernel Adiutor - Advanced based on &lt;a target="_blank" href="https://forum.xda-developers.com/android/apps-games/app-kernel-adiutor-t2986129">Kernel Adiutor by Grarak&lt;/a>. Nothing special with this apps and i just implement the useful features which is mostly used by Xiaomi devices.&lt;/span>
+&lt;li>Source Codes: &lt;a target="_blank" href="https://github.com/khusika/KA-Advanced">here&lt;/a>&lt;/li>
+&lt;li>XDA Thread: &lt;a target="_blank" href="https://forum.xda-developers.com/mi-a1/themes/app-ka-advanced-v1-0-t3835475">here&lt;/a>&lt;/li>
 &lt;h2>ANDROID OPEN SOURCE PROJECT&lt;/h2>
 &lt;span>Various open source projects including ROM, kernel, and mods.&lt;/span>
 &lt;p>List of supported devices:&lt;/p>
@@ -130,46 +131,46 @@ alert("Copied the text: " + copyText.value);
 &lt;button onclick="hideContent('button2')">Show&lt;/button>
 &lt;div id="button2" style="display:none">
 &lt;h3>KERNELS&lt;/h3>
-&lt;li>&lt;a href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604">[MIDO][3.18.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600">[TISSOT][3.18.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883">[BERYLLIUM][4.9.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882">[DIPPER][4.9.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884">[POLARIS][4.9.y] Canting&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604">[MIDO][3.18.y] Canting&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600">[TISSOT][3.18.y] Canting&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883">[BERYLLIUM][4.9.y] Canting&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882">[DIPPER][4.9.y] Canting&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884">[POLARIS][4.9.y] Canting&lt;/a>&lt;/li>
 &lt;h3>ROMS&lt;/h3>
-&lt;li>&lt;a href="http://goo.gl/5Z60R6">[I8150][4.0.4] ProjectK - V8&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/s3z4lF">[I8150][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/Uytzc0">[I8150][4.4.4][KTU84Q] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/9e15w0">[I8150][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/RwoIFP">[I8150][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/t17etM">[I8150][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/2WVuao">[I8150][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/FdJux4">[I8150][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/XCmlbQ">[I8150][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/e8Ux2W">[I8150][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/jvgVX0">[I8150][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/I9kAG9">[I8150][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/gmlGTZ">[I8150][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/t5HyJt">[I8150][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/MH5yAE">[I9001][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/vcfzWp">[I9001][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/xCuVZB">[I9001][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/GnJAAd">[I9001][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/xrlgmi">[I9001][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/5uAHvK">[I9001][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/1evxya">[I9001][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/3ODIF4">[I9001][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/bgeDdR">[I9001][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/6vIyHb">[I9001][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/ON89IB">[I9001][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/Kfwls0">[I9001][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/5Z60R6">[I8150][4.0.4] ProjectK - V8&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/s3z4lF">[I8150][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/Uytzc0">[I8150][4.4.4][KTU84Q] BeanStalk&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/9e15w0">[I8150][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/RwoIFP">[I8150][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/t17etM">[I8150][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/2WVuao">[I8150][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/FdJux4">[I8150][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/XCmlbQ">[I8150][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/e8Ux2W">[I8150][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/jvgVX0">[I8150][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/I9kAG9">[I8150][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/gmlGTZ">[I8150][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/t5HyJt">[I8150][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/MH5yAE">[I9001][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/vcfzWp">[I9001][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/xCuVZB">[I9001][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/GnJAAd">[I9001][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/xrlgmi">[I9001][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/5uAHvK">[I9001][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/1evxya">[I9001][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/3ODIF4">[I9001][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/bgeDdR">[I9001][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/6vIyHb">[I9001][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/ON89IB">[I9001][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/Kfwls0">[I9001][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
 &lt;h3>GUIDES&lt;/h3>
-&lt;li>&lt;a href="http://goo.gl/MolBRy">[GUIDE][MOD][2.3-4.4]FB UI Style + device owner picture&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/FaHSKg">[GUIDE][CM9-11] Add partition info in Settings.apk&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/uKOQEC">[GUIDE][MOD][CM9-11] LCD Density Changer&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/OuOapx">[GUIDE][SMALI][CM9-11] add Changelog in Settings&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/MolBRy">[GUIDE][MOD][2.3-4.4]FB UI Style + device owner picture&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/FaHSKg">[GUIDE][CM9-11] Add partition info in Settings.apk&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/uKOQEC">[GUIDE][MOD][CM9-11] LCD Density Changer&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/OuOapx">[GUIDE][SMALI][CM9-11] add Changelog in Settings&lt;/a>&lt;/li>
 &lt;h3>MOD/THEMES&lt;/h3>
-&lt;li>&lt;a href="http://goo.gl/Fcqlp0">[I8150][MOD][CM9-10]FBui Style + Device Owner Picture&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://goo.gl/uh0szA">[I8150][MOD][ICS4.0|JB4.1] StatusBar 2 Layout&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/Fcqlp0">[I8150][MOD][CM9-10]FBui Style + Device Owner Picture&lt;/a>&lt;/li>
+&lt;li>&lt;a target="_blank" href="http://goo.gl/uh0szA">[I8150][MOD][ICS4.0|JB4.1] StatusBar 2 Layout&lt;/a>&lt;/li>
 &lt;/div>
 &lt;script>
 function hideContent(divid) {
@@ -180,11 +181,4 @@ x.style.display = "block";
 x.style.display = "none";
 }
 }
-function externalLinks() {
-for (var c = document.getElementsByTagName("a"), a = 0; a &lt; c.length; a++) {
-var b = c[a];
-b.getAttribute("href") &amp;&amp; b.hostname !== location.hostname &amp;&amp; (b.target = "_blank")
-}
-};
-externalLinks();
 &lt;/script></description></item></channel></rss>
