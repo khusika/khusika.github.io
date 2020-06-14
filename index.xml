@@ -1,53 +1,162 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>khusika on khusika</title><link>https://khusika.com/</link><description>Recent content in khusika on khusika</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://khusika.com/" rel="self" type="application/rss+xml"/><item><title>Hello World!</title><link>https://khusika.com/2019/my-first-post/</link><pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate><guid>https://khusika.com/2019/my-first-post/</guid><description>&lt;p>Hi everyone! this is my first post. I&amp;rsquo;m start to writing about my experiences, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.&lt;/p></description></item><item><title>About</title><link>https://khusika.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/about/</guid><description>
-&lt;style>
-.about-info {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-}
-.about-info-left li {
-list-style-type: none;
-}
-.about-info-right {
-margin: .5em 1.25em;
-}
-.about-info-right img {
-width: 130px;
-border-radius: 50%;
--webkit-border-radius: 50%;
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-.about-info {
-flex-direction: column-reverse;
-align-items: center;
-}
-.about-info-right {
-margin: auto auto 2em;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-}
-}
-&lt;/style>
-&lt;div class="about-info">
-&lt;div class="about-info-left">
-&lt;p>Hello, I'm an amateur android developer from Indonesia. I'm working with android linux kernel and mostly with android open source codes. Beside that, i am a student of &lt;a href="https://tip.ub.ac.id" rel="nofollow noreferrer" target="_blank">Agroindustrial Technology&lt;/a> in Brawijaya University.&lt;/p>
-&lt;hr>
-&lt;p>Contact me:&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>khusika on khusika</title><link>https://khusika.com/</link><description>Recent content in khusika on khusika</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 14 Jun 2020 20:14:17 +0700</lastBuildDate><atom:link href="https://khusika.com/" rel="self" type="application/rss+xml"/><item><title>Introduction of Canting Kernel</title><link>https://khusika.com/2020/canting/</link><pubDate>Sun, 14 Jun 2020 20:14:17 +0700</pubDate><guid>https://khusika.com/2020/canting/</guid><description>&lt;h2 id="table-of-contents">Table of Contents&lt;/h2>
 &lt;ul>
-&lt;li>&lt;p>&lt;span class="fas fa-envelope">&lt;/span>&amp;nbsp;Email:&amp;nbsp;&lt;a href="mailto:mail@khusika.com"
-rel="nofollow noreferrer" target="_blank">mail@khusika.com&lt;/a>&lt;/p>&lt;/li>
-&lt;li>&lt;p>&lt;span class="fab fa-github">&lt;/span>&amp;nbsp;Github:&amp;nbsp;&lt;a href="https://github.com/khusika"
-rel="nofollow noreferrer" target="_blank">khusika&lt;/a>&lt;/p>&lt;/li>
+&lt;li>&lt;a href="#introduction">Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#source-codes">Source Codes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#features">Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#device-support">Device Support&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#canting-318y">canting-3.18.y&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#canting-49y">canting-4.9.y&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;/div>
-&lt;div class="about-info-right">
-&lt;img alt="Khusika" src="https://avatars1.githubusercontent.com/u/5193379">
-&lt;/div>
-&lt;/div>
-&lt;p>My Github chart:&lt;/p>
-&lt;p>&lt;img src="https://ghchart.rshah.org/khusika" alt="Khusika's Github chart" style="width: 100%;">&lt;/p></description></item><item><title>CahTypeTeam</title><link>https://khusika.com/ctp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/ctp/</guid><description>&lt;style>
+&lt;/li>
+&lt;li>&lt;a href="#how-to-build">How to Build&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="#set-up-environment">Set-up Environment&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#compile-kernel">Compile Kernel&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="#repack-kernel-image">Repack Kernel Image&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#references">References&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Canting is a kernel based on &lt;a href="https://android.googlesource.com/kernel/common">Google kernel-common&lt;/a> merged over &lt;a href="https://source.codeaurora.org/quic/la/kernel">CAF-kernel&lt;/a>. Built to provide security and stability improvement. &amp;ldquo;&lt;a href="https://en.wikipedia.org/wiki/Canting">&lt;strong>&lt;em>Canting&lt;/em>&lt;/strong>&lt;/a>&amp;rdquo; it self is pen-like instrument used in the process of batik making. All related about source codes and features are mentioned below&lt;/p>
+&lt;h2 id="source-codes">Source Codes&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/khusika/canting_kernel_xiaomi_msm8953">&lt;strong>xiaomi-msm8953&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/khusika/canting_kernel_xiaomi_sdm845">&lt;strong>xiaomi-msm845&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;ul>
+&lt;li>Upstream with latest &lt;a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/">linux-stable&lt;/a> releases&lt;/li>
+&lt;li>Upstream with latest &lt;a href="https://source.codeaurora.org/quic/la/kernel">CAF-kernel&lt;/a> releases&lt;/li>
+&lt;li>Build with Google clang-r383902&lt;/li>
+&lt;li>CPU Governors: schedutil, powersave, performance&lt;/li>
+&lt;li>I/O Schedulers: noop, cfq&lt;/li>
+&lt;li>Compat vDSO from Pixel kernel&lt;/li>
+&lt;li>TCP Congestion Algorithm: bbr, westwood, reno, cubic&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/android/development/wireguard-rom-integration-t3711635">WireGuard&lt;/a> VPN support&lt;/li>
+&lt;li>Boeffla wakelock blocker&lt;/li>
+&lt;li>Simple Low Memory Killer&lt;/li>
+&lt;li>Sound Control: Speaker, Microphone, Headphone (Per-channel control)&lt;/li>
+&lt;li>KCAL &amp;amp; KLapse Interface&lt;/li>
+&lt;li>Vibration Intensity Control&lt;/li>
+&lt;li>backlight min option&lt;/li>
+&lt;li>Removed safetynet flags (no need of magisk to bypass safteynet)&lt;/li>
+&lt;li>F2FS &amp;amp; NTFS Support&lt;/li>
+&lt;li>and many more&lt;/li>
+&lt;/ul>
+&lt;h2 id="device-support">Device Support&lt;/h2>
+&lt;h3 id="canting-318y">canting-3.18.y&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>MSM8953&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604">Redmi Note 4X&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600">Mi A1&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="canting-49y">canting-4.9.y&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>MSM8953&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3871134">Mi A1&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>SDM845&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882">canting-4.9 for Mi 8&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884">canting-4.9 for Mi Mix 2S&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883">canting-4.9 for Poco F1&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="how-to-build">How to Build&lt;/h2>
+&lt;p>This section describes how to set up your local work environment to build the Canting Kernel. You must use Ubuntu/Debian.&lt;/p>
+&lt;h3 id="set-up-environment">Set-up Environment&lt;/h3>
+&lt;ol>
+&lt;li>Instal required packaged for Ubuntu based distro, according to the &lt;a href="https://source.android.com/setup/build/initializing#installing-required-packages-ubuntu-1404">source.android.com&lt;/a> and &lt;a href="https://forum.xda-developers.com/chef-central/android/guide-how-to-build-android-kernel-t3654336">xda-developers.com&lt;/a>. Install the following packaged:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo apt-get install git ccache automake lzop bison gperf build-essential zip curl zlib1g-dev zlib1g-dev:i386 g++-multilib python-networkx libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make optipng
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+2. Clone the kernel trees
+For an example, we are going to build canting-4.9.q for sdm845 into &lt;em>canting&lt;/em> as directiories:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/khusika/canting_kernel_xiaomi_sdm845 -b canting-4.9-q canting
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+3. Clone required toolchain, at this point only Clang with prebuilt binutils(arm and arm64) in it to build canting-kernel.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/khusika/prebuilt_google_clang -b master clang-toolchain
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="compile-kernel">Compile Kernel&lt;/h3>
+&lt;ol>
+&lt;li>Make sure to clean the kernel trees&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">make clean &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> make mrproper
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+2. Export required crosscompile, &lt;a href="#set-up-environment">previously&lt;/a> we use prebuilt google-clang.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">export CC&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/clang-toolchain/bin/clang&amp;#39;&lt;/span>
+export CLANG_TRIPLE&lt;span style="color:#f92672">=&lt;/span>aarch64-linux-gnu-
+export CLANG_TRIPLE_ARM32&lt;span style="color:#f92672">=&lt;/span>arm-linux-gnueabi-
+export CROSS_COMPILE&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/clang-toolchain/bin/aarch64-linux-gnu-&amp;#39;&lt;/span>
+export CROSS_COMPILE_ARM32&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/clang-toolchain/bin/arm-linux-gnueabi-&amp;#39;&lt;/span>
+export KBUILD_COMPILER_STRING&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/clang-toolchain/bin/clang&amp;#39;&lt;/span> --version | head -n &lt;span style="color:#ae81ff">1&lt;/span> | perl -pe &lt;span style="color:#e6db74">&amp;#39;s/\((?:http|git).*?\)//gs&amp;#39;&lt;/span> | sed -e &lt;span style="color:#e6db74">&amp;#39;s/ */ /g&amp;#39;&lt;/span>&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+3. Make the device config and build the kernel, at this point we will build dipper kernel.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">make O&lt;span style="color:#f92672">=&lt;/span>out ARCH&lt;span style="color:#f92672">=&lt;/span>arm64 canting-dipper_defconfig
+make -j&lt;span style="color:#66d9ef">$(&lt;/span>nproc --all&lt;span style="color:#66d9ef">)&lt;/span> O&lt;span style="color:#f92672">=&lt;/span>out
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="repack-kernel-image">Repack Kernel Image&lt;/h2>
+&lt;p>At this point, we are going to repack the kernel image into flashable kernel.zip. There is a powerfull flashable.zip made by &lt;a href="https://github.com/osm0sis">Chris Renshaw&lt;/a> called &lt;a href="https://github.com/osm0sis/AnyKernel3">AnyKernel&lt;/a>. All of &lt;a href="#device-support">supported&lt;/a> kernel are able to use those flashable.zip, just follow this guides:&lt;/p>
+&lt;ol>
+&lt;li>Clone &lt;a href="https://github.com/khusika/AnyKernel3">Canting-AnyKernel&lt;/a> repository, for an example we use dipper branch&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git clone https://github.com/khusika/AnyKernel3 -b dipper canting-kernel-dipper
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+2. Copy or move the kernel images into the AnyKernel directories&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">cp &lt;span style="color:#e6db74">&amp;#39;/canting/out/arch/arm64/boot/Image.gz-dtb&amp;#39;&lt;/span> &lt;span style="color:#e6db74">&amp;#39;/canting-kernel-dipper&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p> 
+3. Compress the kernel using zip&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">zip -r9 kernel.zip * -x README.md kernel.zip
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/member.php?u=7334959">Albe96&lt;/a>, 2017. &lt;strong>&lt;a href="https://forum.xda-developers.com/chef-central/android/guide-how-to-build-android-kernel-t3654336">How To Build Android Kernel With Features&lt;/a>&lt;/strong>.&lt;/li>
+&lt;li>&lt;a href="https://source.android.com/">Android Open Source Project&lt;/a>, 2020. &lt;strong>&lt;a href="https://source.android.com/setup/build/initializing#installing-required-packages-ubuntu-1404">Establishing a Build Environment&lt;/a>&lt;/strong>.&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/member.php?u=6842057">Nathanchance&lt;/a>, 2017. &lt;strong>&lt;a href="https://forum.xda-developers.com/android/software-hacking/reference-how-to-compile-android-kernel-t3627297">How to compile an Android kernel&lt;/a>&lt;/strong>.&lt;/li>
+&lt;/ul></description></item><item><title>Hello World!</title><link>https://khusika.com/2019/my-first-post/</link><pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate><guid>https://khusika.com/2019/my-first-post/</guid><description>&lt;p>Hi everyone! this is my first post. I&amp;rsquo;m start to writing about my experiences, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.&lt;/p></description></item><item><title>About</title><link>https://khusika.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/about/</guid><description>&lt;p>Hello, I am an &lt;em>amateur&lt;/em> android developer from Indonesia. I&amp;rsquo;m working with android-linux kernel and mostly with Xiaomi devices. I also a &lt;em>no-op&lt;/em> logo designer using &lt;a href="https://inkscape.org">Inkscape&lt;/a> as a main weapon. Beside that, i am a student of &lt;a href="https://tip.ub.ac.id">Agroindustrial Technology&lt;/a> in Brawijaya University. Below here are all of my projects and contribution related to the android development:&lt;/p>
+&lt;h2 id="toolchain">Toolchain&lt;/h2>
+&lt;h3 id="clang">CLANG&lt;/h3>
+&lt;p>A prebuilt clang toolchain built for kernel compiler targeting ARM,AArch64,X86 as architecture.&lt;/p>
+&lt;ul>
+&lt;li>Clang-9.x: &lt;a href="https://github.com/khusika/canting_prebuilts_clang/archive/9.x.zip">download here&lt;/a>&lt;/li>
+&lt;li>Clang-10.x: &lt;a href="https://github.com/khusika/canting_prebuilts_clang/archive/10.x.zip">download here&lt;/a>&lt;/li>
+&lt;li>Google-Clang: &lt;a href="https://github.com/khusika/prebuilt_google_clang/archive/master.zip">download here&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="android-apps">Android Apps&lt;/h2>
+&lt;h3 id="rajapps">RAJAPPS&lt;/h3>
+&lt;p>An android apps build by &lt;a href="https://github.com/thomasaryanto">Thomas Ariyanto&lt;/a> as back-end and &lt;a href="https://github.com/khusika">Khusika Dhamar Gusti&lt;/a> as front-end under &lt;a href="https://rajabrawijaya.ub.ac.id/">Rajabrawijaya Organization&lt;/a>. This app builds to provide an attendance system based on QR-Codes scanner.&lt;/p>
+&lt;ul>
+&lt;li>Source Codes: &lt;a href="https://github.com/khusika/RAJApps">here&lt;/a>&lt;/li>
+&lt;li>Google Playstore: &lt;a href="https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya">here&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="ka-advance">KA-Advance&lt;/h3>
+&lt;p>Kernel Adiutor - Advanced based on &lt;a href="https://forum.xda-developers.com/android/apps-games/app-kernel-adiutor-t2986129">Kernel Adiutor by Grarak&lt;/a>. Nothing special with this apps and i just implement the useful features which is mostly used by Xiaomi devices.&lt;/p>
+&lt;ul>
+&lt;li>Source Codes: &lt;a href="https://github.com/khusika/KA-Advanced">here&lt;/a>&lt;/li>
+&lt;li>XDA-Thread: &lt;a href="https://forum.xda-developers.com/mi-a1/themes/app-ka-advanced-v1-0-t3835475">here&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="canting-kernel">Canting Kernel&lt;/h2>
+&lt;p>Canting is a kernel based on &lt;a href="https://android.googlesource.com/kernel/common">Google kernel-common&lt;/a> merged over &lt;a href="https://source.codeaurora.org/quic/la/kernel">CAF-kernel&lt;/a>. Built to provide security and stability improvement.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604">canting-3.18 for Redmi Note 4X&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600">canting-3.18 for Mi A1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3871134">canting-4.9 for Mi A1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882">canting-4.9 for Mi 8&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884">canting-4.9 for Mi Mix 2S&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883">canting-4.9 for Poco F1&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="miscellaneous-projects-and-contribution">Miscellaneous Projects and Contribution&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://forum.xda-developers.com/member.php?u=5123347">XDA-Developers&lt;/a>: I got my title in this community as &lt;strong>&lt;em>Recognized Contributor&lt;/em>&lt;/strong>, various open source projects including ROM, kernel, and mods are created by me.&lt;/li>
+&lt;li>&lt;a href="https://review.lineageos.org/q/owner:mail%2540khusika.com">LineageOS&lt;/a>: A free and open-source operating system for various devices, based on the Android mobile platform. Most of code review are done for &lt;em>xiaomi-kernel&lt;/em>.&lt;/li>
+&lt;li>&lt;a href="https://android-review.googlesource.com/q/owner:mail%2540khusika.com">AOSP&lt;/a>: Android Open Source Project (AOSP) repository offer the information and source code needed to create custom variants of the Android OS, port devices and accessories to the Android platform, and ensure devices meet the compatibility requirements that keep the Android ecosystem a healthy and stable environment for millions of users.&lt;/li>
+&lt;/ul></description></item><item><title>CahTypeTeam</title><link>https://khusika.com/ctp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/ctp/</guid><description>&lt;style>
 .ctp {
 transform: translateY(20vh);
 text-align: center;
@@ -106,79 +215,4 @@ alert("Copied the text: " + copyText.value);
 &lt;hr class="garis">
 &lt;/hr>
 &lt;p class="error-link">&lt;a href="https://khusika.com">↑ Back Home ↑&lt;/a>&lt;/p>
-&lt;/div></description></item><item><title>Projects</title><link>https://khusika.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://khusika.com/projects/</guid><description>&lt;h2>TOOLCHAINS&lt;/h2>
-&lt;h3>CLANG&lt;/h3>
-&lt;span>A prebuilt clang toolchain built for kernel compiler targeting ARM,AArch64,X86 as architectur.&lt;/span>
-&lt;li>Clang-9.x: &lt;a target="_blank" href="https://github.com/khusika/canting_prebuilts_clang/archive/9.x.zip">download here&lt;/a>&lt;/li>
-&lt;li>Clang-10.x: &lt;a target="_blank" href="https://github.com/khusika/canting_prebuilts_clang/archive/10.x.zip">download here&lt;/a>&lt;/li>
-&lt;h2>ANDROID APPS&lt;/h2>
-&lt;h3>RAJAPPS&lt;/h3>
-&lt;span>An android apps build by &lt;a target="_blank" href="https://github.com/thomasaryanto">Thomas Ariyanto&lt;/a> as back-end and &lt;a target="_blank" href="https://khusika.com">Khusika Dhamar Gusti&lt;/a> as front-end under &lt;a target="_blank" href="https://rajabrawijaya.ub.ac.id">Rajabrawijaya Organization&lt;/a>. This app builds to provide an attendance system based on QR-Codes scanner.&lt;/span>
-&lt;li>Source Codes: &lt;a target="_blank" href="https://github.com/khusika/RAJApps">here&lt;/a>&lt;/li>
-&lt;li>Google Playstore: &lt;a target="_blank" href="https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya">here&lt;/a>&lt;/li>
-&lt;h3>KA-Advance&lt;/h3>
-&lt;span>Kernel Adiutor - Advanced based on &lt;a target="_blank" href="https://forum.xda-developers.com/android/apps-games/app-kernel-adiutor-t2986129">Kernel Adiutor by Grarak&lt;/a>. Nothing special with this apps and i just implement the useful features which is mostly used by Xiaomi devices.&lt;/span>
-&lt;li>Source Codes: &lt;a target="_blank" href="https://github.com/khusika/KA-Advanced">here&lt;/a>&lt;/li>
-&lt;li>XDA Thread: &lt;a target="_blank" href="https://forum.xda-developers.com/mi-a1/themes/app-ka-advanced-v1-0-t3835475">here&lt;/a>&lt;/li>
-&lt;h2>ANDROID OPEN SOURCE PROJECT&lt;/h2>
-&lt;span>Various open source projects including ROM, kernel, and mods.&lt;/span>
-&lt;p>List of supported devices:&lt;/p>
-&lt;ul>
-&lt;li>Xiaomi sdm845: Berllyium, Dipper, Polaris&lt;/li>
-&lt;li>Xiaomi msm8953: Mido, Tissot&lt;/li>
-&lt;li>&lt;strike>Samsung msm7x30: Ancora, Ariesve&lt;/strike>&lt;/li>
-&lt;/ul>
-&lt;button onclick="hideContent('button2')">Show&lt;/button>
-&lt;div id="button2" style="display:none">
-&lt;h3>KERNELS&lt;/h3>
-&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604">[MIDO][3.18.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600">[TISSOT][3.18.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883">[BERYLLIUM][4.9.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882">[DIPPER][4.9.y] Canting&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884">[POLARIS][4.9.y] Canting&lt;/a>&lt;/li>
-&lt;h3>ROMS&lt;/h3>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/5Z60R6">[I8150][4.0.4] ProjectK - V8&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/s3z4lF">[I8150][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/Uytzc0">[I8150][4.4.4][KTU84Q] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/9e15w0">[I8150][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/RwoIFP">[I8150][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/t17etM">[I8150][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/2WVuao">[I8150][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/FdJux4">[I8150][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/XCmlbQ">[I8150][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/e8Ux2W">[I8150][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/jvgVX0">[I8150][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/I9kAG9">[I8150][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/gmlGTZ">[I8150][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/t5HyJt">[I8150][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/MH5yAE">[I9001][4.4.4][KTU84Q] AOKP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/vcfzWp">[I9001][4.4.4][KTU84Q] AOSB Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/xCuVZB">[I9001][4.4.4][KTU84Q] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/GnJAAd">[I9001][4.4.4][KTU84Q] Carbon Rom&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/xrlgmi">[I9001][4.4.4][KTU84Q] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/5uAHvK">[I9001][5.0.2][LRX22G] AICP&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/1evxya">[I9001][5.0.2][LRX22G] BeanStalk&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/3ODIF4">[I9001][5.0.2][LRX22G] BlissPop&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/bgeDdR">[I9001][5.0.2][LRX22G] CrDroid&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/6vIyHb">[I9001][5.0.2][LRX22G] LiquidSmooth&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/ON89IB">[I9001][5.0.2][LRX22G] Mokee Open Source Project&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/Kfwls0">[I9001][5.0.2][LRX22G] PAC-ROM&lt;/a>&lt;/li>
-&lt;h3>GUIDES&lt;/h3>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/MolBRy">[GUIDE][MOD][2.3-4.4]FB UI Style + device owner picture&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/FaHSKg">[GUIDE][CM9-11] Add partition info in Settings.apk&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/uKOQEC">[GUIDE][MOD][CM9-11] LCD Density Changer&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/OuOapx">[GUIDE][SMALI][CM9-11] add Changelog in Settings&lt;/a>&lt;/li>
-&lt;h3>MOD/THEMES&lt;/h3>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/Fcqlp0">[I8150][MOD][CM9-10]FBui Style + Device Owner Picture&lt;/a>&lt;/li>
-&lt;li>&lt;a target="_blank" href="http://goo.gl/uh0szA">[I8150][MOD][ICS4.0|JB4.1] StatusBar 2 Layout&lt;/a>&lt;/li>
-&lt;/div>
-&lt;script>
-function hideContent(divid) {
-var x = document.getElementById(divid);
-if (x.style.display === "none") {
-x.style.display = "block";
-} else {
-x.style.display = "none";
-}
-}
-&lt;/script></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
