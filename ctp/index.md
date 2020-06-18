@@ -2,8 +2,10 @@
 
 <style>
 .ctp {
-  transform: translateY(20vh);
+  transform: translateY(10vh);
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .tooltip {
@@ -43,6 +45,13 @@
   visibility: visible;
   opacity: 1;
 }
+
+hr.garis { 
+  border: 1px solid;
+  text-align: center;
+  height: 2px;
+  margin: auto;
+}
 </style>
 <script>
 function myFunction() {
@@ -67,6 +76,6 @@ function myFunction() {
 		  <button onclick="myFunction()">Copy me!</button>
 		  <hr class="garis">
 		  </hr>
-		  <p class="error-link"><a href="https://khusika.com">↑ Back Home ↑</a></p>
+		  <p><a href="https://khusika.com">↑ Back Home ↑</a></p>
  </div>
 
