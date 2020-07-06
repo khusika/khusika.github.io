@@ -1,6 +1,14 @@
 # About
 
 
+![Khusika Dhamar Gusti](about.png)
+
+{{< admonition info "Website Information" false >}}
+:(fas fa-server fa-fw): Hosted on [GitHub Pages](https://help.github.com/en/github/working-with-github-pages/about-github-pages)  
+:(fas fa-tools fa-fw): Built with [Hugo](https://gohugo.io/)  
+:(fas fa-palette fa-fw): Theme uses [LoveIt](https://hugoloveit.com)  
+{{</ admonition >}}
+
 Hello, I am an _amateur_ android developer from Indonesia. I'm working with android-linux kernel and mostly with Xiaomi devices. I also a _no-op_ logo designer using [Inkscape](https://inkscape.org) as a main weapon. Beside that, i am a student of [Agroindustrial Technology](https://tip.ub.ac.id) in Brawijaya University. Below here are all of my projects and contribution related to the android development:
 
 ## Toolchain
