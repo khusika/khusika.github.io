@@ -1,8 +1,5 @@
 # About
 
-
-![Khusika Dhamar Gusti](about.png)
-
 {{< admonition info "Website Information" false >}}
 :(fas fa-server fa-fw): Hosted on [GitHub Pages](https://help.github.com/en/github/working-with-github-pages/about-github-pages)  
 :(fas fa-tools fa-fw): Built with [Hugo](https://gohugo.io/)  

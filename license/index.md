@@ -1,18 +1,15 @@
 # About License
 
-
-![Creative Commons Attribution-NonCommercial 4.0 International](license.png)
-
 {{< admonition info "License Information" false >}}
 :(fas fa-globe fa-fw): Powered by [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)  
 :(fab fa-markdown fa-fw): Adapted markdown from [idleberg](https://raw.githubusercontent.com/idleberg/Creative-Commons-Markdown/master/4.0/by-nc.markdown)  
 {{</ admonition >}}
 
-{{< admonition abstract "About Creative Commons" true >}}
+{{< admonition abstract "About Creative Commons" false >}}
 _Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible._
 {{< /admonition >}}
 
-{{< admonition tip "Using Creative Commons Public Licenses" true >}}
+{{< admonition tip "Using Creative Commons Public Licenses" false >}}
 Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.
 
 * *__Considerations for licensors:__* Our public licenses are intended for use by those authorized to give the public permission to use material in ways otherwise restricted by copyright and certain other rights. Our licenses are irrevocable. Licensors should read and understand the terms and conditions of the license they choose before applying it. Licensors should also secure all rights necessary before applying our licenses so that the public can reuse the material as expected. Licensors should clearly mark any material not subject to the license. This includes other CC-licensed material, or material used under an exception or limitation to copyright. [More considerations for licensors](http://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensors).
@@ -64,7 +61,7 @@ a. __License grant.__
 
    3. <u>Term</u>. The term of this Public License is specified in Section [6(a)](#s6a).
 
-   <a id="s2a4"></a>4. <u>Media and formats; technical modifications allowed</u>. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section [2(a)(4)](#s2a4) never produces Adapted Material.
+   4. <a id="s2a4"></a><u>Media and formats; technical modifications allowed</u>. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section [2(a)(4)](#s2a4) never produces Adapted Material.
 
    5. <u>Downstream recipients</u>.
 
