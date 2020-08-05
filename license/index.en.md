@@ -8,9 +8,7 @@ resources:
 
 comment:
   enable: false
-toc:
-  enable: true
-  auto: false
+
 lightgallery: false
 ---
 {{< admonition info "License Information" false >}}

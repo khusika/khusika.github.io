@@ -8,8 +8,6 @@ resources:
 
 comment:
   enable: false
-toc:
-  enable: false
 
 lightgallery: false
 ---
