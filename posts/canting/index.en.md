@@ -1,5 +1,6 @@
 ---
 title: "Introduction of Canting Kernel"
+subtitle: ""
 date: 2020-06-14T20:14:17+07:00
 draft: false
 author: "Khusika"
@@ -13,7 +14,10 @@ categories: ["Projects"]
 
 toc:
   auto: false
+math:
+  enable: false
 lightgallery: false
+license: ""
 ---
 ## Introduction
 Canting is an android kernel based on [Google kernel-common](https://android.googlesource.com/kernel/common) merged over [CAF-kernel](https://source.codeaurora.org/quic/la/kernel). Built to provide security and stability improvement. "[**_Canting_**](https://en.wikipedia.org/wiki/Canting)" it self is a pen-like instrument used in the process of [_batik_](https://en.wikipedia.org/wiki/Batik) making.

@@ -1,5 +1,6 @@
 ---
 title: "About"
+subtitle: ""
 draft: false
 description: "Khusika Dhamar Gusti"
 resources:

@@ -1,5 +1,6 @@
 ---
 title: Hello World!
+subtitle: ""
 date: "2019-09-03"
 draft: false
 author: "Khusika"
@@ -13,7 +14,10 @@ categories: ["Blogs"]
 
 toc:
   enable: false
+math:
+  enable: false
 lightgallery: false
+license: ""
 ---
 Hi everyone! this is my first post.
 <!--more-->

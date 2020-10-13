@@ -1,5 +1,6 @@
 ---
 title: "Things I Do On Focal Fossa"
+subtitle: ""
 date: 2020-09-19T08:57:07+07:00 
 draft: false
 author: "Khusika"
@@ -13,7 +14,10 @@ categories: ["blogs"]
 
 toc:
   auto: false
+math:
+  enable: false
 lightgallery: false
+license: ""
 ---
 
 Ubuntu 20.04 was released on 2020 and it brings plenty of new features. In this article, i will share some of Focal Fossa configuration for personal use.

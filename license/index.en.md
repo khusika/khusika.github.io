@@ -1,5 +1,6 @@
 ---
 title: "About License"
+subtitle: ""
 draft: false
 description: "Creative Commons Attribution-NonCommercial 4.0 International."
 resources:
