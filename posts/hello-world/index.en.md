@@ -17,7 +17,7 @@ toc:
 math:
   enable: false
 lightgallery: false
-license: ""
+license: 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
 Hi everyone! this is my first post.
 <!--more-->
