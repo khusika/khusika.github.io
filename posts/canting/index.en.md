@@ -2,6 +2,7 @@
 title: "Introduction of Canting Kernel"
 subtitle: ""
 date: 2020-06-14T20:14:17+07:00
+lastmod: 2020-10-25T19:41:23+07:00
 draft: false
 author: "Khusika"
 description: "Canting is a kernel based on Google Common merged over CAF."
@@ -17,10 +18,10 @@ toc:
 math:
   enable: false
 lightgallery: false
-license: 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+license: 'Published under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
-## Introduction
 Canting is an android kernel based on [Google kernel-common](https://android.googlesource.com/kernel/common) merged over [CAF-kernel](https://source.codeaurora.org/quic/la/kernel). Built to provide security and stability improvement. "[**_Canting_**](https://en.wikipedia.org/wiki/Canting)" it self is a pen-like instrument used in the process of [_batik_](https://en.wikipedia.org/wiki/Batik) making.
+<!--more-->
 
 ## Source Codes
 * [**xiaomi-msm8953**](https://github.com/khusika/canting_kernel_xiaomi_msm8953)
