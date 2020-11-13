@@ -7,7 +7,7 @@ author: "Khusika"
 description: "Things I Do On Focal Fossa"
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.webp"
 
 tags: ["ubuntu"]
 categories: ["blogs"]

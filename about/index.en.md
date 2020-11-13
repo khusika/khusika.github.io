@@ -5,7 +5,7 @@ draft: false
 description: "Khusika Dhamar Gusti"
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.webp"
 
 comment:
   enable: false

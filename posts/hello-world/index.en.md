@@ -7,7 +7,7 @@ author: "Khusika"
 description: "Hi everyone! this is my first post."
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.webp"
 
 tags: []
 categories: ["Blogs"]

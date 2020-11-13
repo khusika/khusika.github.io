@@ -8,7 +8,7 @@ author: "Khusika"
 description: "Canting is a kernel based on Google Common merged over CAF."
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "featured-image.webp"
 
 tags: ["android", "kernel"]
 categories: ["Projects"]
