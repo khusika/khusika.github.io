@@ -4,6 +4,3 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/khusika/docs
-[submodule "public"]
-	path = public
-	url = https://github.com/khusika/khusika.github.io
