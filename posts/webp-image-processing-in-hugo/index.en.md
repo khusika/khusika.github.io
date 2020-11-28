@@ -2,6 +2,7 @@
 title: WebP Image Processing in Hugo
 subtitle: ""
 date: 2020-11-15T11:19:39+07:00
+lastmod: 2020-11-28T14:12:47+07:00
 draft: false
 author: "Khusika"
 description: "WebP Image Processing in Hugo"
@@ -41,5 +42,5 @@ If you wanted to use WebP encoding in Hugo, you can try to [build Hugo from sour
 ```
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
-[Hugo v0.79.0-DEV/extended](hugo)
+[Hugo v0.80.0-DEV/extended](hugo)
 {{</ admonition >}}
