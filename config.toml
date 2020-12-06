@@ -263,7 +263,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paginate = 20
     # date format (month and day)
     # 日期格式 (月和日)
-    dateFormat = "01-02"
+    dateFormat = "January, 1"
     # amount of RSS pages
     # RSS 文章数目
     rss = 10
@@ -276,7 +276,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paginate = 20
     # date format (month and day)
     # 日期格式 (月和日)
-    dateFormat = "01-02"
+    dateFormat = "January, 1"
     # amount of RSS pages
     # RSS 文章数目
     rss = 10
