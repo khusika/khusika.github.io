@@ -12,9 +12,11 @@ Official hardware driver bring HDD with 750GB storage in it. The idea of upgradi
 Those good benefits of SSD in several areas made me to choose SSD as default storage in my laptop. For the reference, i choose to use _Seagate BarraCuda 120 SSD_ with 500GB of memory in it. In my case, these memory will be used as `~/root` or `Local Disk (C:)` with 50GB of memory in it and `~/home` or `Local Disk (D:)` with 450GB of memory in it. For the extra memory, i use HDD Caddy which will be explained in the next section. See the table below for driver specifications.
 
 ![Seagate BarraCuda SSD](seagate-ssd.webp "Seagate BarraCuda SSD")
+
 {{< admonition info "Official Data Sheet" false >}}
 _[barracuda-120-sata-DS2022-1-1909US-en_US.pdf](https://www.seagate.com/www-content/datasheets/pdfs/barracuda-120-sata-DS2022-1-1909US-en_US.pdf)_
 {{</ admonition >}}
+
 | Specifications | Description |
 | -------------- | :---------: |
 | Model Number | ZA500CM10003 |
@@ -29,9 +31,11 @@ The e014tx series already shipped with DVD drive which is unnecessary for me. Mo
 In this case, the type of storage which i use with caddy is _Solid State Hybrid Drives (SSHD)_. SSHD brings _SSD performance with HDD capacity and affordable price_. For the reference, i choose to use _Seagate FireCuda SSHD_ with 1TB of memory in it. These memory will be used as extra data backup. See the table below for driver specifications.
 
 ![Seagate FireCuda SSHD](seagate-sshd.webp "Seagate FireCuda SSHD")
+
 {{< admonition info "Official Data Sheet" false >}}
 _[firecuda-2-5-sshd-DS1908-2-2006US-en_US.pdf](https://www.seagate.com/www-content/datasheets/pdfs/firecuda-2-5-sshd-DS1908-2-2006US-en_US.pdf)_
 {{</ admonition >}}
+
 | Specifications | Description |
 | -------------- | :---------: |
 | Model Number | ST1000LX015 |
@@ -46,9 +50,11 @@ HP Pavillion 14-e014tx (15-e014tx) shipped with 4GB _DDR3L_ of _Random Access Me
 For the production use in this laptop, upgrading RAM from 4GB to 16GB is enough for me. According to the [source.android.com](https://source.android.com/setup/build/requirements#hardware-requirements), we need at least 16 GB of available RAM/swap to build an android OS and kernel. For the reference, i choose to use _Corsair CMSX16GX3M2B1600C9_. This type of RAM brings a dual channel memory 2x8 GB with low voltage in it. See this table below for the data sheet.
 
 ![Corsair Vengeance](corsair-vengeance.webp "Corsair Vengeance")
+
 {{< admonition info "Official Data Sheet" false >}}
 _[CMSX16GX3M2B1600C9](https://www.corsair.com/eu/en/Categories/Products/Memory/Laptop-and-Notebook-Memory/Vengeance%C2%AE-%E2%80%94-16GB-High-Performance-Laptop-Memory-Upgrade-Kit/p/CMSX16GX3M2B1600C9#tab-tech-specs)_
 {{</ admonition >}}
+
 | Specifications | Description |
 | -------------- | :---------: |
 | Memory Configuration | SODIMM |
