@@ -22,6 +22,6 @@ If you wanted to use WebP encoding in Hugo, you can try to [build Hugo from sour
 ```
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
-[:(far fa-file-archive fa-fw): Hugo v0.81.0-DEV/extended](hugo)
+[:(far fa-file-archive fa-fw): Hugo v0.82.0-DEV/extended](hugo)
 {{</ admonition >}}
 
