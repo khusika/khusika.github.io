@@ -9,6 +9,9 @@ theme = "LoveIt"
 # 主题目录
 themesDir = "themes"
 
+# publish directory
+publishDir = "docs"
+
 # website title
 # 网站标题
 title = "Khusika"
