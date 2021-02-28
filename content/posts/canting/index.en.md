@@ -2,7 +2,7 @@
 title: "Introduction of Canting Kernel"
 subtitle: ""
 date: 2020-06-14T20:14:17+07:00
-lastmod: 2020-10-25T19:41:23+07:00
+lastmod: 2021-02-28T11:41:54+07:00 
 draft: false
 author: "Khusika"
 description: "Canting is a kernel based on Google Common merged over CAF."
@@ -24,33 +24,34 @@ Canting is an android kernel based on Google kernel-common merged over CAF-kerne
 <!--more-->
 
 ## Source Codes
-* [**xiaomi-msm8953**](https://github.com/khusika/canting_kernel_xiaomi_msm8953)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/releases)
-* [**xiaomi-sdm845**](https://github.com/khusika/canting_kernel_xiaomi_sdm845)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/canting_kernel_xiaomi_sdm845?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_sdm845/releases)
+### xiaomi-msm8953
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/releases/latest)[![Total Stars](https://img.shields.io/github/stars/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/stargazers)[![Total Forks](https://img.shields.io/github/forks/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/network/members)[![Issues](https://img.shields.io/github/issues/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/issues)
+
+### xiaomi-sdm845
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/canting_kernel_xiaomi_sdm845?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_sdm845/releases/latest)[![Total Stars](https://img.shields.io/github/stars/khusika/canting_kernel_xiaomi_sdm845?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_sdm845/stargazers)[![Total Forks](https://img.shields.io/github/forks/khusika/canting_kernel_xiaomi_sdm845?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_sdm845/network/members)[![Issues](https://img.shields.io/github/issues/khusika/canting_kernel_xiaomi_sdm845?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_sdm845/issues)
 
 ## Features
 * Upstream with latest [linux-stable](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/) releases
 * Upstream with latest [CAF-kernel](https://source.codeaurora.org/quic/la/kernel) releases
-* Build with Google clang-r383902
+* Clang supported
 * CPU Governors: schedutil, powersave, performance
 * I/O Schedulers: noop, cfq
 * Compat vDSO from Pixel kernel
 * TCP Congestion Algorithm: bbr, westwood, reno, cubic
-* [WireGuard](https://forum.xda-developers.com/android/development/wireguard-rom-integration-t3711635) VPN support
+* [WireGuard](https://forum.xda-developers.com/t/wireguard-kernel-rom-integration.3711635/) VPN support
 * Boeffla wakelock blocker
-* Simple Low Memory Killer
+* [Simple Low Memory Killer](https://github.com/kerneltoast/simple_lmk)
 * Sound Control: Speaker, Microphone, Headphone (Per-channel control)
 * KCAL & KLapse Interface
 * Vibration Intensity Control
 * backlight min option
 * Removed safetynet flags (no need of magisk to bypass safteynet)
-* F2FS & NTFS Support
+* Extend File System Support: F2FS, EXFAT, NTFS
 * and many more
 
 ## Device Support
 ### canting-3.18.y
-* **MSM8953**
+* ~~**MSM8953**~~ _abandoned_
   * [Redmi Note 4X](https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604)
   * [Mi A1](https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600)
 
