@@ -2,7 +2,7 @@
 title: Instagram Shortcode in Hugo
 subtitle: ""
 date: 2021-03-02T08:32:25+07:00
-lastmod: 
+lastmod: 2021-03-04T21:03:54+07:00
 draft: false
 author: "Khusika"
 description: "Instagram Shortcode in Hugo"
@@ -54,7 +54,7 @@ After you get both _App ID_ and _Client Token, follow these instruction below:
 {{- $clientToken := .Site.Params.Instagram.ClientToken -}}
 {{ $id := .Get 0 }}
 {{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
-{{ with getJSON "https://graph.facebook.com/v8.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
 ```
 
 2. Add front matter in `config.toml`:
@@ -66,12 +66,12 @@ After you get both _App ID_ and _Client Token, follow these instruction below:
 
 3. Create an example `instagram` input in your markdown:
 ```markdown
-{{</* instagram BWNjjyYFxVx hidecaption */>}}
+{{</* instagram BWNjjyYFxVx "hidecaption" */>}}
 ```
 
 4. The rendered output will be like this:
 
-   {{< instagram BWNjjyYFxVx hidecaption >}}
+{{< instagram BWNjjyYFxVx "hidecaption" >}}
 
 At last, you can enjoy to use Instagram shortcode in Hugo without any problems. Have a good day! :wink:
 
