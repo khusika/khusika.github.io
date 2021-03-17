@@ -2,7 +2,7 @@
 title: WebP Image Processing in Hugo
 subtitle: ""
 date: 2020-11-15T11:19:39+07:00
-lastmod: 2021-02-28T17:36:23+07:00
+lastmod: 2021-03-17T10:35:27+07:00
 draft: false
 author: "Khusika"
 description: "WebP Image Processing in Hugo"
@@ -40,6 +40,10 @@ If you wanted to use WebP encoding in Hugo, you can try to [build Hugo from sour
 {{ $resized := $imageResource.Resize "300px" }}
 {{ $resized.RelPermalink }}
 ```
+
+{{< admonition warning "Update March 2021" true >}}
+in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/ba1d0051b44fdd242b20899e195e37ab26501516) format has been modified which causes conflicts with [#7155](https://github.com/gohugoio/hugo/pull/7155). If you are having problem fixing the conflict, you can _cherry-pick_ [my fixes](https://github.com/khusika/hugo/commit/aafa93afc12e322335bb17bd3fbdb46ac8975215) instead.
+{{</ admonition >}}
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
 [:(far fa-file-archive fa-fw): hugo.bin](https://drive.google.com/file/d/19HLNINPFu7RWpIisHSv-bA85EJDd_8Fk/view) - _extended version_
