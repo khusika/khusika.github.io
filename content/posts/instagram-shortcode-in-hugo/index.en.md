@@ -2,7 +2,6 @@
 title: Instagram Shortcode in Hugo
 subtitle: ""
 date: 2021-03-02T08:32:25+07:00
-lastmod: 2021-03-04T21:03:54+07:00
 draft: false
 author: "Khusika"
 description: "Instagram Shortcode in Hugo"

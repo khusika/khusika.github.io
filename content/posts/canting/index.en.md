@@ -2,7 +2,6 @@
 title: "Introduction of Canting Kernel"
 subtitle: ""
 date: 2020-06-14T20:14:17+07:00
-lastmod: 2021-02-28T11:41:54+07:00 
 draft: false
 author: "Khusika"
 description: "Canting is a kernel based on Google Common merged over CAF."

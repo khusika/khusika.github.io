@@ -2,7 +2,6 @@
 title: WebP Image Processing in Hugo
 subtitle: ""
 date: 2020-11-15T11:19:39+07:00
-lastmod: 2021-03-17T10:35:27+07:00
 draft: false
 author: "Khusika"
 description: "WebP Image Processing in Hugo"
