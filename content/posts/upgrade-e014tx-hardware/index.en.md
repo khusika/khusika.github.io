@@ -17,7 +17,7 @@ toc:
 math:
   enable: false
 lightgallery: true
-license: 'Published under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
 
 Laptops are generally easy to perform minor upgrades on, but major hardware changes such as CPU and mainboard replacements are generally infeasible. In this section I will share my own expirience about upgrading HP Pavillion 14-e014tx also known as 15-e014tx.

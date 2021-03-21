@@ -17,7 +17,7 @@ toc:
 math:
   enable: false
 lightgallery: false
-license: 'Published under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
 WebP is a modern image format that provides superior lossless and lossy compression for images on the web. But for some reason, it is not supported in Hugo framework. In this section i would like to discuss about implementation of WebP in Hugo.
 <!--more-->
