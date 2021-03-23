@@ -1,0 +1,23 @@
+name: HTML Validator
+
+on:
+  push:
+    branches: master
+
+defaults:
+  run:
+    working-directory: docs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action-experimental@main
+        with:
+          root: ./
+          log_level: INFO
+          css: true
+          skip: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
+          extra: --ignore 'No p element in scope but a p end tag seen'
