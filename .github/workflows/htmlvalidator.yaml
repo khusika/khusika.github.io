@@ -20,4 +20,3 @@ jobs:
           log_level: INFO
           css: true
           skip: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
-          extra: --ignore 'No p element in scope but a p end tag seen'
