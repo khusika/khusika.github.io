@@ -18,7 +18,7 @@ lightgallery: false
 [![HTML Validator](https://img.shields.io/github/workflow/status/khusika/khusika.github.io/HTML%20Validator?label=HTML%20Validator&style=flat-square)](https://github.com/khusika/khusika.github.io/actions/workflows/htmlvalidator.yaml)[![Last Commit](https://img.shields.io/github/last-commit/khusika/khusika.github.io/master?style=flat-square)](https://github.com/khusika/khusika.github.io/commits/master)  
 :(fas fa-server fa-fw): Hosted on [GitHub Pages](https://pages.github.com/)  
 :(fas fa-tools fa-fw): Built with [Hugo](https://gohugo.io/)  
-:(fas fa-palette fa-fw): Theme uses [LoveIt](https://hugoloveit.com)  
+:(fas fa-palette fa-fw): Theme uses [FeelIt](https://github.com/khusika/FeelIt)  
 {{</ admonition >}}
 
 Hello, I am an _amateur_ android developer from Indonesia. I'm working with android-linux kernel and mostly with Xiaomi devices. I also a _no-op_ logo designer using [Inkscape](https://inkscape.org) as a main weapon. Beside that, i am a student of [Agroindustrial Technology](https://tip.ub.ac.id) in Brawijaya University. Below here are some of projects and contributions done by me:
