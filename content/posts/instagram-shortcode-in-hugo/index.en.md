@@ -23,7 +23,7 @@ Hugo it self has built-in Instagram shortcode supports, but for some reason it c
 <!--more-->
 
 ## Instagram Shortcode
-If you are using Instagram shortcode in Hugo and having an issue with it, you are not the only one. Using Instagram shortcode with `{{</* instagram BWNjjyYFxVx hidecaption */>}}` will generate an error like this:
+If you are using Instagram shortcode in Hugo and having an issue with it, you are not the only one. Using Instagram shortcode with `{{</* instagram "BWNjjyYFxVx" "hidecaption" */>}}` will generate an error like this:
 ```
 Failed to get JSON resource "https://api.instagram.com/oembed/?url=https://instagram.com/p/BWNjjyYFxVx/&hidecaption=1": Failed to retrieve remote file: Bad Request
 ```
@@ -65,12 +65,12 @@ After you get both _App ID_ and _Client Token, follow these instruction below:
 
 3. Create an example `instagram` input in your markdown:
 ```markdown
-{{</* instagram BWNjjyYFxVx "hidecaption" */>}}
+{{</* instagram "BWNjjyYFxVx" "hidecaption" */>}}
 ```
 
 4. The rendered output will be like this:
 
-{{< instagram BWNjjyYFxVx "hidecaption" >}}
+{{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
 
 At last, you can enjoy to use Instagram shortcode in Hugo without any problems. Have a good day! :wink:
 
