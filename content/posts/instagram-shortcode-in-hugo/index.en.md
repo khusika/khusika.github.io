@@ -39,21 +39,29 @@ Facebook Developers lead us to use the newest Instagram [oEmbed](https://develop
 2. Add [_Instagram Graph API_](https://developers.facebook.com/docs/instagram-api/) and [_oEmbed_](https://developers.facebook.com/docs/plugins/oembed) to your facebook app
 3. Don't forget to activate _oEmbed_ plugin
 ![Instagram Graph Api and oEmbed Plugins](facebook_plugins.webp "Instagram Graph Api and oEmbed Plugins")
-4. Find and copy _App ID_ in top left corner and use it for `.Site.Params.Instagram.AppId`
+4. Find and copy _App ID_ in top left corner and use it for `.Site.Params.instagram.appId`
 5. Go to Settings > Advanced > Security
-6. Copy _Client Token_ and use it for `.Site.Params.Instagram.ClientToken`
+6. Copy _Client Token_ and use it for `.Site.Params.instagram.clientToken`
 ![Facebook App ID and Client Token](facebook_appid.webp "Facebook App ID and Client Token")
 
 ### Theme Configuration
 After you get both _App ID_ and _Client Token, follow these instruction below:
 
 1. Create an `instagram.html` in `YourProject/layouts/shortcodes`
+
+   At this point we will integrate url query string parameter both Instagram Post and TV.
+The `$type` parameter with `p` will stand for Instagram Post and `tv` for Instagram TV.
+
 ```html
-{{- $appId := .Site.Params.Instagram.AppId -}}
-{{- $clientToken := .Site.Params.Instagram.ClientToken -}}
-{{ $id := .Get 0 }}
-{{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
-{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+{{- $ig := .Site.Params.instagram -}}
+{{- $appId := .Site.Params.instagram.appId -}}
+{{- $clientToken := .Site.Params.instagram.clientToken -}}
+{{- if not $ig.privacy -}}
+{{ $type := .Get 0 }}
+{{ $id := .Get 1 }}
+{{ $hideCaption := cond (eq (.Get 2) "hidecaption") "1" "0" }}
+{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+{{- end -}}
 ```
 
 2. Add front matter in `config.toml`:
@@ -61,19 +69,32 @@ After you get both _App ID_ and _Client Token, follow these instruction below:
 [params.instagram]
   appId = "YourAppId"
   clientToken = "YourClientToken"
+  privacy = false
 ```
 
 3. Create an example `instagram` input in your markdown:
-```markdown
-{{</* instagram "BWNjjyYFxVx" "hidecaption" */>}}
-```
+
+   3.1. Sample input of Instagram Post
+   
+   ```markdown
+   {{</* instagram "p" "BWNjjyYFxVx" "hidecaption" */>}}
+   ```
+   
+   3.2. Sample input of Instagram TV
+   
+   ```markdown
+   {{</* instagram "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+   ```
 
 4. The rendered output will be like this:
 
-{{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
+   4.1. Sample output of Instagram Post
+   
+   {{< instagram "p" "BWNjjyYFxVx" "hidecaption" >}}
 
+   4.2. Sample output of Instagram TV
+   
+   {{< instagram "tv" "BkQUbR8h1sp" "hidecaption" >}}
+
+---
 At last, you can enjoy to use Instagram shortcode in Hugo without any problems. Have a good day! :wink:
-
-{{< admonition note "Notes" false >}}
-There is also one other way to fix this apart from going through this theme by modifying the hugo template which I will explain in the other article.
-{{</ admonition >}}
