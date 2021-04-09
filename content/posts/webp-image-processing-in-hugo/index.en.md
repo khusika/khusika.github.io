@@ -41,7 +41,7 @@ If you wanted to use WebP encoding in Hugo, you can try to [build Hugo from sour
 ```
 
 {{< admonition warning "Update March 2021" true >}}
-in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/ba1d0051b44fdd242b20899e195e37ab26501516) format has been modified which causes conflicts with [#7155](https://github.com/gohugoio/hugo/pull/7155). If you are having problem fixing the conflict, you can _cherry-pick_ [my fixes](https://github.com/khusika/hugo/commit/aafa93afc12e322335bb17bd3fbdb46ac8975215) instead.
+in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/ba1d0051b44fdd242b20899e195e37ab26501516) format has been modified which causes conflicts with [#7155](https://github.com/gohugoio/hugo/pull/7155). If you are having problem fixing the conflict, you can _cherry-pick_ [my fixes](https://github.com/khusika/hugo/commit/8a70de266c3be92bf0ef07f674ca60e4895e352f) instead.
 {{</ admonition >}}
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
