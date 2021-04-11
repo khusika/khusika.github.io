@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "purgecss": "^4.0.3"
+  },
+  "scripts": {
+    "reinstall": "rm -rf node_modules && npm install",
+    "prepare": "husky install",
+    "purgecss": "npx purgecss --config ./purgecss.config.js -o './docs/css/home.min.css'",
+    "purgefont": "npx purgecss --config ./purgefont.config.js -o './docs/lib/fontawesome-free/all.min.css'"
+  }
+}
