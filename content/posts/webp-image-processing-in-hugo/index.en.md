@@ -19,8 +19,12 @@ math:
 lightgallery: false
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
-WebP is a modern image format that provides superior lossless and lossy compression for images on the web. But for some reason, it is not supported in Hugo framework. In this section i would like to discuss about implementation of WebP in Hugo.
+WebP is a modern image format that provides superior lossless and lossy compression for images on the web. ~~But for some reason, it is not supported in Hugo framework.~~ In this section i would like to discuss about implementation of WebP in Hugo.
 <!--more-->
+
+{{< admonition warning "Update April 2021" true >}}
+As of this commit "[_33d5f8: Add Add webp image encoding support_](https://github.com/gohugoio/hugo/commits/33d5f805923eb50dfb309d024f6555c59a339846)", Hugo version 0.83.0 and later can use WebP image processing. Based on those commit, currently only used when encoding to Webp in extended version.
+{{</ admonition >}}
 
 ## Why WebP?
 There are several article mentioned that WebP provide a better quality and quantity for web image resources. According to the [Google Developers](https://developers.google.com/speed/webp), WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index. Lighthouse also mentioned in the [web.dev](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=unknown) that, WebP have superior compression and quality characteristics compared to their older JPEG and PNG counterparts. For more details, you can read "_[WebP Compression Study](https://developers.google.com/speed/webp/docs/webp_study)_".
