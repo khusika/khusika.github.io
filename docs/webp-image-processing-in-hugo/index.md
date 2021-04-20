@@ -1,7 +1,11 @@
 # WebP Image Processing in Hugo
 
-WebP is a modern image format that provides superior lossless and lossy compression for images on the web. But for some reason, it is not supported in Hugo framework. In this section i would like to discuss about implementation of WebP in Hugo.
+WebP is a modern image format that provides superior lossless and lossy compression for images on the web. ~~But for some reason, it is not supported in Hugo framework.~~ In this section i would like to discuss about implementation of WebP in Hugo.
 <!--more-->
+
+{{< admonition warning "Update April 2021" true >}}
+As of this commit "[_33d5f8: Add Add webp image encoding support_](https://github.com/gohugoio/hugo/commits/33d5f805923eb50dfb309d024f6555c59a339846)", Hugo version 0.83.0 and later can use WebP image processing. Based on those commit, currently only used when encoding to Webp in extended version.
+{{</ admonition >}}
 
 ## Why WebP?
 There are several article mentioned that WebP provide a better quality and quantity for web image resources. According to the [Google Developers](https://developers.google.com/speed/webp), WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index. Lighthouse also mentioned in the [web.dev](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=unknown) that, WebP have superior compression and quality characteristics compared to their older JPEG and PNG counterparts. For more details, you can read "_[WebP Compression Study](https://developers.google.com/speed/webp/docs/webp_study)_".
@@ -22,7 +26,7 @@ If you wanted to use WebP encoding in Hugo, you can try to [build Hugo from sour
 ```
 
 {{< admonition warning "Update March 2021" true >}}
-in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/ba1d0051b44fdd242b20899e195e37ab26501516) format has been modified which causes conflicts with [#7155](https://github.com/gohugoio/hugo/pull/7155). If you are having problem fixing the conflict, you can _cherry-pick_ [my fixes](https://github.com/khusika/hugo/commit/aafa93afc12e322335bb17bd3fbdb46ac8975215) instead.
+in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/ba1d0051b44fdd242b20899e195e37ab26501516) format has been modified which causes conflicts with [#7155](https://github.com/gohugoio/hugo/pull/7155). If you are having problem fixing the conflict, you can _cherry-pick_ [my fixes](https://github.com/khusika/hugo/commit/8a70de266c3be92bf0ef07f674ca60e4895e352f) instead.
 {{</ admonition >}}
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
