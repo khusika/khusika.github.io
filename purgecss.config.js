@@ -1,9 +1,9 @@
 module.exports = {
     content: ['./docs/js/*.js', './docs/*.html', './docs/**/*.html', './docs/**/**/*.html',  './docs/**/**/**/*.html', './docs/**/**/**/**/*.html'],
-    css: ['./docs/css/home.min.css'],
+    css: ['./docs/css/*.css'],
     safelist: {
       deep: [/lazyloaded$/, /blur$/],
-      greedy: [/thumb$/]
+      greedy: [/thumb$/, /lazyloading$/, /instagram-media$/, /lg-icon$/, /kbd$/]
     },
     blocklist: [ /search$/ ]
 }
