@@ -19,4 +19,4 @@ jobs:
           root: ./
           log_level: INFO
           css: true
-          ignore: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
+          blacklist: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
