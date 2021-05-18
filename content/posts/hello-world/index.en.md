@@ -9,7 +9,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.webp"
 
-tags: []
+tags: [daily]
 categories: ["Blogs"]
 
 toc:
