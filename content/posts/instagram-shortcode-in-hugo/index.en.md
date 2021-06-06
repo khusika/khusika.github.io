@@ -4,7 +4,7 @@ subtitle: ""
 date: 2021-03-02T08:32:25+07:00
 draft: false
 author: "Khusika"
-description: "Instagram Shortcode in Hugo"
+description: "Implement Instagram Shortcode in Hugo"
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
@@ -52,50 +52,50 @@ After you get both _App ID_ and _Client Token, follow these instruction below:
    At this point we will integrate url query string parameter both Instagram Post and TV.
 The `$type` parameter with `p` will stand for Instagram Post and `tv` for Instagram TV. The `ig` parameter will confirm that the oEmbed used is for Instagram.
 
-```html
-{{- $oe := .Site.Params.oembed -}}
-{{- $appId := $oe.appId -}}
-{{- $clientToken := $oe.clientToken -}}
-{{- if not $oe.privacy -}}
-{{ $host := .Get 0 }}
-{{ $type := .Get 1 }}
-{{ $id := .Get 2 }}
-{{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-{{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
-{{- end -}}
-```
+   ```html
+   {{- $oe := .Site.Params.oembed -}}
+   {{- $appId := $oe.appId -}}
+   {{- $clientToken := $oe.clientToken -}}
+   {{- if not $oe.privacy -}}
+   {{ $host := .Get 0 }}
+   {{ $type := .Get 1 }}
+   {{ $id := .Get 2 }}
+   {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
+   {{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{- end -}}
+   ```
 
 2. Add front matter in `config.toml`:
-```toml
-[params.oembed]
-  appId = "YourAppId"
-  clientToken = "YourClientToken"
-  privacy = false
-```
+   ```toml
+   [params.oembed]
+     appId = "YourAppId"
+     clientToken = "YourClientToken"
+     privacy = false
+   ```
 
 3. Create an example `instagram` input in your markdown:
 
-   3.1. Sample input of Instagram Post
-   
-   ```markdown
-   {{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
-   ```
-   
-   3.2. Sample input of Instagram TV
-   
-   ```markdown
-   {{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
-   ```
+a. Sample input of Instagram Post
+
+```markdown
+{{</* oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" */>}}
+```
+
+b. Sample input of Instagram TV
+
+```markdown
+{{</* oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" */>}}
+```
 
 4. The rendered output will be like this:
 
-   4.1. Sample output of Instagram Post
-   
-   {{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
+a. Sample output of Instagram Post
 
-   4.2. Sample output of Instagram TV
-   
-   {{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
+{{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
+
+b. Sample output of Instagram TV
+
+{{< oembed "ig" "tv" "BkQUbR8h1sp" "hidecaption" >}}
 
 ---
 At last, you can enjoy to use Instagram shortcode in Hugo without any problems. Have a good day! :wink:
