@@ -39,7 +39,7 @@ If you are coming from "[_Instagram Shortcodes in Hugo_](/instagram-shortcode-in
 4. Find and copy _App ID_ in top left corner and use it for `.Site.Params.oembed.appId`
 5. Go to Settings > Advanced > Security
 6. Copy _Client Token_ and use it for `.Site.Params.oembed.clientToken`
-![Facebook App ID and Client Token](facebook_appid.webp "Facebook App ID and Client Token")
+![Facebook App ID and Client Token](/instagram-shortcode-in-hugo/facebook_appid.webp "Facebook App ID and Client Token")
 
 ### Theme Configuration
 After you get both _App ID_ and _Client Token, follow these instruction below:
