@@ -3,15 +3,17 @@
 See how to embed Facebook page, post, and video in Hugo as shortcodes.
 <!--more-->
 
+{{< admonition warning "Messages from Facebook" >}}
+Facebook announced [**v11.0**](https://developers.facebook.com/docs/graph-api/changelog/version11.0) of the Graph API and Marketing APIs. With this update, there are new requirements to be able to access [**oEmbed APIs**](https://developers.facebook.com/docs/plugins/oembed/). To continue accessing the oEmbed APIs, you will have to [submit your app](https://developers.facebook.com/docs/plugins/oembed/) for review by **September 6th, 2021**. If you want to request new access to the oEmbed APIs, you will also need to submit your app(s) for review.
+{{< /admonition >}}
+
 ## About Facebook oEmbed
 Facebook oEmbed endpoints allow you to get embed HTML and basic metadata for pages, posts, and videos in order to display them in another website or app.
 
 ## How to Implement
 ### Facebook App Configuration
 
-{{< admonition info "Notes" >}}
-If you are coming from "[_Instagram Shortcodes in Hugo_](/instagram-shortcode-in-hugo)", just skip this step.
-{{< /admonition >}}
+> If you are coming from "[_Instagram Shortcodes in Hugo_](/instagram-shortcode-in-hugo)", just skip this step.
 
 1. Create an app in [Facebook Developers Page](https://developers.facebook.com/)
 2. Add [_oEmbed_](https://developers.facebook.com/docs/plugins/oembed) to your facebook app
@@ -39,9 +41,9 @@ The `$type` parameter with `page` will stand for Facebook Page, `post` for Faceb
    {{ $type := .Get 1 }}
    {{ $id := .Get 2 }}
    {{- if eq $type "page" -}}
-   {{ with getJSON "https://graph.facebook.com/v10.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- else -}}
-   {{ with getJSON "https://graph.facebook.com/v10.0/oembed_" $type "?url=" $id "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- end -}}
    {{- end -}}
    ```
@@ -58,12 +60,12 @@ The `$type` parameter with `page` will stand for Facebook Page, `post` for Faceb
    {{ $id := .Get 2 }}
    {{- if eq $host "ig" -}}
    {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-   {{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- else if eq $host "fb" -}}
    {{- if eq $type "page" -}}
-   {{ with getJSON "https://graph.facebook.com/v10.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&show_posts=false" "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- else -}}
-   {{ with getJSON "https://graph.facebook.com/v10.0/oembed_" $type "?url=" $id "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/oembed_" $type "?url=" $id "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- end -}}
    {{- end -}}
    {{- end -}}
