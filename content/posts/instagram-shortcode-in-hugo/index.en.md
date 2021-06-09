@@ -22,7 +22,16 @@ license: '<a rel="license external nofollow noopener noreffer" href="https://cre
 Hugo it self has built-in Instagram shortcode supports, but for some reason it can't be used anymore. In this article i will write about how to solve this problem in your Hugo environment.
 <!--more-->
 
+{{< admonition warning "Messages from Facebook" >}}
+Facebook announced [**v11.0**](https://developers.facebook.com/docs/graph-api/changelog/version11.0) of the Graph API and Marketing APIs. With this update, there are new requirements to be able to access [**oEmbed APIs**](https://developers.facebook.com/docs/plugins/oembed/). To continue accessing the oEmbed APIs, you will have to [submit your app](https://developers.facebook.com/docs/plugins/oembed/) for review by **September 6th, 2021**. If you want to request new access to the oEmbed APIs, you will also need to submit your app(s) for review.
+{{< /admonition >}}
+
 ## Instagram Shortcode
+
+{{< admonition info "Notice" >}}
+Hugo version 0.84.0-DEV now requires Facebook access token to accesing Instagram oEmbed according to [this commit](https://github.com/gohugoio/hugo/commit/9b5debe4b820132759cfdf7bff7fe9c1ad0a6bb1). But, they are still using deprecated Facebook APIs [v8.0](https://developers.facebook.com/docs/graph-api/changelog/version8.0).
+{{< /admonition >}}
+
 If you are using Instagram shortcode in Hugo and having an issue with it, you are not the only one. Using Instagram shortcode with `{{</* instagram "BWNjjyYFxVx" "hidecaption" */>}}` will generate an error like this:
 ```
 Failed to get JSON resource "https://api.instagram.com/oembed/?url=https://instagram.com/p/BWNjjyYFxVx/&hidecaption=1": Failed to retrieve remote file: Bad Request
@@ -61,7 +70,7 @@ The `$type` parameter with `p` will stand for Instagram Post and `tv` for Instag
    {{ $type := .Get 1 }}
    {{ $id := .Get 2 }}
    {{ $hideCaption := cond (eq (.Get 3) "hidecaption") "1" "0" }}
-   {{ with getJSON "https://graph.facebook.com/v10.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
+   {{ with getJSON "https://graph.facebook.com/v11.0/instagram_oembed/?url=https://instagram.com/" $type "/" $id "/&hidecaption=" $hideCaption "&access_token=" $appId "|" $clientToken }}{{ .html | safeHTML }}{{ end }}
    {{- end -}}
    ```
 
