@@ -35,9 +35,9 @@ jobs:
           css: true
           blacklist: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
 
-      - name: Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          configPath: './lighthouserc.json'
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+#      - name: Lighthouse CI
+#        uses: treosh/lighthouse-ci-action@v7
+#        with:
+#          configPath: './lighthouserc.json'
+#          uploadArtifacts: true
+#          temporaryPublicStorage: true
