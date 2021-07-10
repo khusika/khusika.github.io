@@ -93,6 +93,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # whether to enable CSS and JS source mapping
   SourceMap = false
 
+  # PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "1.0.0"
+
   # App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
