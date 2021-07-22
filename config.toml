@@ -98,7 +98,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     # whether to enable PWA support
     enable = true
     # service-worker version
-    version = "1.0.0"
+    version = "1.0.1"
 
   # App icon config
   [params.app]
