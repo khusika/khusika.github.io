@@ -115,6 +115,42 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     # Windows v8-10 tile color
     tileColor = "#da532c"
 
+  # About page config
+  [params.about]
+    # whether to enable profile on about page
+    # depends on .Site.Params.home.profile.enable
+    enable = true
+    # whether to enable param layout
+    param = true
+    # title for param layout
+    paramTitle = "Personal Information"
+    # general description of your site
+    # can be write with markdown style
+    description = "Hello, I am an _amateur_ android developer from Indonesia. I'm working with android-linux kernel and mostly with Xiaomi devices. I also a _no-op_ logo designer using [Inkscape](https://inkscape.org) as a main weapon. Beside that, i am a student of [Agroindustrial Technology](https://tip.ub.ac.id) in Brawijaya University."
+    # description of your status
+    [[params.about.status]]
+      faIcon = "fas fa-building"
+      title = "Company"
+      desc = "khusika.com"
+    [[params.about.status]]
+      faIcon = "fas fa-briefcase fa-fw"
+      title = "Occupation"
+      desc = "Freelancer"
+    [[params.about.status]]
+      title = "Location"
+      faIcon = "fas fa-map-marker-alt"
+      desc = "Indonesia"
+    # description of your parameter
+    [[params.about.parameter]]
+      language = "Android Kernel Development"
+      level = "70"
+    [[params.about.parameter]]
+      language = "Logo Design"
+      level = "90"
+    [[params.about.parameter]]
+      language = "Gamer"
+      level = "80"
+
   # Home page config
   [params.home]
     # amount of RSS pages

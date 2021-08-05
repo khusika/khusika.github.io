@@ -17,7 +17,7 @@ toc:
 lightgallery: false
 ---
 
-Hello, I am an _amateur_ android developer from Indonesia. I'm working with android-linux kernel and mostly with Xiaomi devices. I also a _no-op_ logo designer using [Inkscape](https://inkscape.org) as a main weapon. Beside that, i am a student of [Agroindustrial Technology](https://tip.ub.ac.id) in Brawijaya University. Below here are some of projects and contributions done by me:
+Below here are some of projects and contributions done by me:
 
 * [AOSP Code Review](https://android-review.googlesource.com/q/owner:mail%2540khusika.com): This repository offer the information and source code needed to create custom variants of the Android platform. Some of codes and fixes are done by me.
 
