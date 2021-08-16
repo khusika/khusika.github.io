@@ -1,17 +1,38 @@
 # About
 
 
+### Projects & Contributions
+
 Below here are some of projects and contributions done by me:
 
-* [AOSP Code Review](https://android-review.googlesource.com/q/owner:mail%2540khusika.com): This repository offer the information and source code needed to create custom variants of the Android platform. Some of codes and fixes are done by me.
+* [Canting Kernel](/canting): is an android-kernel based on Google kernel-common merged over CAF-kernel. Built to provide security and stability improvement.
 
-* [Canting Kernel](/canting): Canting kernel is a kernel based on Google kernel-common merged over CAF-kernel. Built to provide security and stability improvement.
+* [Hugo FeelIt](https://github.com/khusika/FeelIt): is a clean, elegant but advanced blog theme for [Hugo](https://gohugo.io/).
 
-* [LineageOS](https://review.lineageos.org/q/owner:mail%2540khusika.com): A free and open-source operating system for various devices, based on the Android mobile platform. Most of code review are done for _xiaomi-kernel_.
+* [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): This app is built to provide an attendance system based on QR-Codes scanner. I've contribute as a _front-end_ in the development of this application under [Rajabrawijaya Organization](https://rajabrawijaya.ub.ac.id/).
 
-* [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): This app is built to provide an attendance system based on QR-Codes scanner. I've contribute as a front-end in the development of this application under [	Rajabrawijaya Organization](https://rajabrawijaya.ub.ac.id/).
+* [XDA-Developers](https://forum.xda-developers.com/member.php?u=5123347): I got my title on this community as [_Recognized Contributor_](https://forum.xda-developers.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966), various open source projects including ROM, kernel, and mods are created by me.
 
-* [XDA-Developers](https://forum.xda-developers.com/member.php?u=5123347): I got my title in this community as [_Recognized Contributor_](https://forum.xda-developers.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966), various open source projects including ROM, kernel, and mods are created by me.
+* I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail%2540khusika.com). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
+
+### Daily Games
+
+Sometimes i play games on Android, below here are games that i often play:
+
+* [Bleach: Brave Souls](https://play.google.com/store/apps/details?id=com.klab.bleach)
+  
+  - ID: 75424574
+  - Server: Global
+
+* [Punishing: Gray Raven](https://play.google.com/store/apps/details?id=com.kurogame.gplay.punishing.grayraven.en)
+  
+  - ID: 11413118
+  - Server: Asia-Pacific
+
+* [Super Mecha Champions](https://play.google.com/store/apps/details?id=com.netease.g93na)
+  
+  - ID: 1582536
+  - Server: Asia
 
 ---
 If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:mail@khusika.com) or [telegram](https://t.me/khusika).
