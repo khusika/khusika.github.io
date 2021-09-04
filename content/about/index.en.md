@@ -2,7 +2,7 @@
 title: "About"
 subtitle: ""
 draft: false
-description: "Khusika Dhamar Gusti"
+description: "About khusika.com"
 
 comment:
   enable: false
@@ -24,7 +24,7 @@ Below here are some of projects and contributions done by me:
 
 * [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): This app is built to provide an attendance system based on QR-Codes scanner. I've contribute as a _front-end_ in the development of this application under [Rajabrawijaya Organization](https://rajabrawijaya.ub.ac.id/).
 
-* [XDA-Developers](https://forum.xda-developers.com/member.php?u=5123347): I got my title on this community as [_Recognized Contributor_](https://forum.xda-developers.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966), various open source projects including ROM, kernel, and mods are created by me.
+* [XDA-Developers](https://forum.xda-developers.com/member.php?u=5123347): I got my title on this community as [_Recognized Developer_](https://www.xda-developers.com/recognized-developer-program/) and [_Recognized Contributor_](https://forum.xda-developers.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966), various open source projects including ROM, kernel, and mods are created by me.
 
 * I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail%2540khusika.com). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
 
