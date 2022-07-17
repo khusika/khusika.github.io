@@ -1,4 +1,4 @@
-baseURL = "https://khusika.com"
+baseURL = "https://khusika.dev"
 # [en, zh-cn, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
 # theme
@@ -131,7 +131,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     [[params.about.status]]
       faIcon = "fas fa-building"
       title = "Company"
-      desc = "khusika.com"
+      desc = "khusika.dev"
     [[params.about.status]]
       faIcon = "fas fa-briefcase fa-fw"
       title = "Occupation"
@@ -243,7 +243,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     XMPP = ""
     Matrix = ""
     Bilibili = ""
-    Email = "mail@khusika.com"
+    Email = "mail@khusika.dev"
     Resume = ""
     RSS = false
 
@@ -598,7 +598,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # Author config
 [author]
   name = "Khusika Dhamar Gusti"
-  email = "mail@khusika.com"
+  email = "mail@khusika.dev"
   link = "/about/"
 
 # Sitemap config
