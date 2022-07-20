@@ -2,7 +2,7 @@
 title: "About"
 subtitle: ""
 draft: false
-description: "About khusika.com"
+description: "About khusika.dev"
 
 comment:
   enable: false
@@ -48,4 +48,4 @@ Sometimes i play games on Android, below here are games that i often play:
   - Server: Asia
 
 ---
-If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:mail@khusika.com) or [telegram](https://t.me/khusika).
+If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:mail@khusika.dev) or [telegram](https://t.me/khusika).
