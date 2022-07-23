@@ -13,6 +13,8 @@ Below here are some of projects and contributions done by me:
 
 * [XDA-Developers](https://forum.xda-developers.com/member.php?u=5123347): I got my title on this community as [_Recognized Developer_](https://www.xda-developers.com/recognized-developer-program/) and [_Recognized Contributor_](https://forum.xda-developers.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966), various open source projects including ROM, kernel, and mods are created by me.
 
+* [Pixys OS](https://pixysos.com/): I'm officially a device [maintainer](https://pixysos.com/team/khusika) for [Poco X3 Pro](https://pixysos.com/vayu) as per [this change](https://github.com/PixysOS/official_devices/pull/109). I'm also actively contributing to Pixys OS through [my gerrit changes](https://gerrit.pixysos.com/q/owner:mail%2540khusika.dev).
+
 * I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail%2540khusika.com). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
 
 ### Daily Games
