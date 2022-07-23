@@ -142,11 +142,11 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       desc = "Indonesia"
     # description of your parameter
     [[params.about.parameter]]
-      language = "Android Kernel Development"
-      level = "70"
+      language = "Android OS Development"
+      level = "90"
     [[params.about.parameter]]
       language = "Logo Design"
-      level = "90"
+      level = "70"
     [[params.about.parameter]]
       language = "Gamer"
       level = "80"
