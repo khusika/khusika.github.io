@@ -17,6 +17,23 @@ Below here are some of projects and contributions done by me:
 
 * I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail%2540khusika.com). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
 
+
+### Daily Drivers
+
+* Phone:
+  
+  - Poco X3 Pro (vayu)
+  - ~~Mi 8 (dipper)~~
+  - ~~Mi A1 (tissot)~~
+
+* Laptop:
+  
+  - CPU: 12th Gen Intel(R) Core(TM) i7-12700H
+  - GPU: NVIDIA GeForce RTX 3050
+  - Storage: 512 GB PCIe® NVMe™ TLC M.2 SSD
+  - RAM: Corsair Vengeance 32GB (2 x 16GB) DDR4 3200MHz CMSX32GX4M2A3200C22
+
+
 ### Daily Games
 
 Sometimes i play games on Android, below here are games that i often play:
