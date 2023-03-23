@@ -2,7 +2,7 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "mkdirp": "^1.0.4",
-    "purgecss": "^4.0.3"
+    "purgecss": "^5.0.0"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && npm install",
