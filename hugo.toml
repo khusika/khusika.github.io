@@ -174,7 +174,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = false
+      enable = true
       # special amount of posts in each home posts page
       paginate = 6
       # display image-preview
