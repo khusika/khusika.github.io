@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "husky": "^8.0.3",
-    "mkdirp": "^3.0.0",
+    "mkdirp": "^3.0.1",
     "purgecss": "^5.0.0"
   },
   "scripts": {
