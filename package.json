@@ -7,11 +7,11 @@
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
     "prepare": "husky install",
-    "buildhugo": "cd hugo && go clean && go install --tags extended && cp -f -r ~/go/bin/hugo ../bin && chmod +x ../bin/hugo && cd ../",
+    "buildhugo": "cd hugo && go clean && go install --tags extended && cd ../",
     "buildjs": "npx mkdirp assets/js && sed '94,309d;467,589d;593,597d;615,636d;639,642d;696,697d;716d;722,727d' themes/FeelIt/assets/js/theme.js > assets/js/theme.js",
-    "buildtest": "npm run buildjs && ./bin/hugo --gc --minify -d test",
-    "debug": "npm run buildjs && ./bin/hugo server --gc -D --environment production",
-    "deploy": "npm run buildjs && rm -f -r docs && ./bin/hugo --gc --minify && git add docs && git commit -S -s -m 'docs: Re-generate fixes'",
+    "buildtest": "npm run buildjs && hugo --gc --minify -d test",
+    "debug": "npm run buildjs && hugo server --gc -D --environment production",
+    "deploy": "npm run buildjs && rm -f -r docs && hugo --gc --minify && git add docs && git commit -S -s -m 'docs: Re-generate fixes'",
     "purgecss": "npx purgecss --config ./purgecss.config.js -o './docs/css/'",
     "purgefont": "npx purgecss --config ./purgefont.config.js -o './docs/lib/fontawesome-free/all.min.css'"
   }
