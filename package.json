@@ -7,7 +7,7 @@
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
     "prepare": "husky install",
-    "buildhugo": "cd hugo && go clean && go install --tags extended && cp -f -r ~/go/bin/hugo ../bin && chmod +x ../bin/hugo && cd ../",
+    "buildhugo": "go clean -C hugo && env GOOS=linux GOARCH=amd64 CGO_ENABLED=1 go build -C hugo -ldflags='-s -w' --tags extended -o ../bin",
     "buildjs": "npx mkdirp assets/js && sed '94,309d;467,589d;593,597d;615,636d;639,642d;696,697d;716d;722,727d' themes/FeelIt/assets/js/theme.js > assets/js/theme.js",
     "buildtest": "npm run buildjs && ./bin/hugo --gc --minify -d test",
     "debug": "npm run buildjs && ./bin/hugo server --gc -D --environment production",
