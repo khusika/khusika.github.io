@@ -284,7 +284,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
-    license= '<a rel="license external nofollow noopener noreffer" href="/privacy" target="_blank">Privacy Policy</a>'
+    license= '<a rel="license external nofollow noopener noreffer" href="/privacy" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="/terms" target="_blank">Terms</a>'
 
   # Section (all posts) page config
   [params.section]
