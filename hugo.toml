@@ -7,9 +7,6 @@ theme = "FeelIt"
 # themes directory
 themesDir = "themes"
 
-# publish directory
-publishDir = "docs"
-
 # website title
 title = "Khusika"
 
