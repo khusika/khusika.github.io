@@ -14,7 +14,6 @@ title = "Khusika"
 enableRobotsTXT = true
 # whether to use git commit log
 enableGitInfo = true
-useContentDirGitInfo = true
 # whether to use emoji code
 enableEmoji = true
 # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
