@@ -128,6 +128,10 @@ c. Sample input of Facebook Video
 
 4. The rendered output will be like this:
 
+{{< admonition warning "Update May 2023" true >}}
+Sample output may not work because Facebook API has been deactivated
+{{</ admonition >}}
+
 a. Sample output of Facebook Page
 
 {{< oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" >}}

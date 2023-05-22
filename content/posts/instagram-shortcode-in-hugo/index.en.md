@@ -98,6 +98,10 @@ b. Sample input of Instagram TV
 
 4. The rendered output will be like this:
 
+{{< admonition warning "Update May 2023" true >}}
+Sample output may not work because Facebook API has been deactivated
+{{</ admonition >}}
+
 a. Sample output of Instagram Post
 
 {{< oembed "ig" "p" "BWNjjyYFxVx" "hidecaption" >}}
