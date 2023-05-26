@@ -1,4 +1,5 @@
 /assets/js/
+/docs/lib/katex
 /node_modules/
 /resources/_gen/
 /test
