@@ -1,16 +1,13 @@
 {
   "devDependencies": {
-    "husky": "^8.0.3",
     "purgecss": "^6.0.0-alpha.0"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
-    "prepare": "husky install",
     "buildhugo": "if [ $(go env GOOS) = 'linux' ] || [ $(go env GOOS) = 'android' ]; then if [ $(go env GOARCH) = 'amd64' ] || [ $(go env GOARCH) = 'arm64' ]; then (go clean -C hugo && export CGO_ENABLED=1 AR=llvm-ar-16 CC=clang-16 CXX=clang++-16 && go build -C hugo -ldflags='-s -w' --tags extended -o ../bin/$(go env GOARCH)/hugo && upx --best --lzma ./bin/$(go env GOARCH)/hugo); else echo 'Unsupported Arch Version'; fi else echo 'Unsupported OS Version'; fi",
     "buildjs": "mkdir -p assets/js && sed '94,309d;467,589d;593,597d;615,636d;639,642d;696,697d;716d;722,727d' themes/FeelIt/assets/js/theme.js > assets/js/theme.js",
-    "buildtest": "npm run buildjs && ./bin/$(go env GOARCH)/hugo --gc --minify -d test",
     "debug": "npm run buildjs && ./bin/$(go env GOARCH)/hugo server --gc -D --environment production",
-    "deploy": "npm run buildjs && rm -f -r docs && ./bin/$(go env GOARCH)/hugo --gc --minify -d docs && git add docs && git commit -S -s -m 'docs: Re-generate fixes'",
+    "deploy": "npm run buildjs && rm -f -r docs && ./bin/$(go env GOARCH)/hugo --gc --minify -d docs && npm run purgecss && npm run purgefont && rm -f -r ./docs/lib/katex",
     "purgecss": "npx purgecss --config ./purgecss.config.js -o './docs/css/'",
     "purgefont": "npx purgecss --config ./purgefont.config.js -o './docs/lib/fontawesome-free/all.min.css'"
   }

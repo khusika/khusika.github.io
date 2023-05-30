@@ -1,6 +1,5 @@
 /assets/js/
-/docs/lib/katex
+/docs
 /node_modules/
 /resources/_gen/
-/test
 .hugo_build.lock
