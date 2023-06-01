@@ -8,15 +8,15 @@ GITPATCH="../patch/820ee6627dbee5ca01423714df8a660bf0c5ad4e.patch"
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
   if [ -f "./source/go.mod" ]; then
       echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}";
-	  (cd source && git fetch origin master && git checkout origin/master && cd ../);
+      (cd source && git fetch origin master && git checkout origin/master && cd ../);
     else
       echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}";
-	  (git clone https://github.com/gohugoio/hugo -b master source);
+      (git clone https://github.com/gohugoio/hugo -b master source);
   fi
   echo -e "${YLW}Applying patch...${RST}";
   (cd source && git am ${GITPATCH} && cd ../);
   echo -e "${YLW}Building hugo binary...${RST}";
-  (go clean -C source && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C source -ldflags="-s -w" --tags extended -o "../bin/$(go env GOARCH)/hugo" && upx --best --lzma "./bin/$(go env GOARCH)/hugo");
+  (go clean -C source && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C source -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../bin/$(go env GOARCH)/hugo" && upx --best --lzma "./bin/$(go env GOARCH)/hugo");
 else
   echo -e "${RED}Unsupported OS and Arch Version${RST}";
 fi
