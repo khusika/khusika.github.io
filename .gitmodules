@@ -1,7 +1,3 @@
 [submodule "themes/FeelIt"]
 	path = themes/FeelIt
 	url = git@github.com:khusika/FeelIt.git
-[submodule "hugo"]
-	path = hugo
-	url = git@github.com:khusika/hugo.git
-	branch = personal
