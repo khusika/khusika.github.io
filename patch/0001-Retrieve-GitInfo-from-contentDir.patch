@@ -64,7 +64,7 @@ Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
  2 files changed, 6 insertions(+), 3 deletions(-)
 
 diff --git a/docs/content/en/variables/git.md b/docs/content/en/variables/git.md
-index dfd6e540744..cee2d893758 100644
+index dfd6e540..cee2d893 100644
 --- a/docs/content/en/variables/git.md
 +++ b/docs/content/en/variables/git.md
 @@ -18,7 +18,7 @@ Hugo's Git integrations should be fairly performant but *can* increase your buil
@@ -77,7 +77,7 @@ index dfd6e540744..cee2d893758 100644
  3. The `.GitInfo` feature must be enabled in your Hugo project by passing `--enableGitInfo` flag on the command line or by setting `enableGitInfo` to `true` in your [site's configuration file][configuration].
  
 diff --git a/hugolib/gitinfo.go b/hugolib/gitinfo.go
-index f0c5dfa2759..0fb1ba4fa31 100644
+index f0c5dfa2..0fb1ba4f 100644
 --- a/hugolib/gitinfo.go
 +++ b/hugolib/gitinfo.go
 @@ -39,9 +39,12 @@ func (g *gitInfo) forPage(p page.Page) source.GitInfo {
