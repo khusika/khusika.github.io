@@ -35,6 +35,13 @@ jobs:
         with:
           path: './docs'
 
+      - name: Run ShellCheck
+        if: |
+          contains(github.event.head_commit.message, 'build:')
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './build'
+
   deploy:
     if: |
       contains(github.event.head_commit.message, '[deploy]')
