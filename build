@@ -3,7 +3,6 @@
 RED="\033[01;31m"
 YLW="\033[01;33m"
 RST="\033[0m"
-GITPATCH="../patch/*.patch"
 
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
   if [ -f "./src/go.mod" ]; then
@@ -14,7 +13,7 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
       (git clone https://github.com/gohugoio/hugo -b master src);
   fi
   echo -e "${YLW}Applying patch...${RST}";
-  (cd src && git apply --stat ${GITPATCH} && cd ../);
+  (cd src && git apply --stat ../patch/*.patch && cd ../);
   echo -e "${YLW}Building hugo binary...${RST}";
   (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../bin/$(go env GOARCH)/hugo" && upx --best --lzma "./bin/$(go env GOARCH)/hugo");
 else
