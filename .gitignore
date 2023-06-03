@@ -2,5 +2,5 @@
 /docs
 /node_modules/
 /resources/_gen/
-/source
+/src
 .hugo_build.lock
