@@ -1,4 +1,4 @@
-From 2287db5f1e5bf1109bb0b1c325e1b39925ffc828 Mon Sep 17 00:00:00 2001
+From 021d3a4aa57191d1c990855233f8ec3a58b3ca69 Mon Sep 17 00:00:00 2001
 From: Dean Jackson <deanishe@deanishe.net>
 Date: Mon, 17 Dec 2018 20:36:16 +0100
 Subject: [PATCH] Retrieve GitInfo from contentDir
