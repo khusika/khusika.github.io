@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Copyright (C) 2023 Khusika Dhamar Gusti
 
 RED="\033[01;31m"
 YLW="\033[01;33m"
@@ -20,7 +24,14 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   echo -e "${YLW}Applying patch...${RST}";
   (cd src && git apply --stat ../patch/*.patch && cd ../);
   echo -e "${YLW}Building hugo binary...${RST}";
-  (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../bin/$(go env GOARCH)/hugo" && upx --best --lzma "./bin/$(go env GOARCH)/hugo");
+  (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../bin/$(go env GOARCH)/hugo");
+  if [ -x "$(command -v upx)" ]; then
+    (upx --best --lzma "./bin/$(go env GOARCH)/hugo");
+  else
+    echo -e "${RED}Build failed: ${YLW}\e]8;;https://upx.github.io\aUPX\e]8;;\a does not exist.";
+    (git restore "./bin/$(go env GOARCH)");
+    exit;
+  fi
 else
   echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}";
   exit;
