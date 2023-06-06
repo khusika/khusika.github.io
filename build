@@ -4,6 +4,11 @@ RED="\033[01;31m"
 YLW="\033[01;33m"
 RST="\033[0m"
 
+if ! [ -x "$(command -v clang-16)" ]; then
+  echo -e "${RED}Build failed: ${YLW}Unsupported C and C++ compiler version, please use clang-16.${RST}";
+  exit;
+fi
+
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
   if [ -f "./src/go.mod" ]; then
       echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}";
@@ -17,5 +22,6 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   echo -e "${YLW}Building hugo binary...${RST}";
   (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16" && go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../bin/$(go env GOARCH)/hugo" && upx --best --lzma "./bin/$(go env GOARCH)/hugo");
 else
-  echo -e "${RED}Unsupported OS and Arch Version${RST}";
+  echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}";
+  exit;
 fi
