@@ -34,7 +34,9 @@ Based on those articles, we can apply it to optimize Hugo binary and save more s
 
 ## Install Required Packages
 
-> I wrote this only for `linux/amd64` environment
+{{< admonition info "Info" >}}
+I wrote this only for `linux/amd64` environment
+{{< /admonition >}}
 
 1. First of all, these are required packages to build Hugo binary:
  - [GoLang](https://go.dev/dl/) _Use go1.20.x_
@@ -94,3 +96,7 @@ If you want instant build, you can use my script below:
 wget https://raw.githubusercontent.com/khusika/khusika.github.io/master/build && ./build
 ```
 The output file will be in the `bin/$(go env GOARCH)/hugo`.
+
+{{< admonition warning "Messages from UPX" >}}
+False positive antivirus alerts of official UPX releases _(Windows only)_. [See #437](https://github.com/upx/upx/issues/437)
+{{< /admonition >}}
