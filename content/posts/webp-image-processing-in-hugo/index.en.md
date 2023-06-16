@@ -50,6 +50,4 @@ in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
 [:(far fa-file-archive fa-fw): hugo.bin](https://github.com/khusika/khusika.github.io/raw/master/bin/amd64/hugo) - _linux/amd64 extended version_
-
-[:(far fa-file-archive fa-fw): hugo.bin](https://github.com/khusika/khusika.github.io/raw/master/bin/arm64/hugo) - _linux/arm64 extended version_
 {{</ admonition >}}
