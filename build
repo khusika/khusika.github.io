@@ -36,6 +36,11 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16")
   (go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../${BIN}")
   (upx --best --lzma "./${BIN}")
+  if [ -d "./.git" ]; then
+    echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
+    (git add "./bin")
+    (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ./src && git rev-parse --short HEAD && cd ../)" -m "[deploy]")
+  fi
 else
   echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}"
   exit

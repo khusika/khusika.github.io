@@ -1,0 +1,45 @@
+name: Build Hugo
+
+on:
+  schedule:
+    - cron: '* 13 * * 1'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install llvm-16
+        run: |
+            wget https://apt.llvm.org/llvm.sh
+            chmod +x llvm.sh
+            sudo ./llvm.sh 16
+
+      - name: Install UPX
+        run: |
+            wget https://github.com/upx/upx/releases/download/v4.0.2/upx-4.0.2-amd64_linux.tar.xz
+            sudo tar -xvf ./upx-4.0.2-amd64_linux.tar.xz
+            export PATH=$PATH:./upx-4.0.2-amd64_linux
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'
+
+      - name: Buld Hugo Binary
+        run: |
+          ./build
+          git push origin master
