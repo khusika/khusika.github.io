@@ -7,7 +7,8 @@
 RED="\033[01;31m"
 YLW="\033[01;33m"
 RST="\033[0m"
-BIN="bin/$(go env GOARCH)/hugo"
+BIN="./bin/$(go env GOARCH)/hugo"
+SRC="./src"
 
 if ! [ -x "$(command -v clang-16)" ]; then
   echo -e "${RED}Build failed: ${YLW}Unsupported C and C++ compiler version, please use clang-16.${RST}"
@@ -18,9 +19,9 @@ elif ! [ -x "$(command -v upx)" ]; then
 fi
 
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
-  if [ -d "./src/.git" ]; then
+  if [ -d "${SRC}/.git" ]; then
       echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
-      (cd src && git fetch origin master && git checkout -f origin/master && cd ../)
+      (cd ${SRC} && git fetch origin master && git checkout -f origin/master && cd ../)
     else
       echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
       (git clone https://github.com/gohugoio/hugo -b master src)
@@ -29,20 +30,20 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   do
       if [ -f "${patch}" ]; then
        echo -e "${YLW}Applying patch...${RST}"
-       (cd src && git apply --stat ".${patch}" && cd ../)
+       (cd ${SRC} && git apply --stat ".${patch}" && cd ../)
       fi
   done
-  v1="$(./"${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
-  v2="$(cd ./src && git rev-parse HEAD && cd ../)"
+  v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
+  v2="$(cd ${SRC} && git rev-parse HEAD && cd ../)"
   if [ "${v1}" != "${v2}" ]; then
     echo -e "${YLW}Building hugo binary...${RST}"
-    (go clean -C src && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16")
-    (go build -C src -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o "../${BIN}")
-    (upx --best --lzma "./${BIN}")
+    (go clean -C ${SRC} && export CGO_ENABLED="1" AR="llvm-ar-16" CC="clang-16" CXX="clang++-16")
+    (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o ".${BIN}")
+    (upx --best --lzma "${BIN}")
     if [ -d "./.git" ]; then
       echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
-      (git add "./bin")
-      (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ./src && git rev-parse --short HEAD && cd ../)" -m "[deploy]")
+      (git add "${BIN}")
+      (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ${SRC} && git rev-parse --short HEAD && cd ../)" -m "[deploy]")
     fi
   else
     echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version"
