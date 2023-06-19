@@ -39,7 +39,7 @@ jobs:
         with:
           go-version: '1.20'
 
-      - name: Buld Hugo Binary
+      - name: Build Hugo Binary
         run: |
           ./build
           git push origin master
