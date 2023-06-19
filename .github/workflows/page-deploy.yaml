@@ -32,17 +32,19 @@ jobs:
           css: true
           blacklist: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
 
-      - name: Upload Docs
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: './docs'
-
       - name: Run ShellCheck
         if: |
           contains(github.event.head_commit.message, 'build:')
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: './build'
+
+      - name: Upload Docs
+        if: |
+          contains(github.event.head_commit.message, '[deploy]')
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './docs'
 
   deploy:
     if: |
