@@ -32,7 +32,7 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
        (cd src && git apply --stat ".${patch}" && cd ../)
       fi
   done
-  v1="$(./${BIN} version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
+  v1="$(./"${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
   v2="$(cd ./src && git rev-parse HEAD && cd ../)"
   if [ "${v1}" != "${v2}" ]; then
     echo -e "${YLW}Building hugo binary...${RST}"
