@@ -21,10 +21,10 @@ jobs:
             sudo ./llvm.sh 16
 
       - name: Install UPX
-        run: |
-            wget https://github.com/upx/upx/releases/download/v4.0.2/upx-4.0.2-amd64_linux.tar.xz
-            sudo tar -xvf ./upx-4.0.2-amd64_linux.tar.xz
-            export PATH=$PATH:./upx-4.0.2-amd64_linux
+        uses: crazy-max/ghaction-upx@v2
+        with:
+          version: latest
+          install-only: true
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v5
