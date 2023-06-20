@@ -52,7 +52,7 @@ I wrote this only for `linux/amd64` environment
 
    b. Setup llvm-16
    ```bash
-   wget wget https://apt.llvm.org/llvm.sh && sudo ./llvm.sh 16
+   wget https://apt.llvm.org/llvm.sh && sudo ./llvm.sh 16
    ```
 
    c. Setup UPX
