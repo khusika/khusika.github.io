@@ -30,7 +30,6 @@ jobs:
           root: ./docs
           log_level: INFO
           css: true
-          blacklist: qga9x8k4gvvriy6on3ehsmm8bza2pg.html
 
       - name: Run ShellCheck
         if: |
