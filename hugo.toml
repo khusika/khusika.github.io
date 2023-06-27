@@ -122,7 +122,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "Hello, I am an _amateur_ android developer from Indonesia. I'm working with android-linux kernel and mostly with Xiaomi devices. I also a _no-op_ logo designer using [Inkscape](https://inkscape.org) as a main weapon. Beside that, i am a student of [Agroindustrial Technology](https://tip.ub.ac.id) in Brawijaya University."
+    description = "Hi, I'm Khusika. I am an amateur developer from Indonesia. I'm interested in open source development, especially with low-architecture. As well as being interested in vector designs using [Inkscape](https://inkscape.org/). Apart from that, I also like to play mobile games on Android. I will share some of my activities that you might like here in a [blog post](https://khusika.dev/posts/)."
     # description of your status
     [[params.about.status]]
       faIcon = "fas fa-building"
@@ -145,7 +145,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       level = "70"
     [[params.about.parameter]]
       language = "Gamer"
-      level = "80"
+      level = "50"
 
   # Home page config
   [params.home]
