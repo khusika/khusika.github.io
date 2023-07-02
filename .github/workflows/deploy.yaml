@@ -16,7 +16,16 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Run ShellCheck
+        if: |
+          contains(github.event.head_commit.message, 'build:')
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './build'
+
       - name: Build Page
+        if: |
+          !contains(github.event.head_commit.message, 'build:')
         env:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
@@ -25,18 +34,13 @@ jobs:
             npm run deploy
 
       - name: Validate HTML
+        if: |
+          !contains(github.event.head_commit.message, 'build:')
         uses: Cyb3r-Jak3/html5validator-action@master
         with:
           root: ./docs
           log_level: INFO
           css: true
-
-      - name: Run ShellCheck
-        if: |
-          contains(github.event.head_commit.message, 'build:')
-        uses: ludeeus/action-shellcheck@master
-        with:
-          scandir: './build'
 
       - name: Upload Docs
         if: |
