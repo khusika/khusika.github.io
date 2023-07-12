@@ -16,11 +16,11 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Install llvm-16
+      - name: Install llvm-17
         run: |
             wget https://apt.llvm.org/llvm.sh
             chmod +x llvm.sh
-            sudo ./llvm.sh 16
+            sudo ./llvm.sh 17
 
       - name: Install UPX
         uses: crazy-max/ghaction-upx@v2
