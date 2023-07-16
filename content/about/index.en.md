@@ -35,7 +35,8 @@ Below here are some of projects and contributions done by me:
 
 * Phone:
   
-  - Poco X3 Pro (vayu)
+  - Xiaomi 12 (cupid)
+  - ~~Poco X3 Pro (vayu)~~
   - ~~Mi 8 (dipper)~~
   - ~~Mi A1 (tissot)~~
 
