@@ -10,10 +10,7 @@ RST="\033[0m"
 BIN="./bin/$(go env GOARCH)/hugo"
 SRC="./src"
 
-if ! [ -x "$(command -v clang-17)" ]; then
-  echo -e "${RED}Build failed: ${YLW}Unsupported C and C++ compiler version, please use clang-16.${RST}"
-  exit
-elif ! [ -x "$(command -v upx)" ]; then
+if ! [ -x "$(command -v upx)" ]; then
   echo -e "${RED}Build failed: ${YLW}\e]8;;https://upx.github.io\aUPX\e]8;;\a does not exist."
   exit
 fi
@@ -41,7 +38,7 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   v2="$(cd ${SRC} && git rev-parse HEAD && cd ../)"
   if [ "${v1}" != "${v2}" ]; then
     echo -e "${YLW}Building hugo binary...${RST}"
-    (go clean -C ${SRC} && export CGO_ENABLED="1" AR="llvm-ar-17" CC="clang-17" CXX="clang++-17")
+    (go clean -C ${SRC} && export CGO_ENABLED="1")
     (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o ".${BIN}")
     (upx --best --lzma "${BIN}")
     if [ -d "./.git" ]; then
