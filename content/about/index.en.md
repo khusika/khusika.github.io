@@ -64,7 +64,7 @@ Sometimes i play games on Android, below here are games that i often play:
 
 * [Super Mecha Champions](https://play.google.com/store/apps/details?id=com.netease.g93na)
   
-  - ID: 1582536
+  - ID: ~~1582536~~_sold_
   - Server: Asia
 
 ---
