@@ -27,7 +27,7 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   do
       if [ -f "${patch}" ]; then
        echo -e "${YLW}Applying patch...${RST}"
-       (cd ${SRC} && git apply --stat ".${patch}" && cd ../)
+       (cd ${SRC} && git apply --stat ".${patch}" && git apply ".${patch}" && cd ../)
       fi
   done
   if [ -x "$(command -v "${BIN}")" ]; then
