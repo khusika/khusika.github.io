@@ -46,6 +46,11 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
       (git add "${BIN}")
       (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ${SRC} && git rev-parse --short HEAD && cd ../)" -m "[deploy]")
     fi
+    if ! [ "$(cd ${SRC} && git status --porcelain | wc -l)" = "0" ]; then
+      echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
+      (cd ${SRC} && git restore . && cd ../)
+    fi
+    echo -e "${RED}Build: ${YLW}Completed${RST}"
   else
     echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version"
     exit
