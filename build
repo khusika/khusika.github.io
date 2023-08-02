@@ -23,13 +23,6 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
       echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
       (git clone https://github.com/gohugoio/hugo -b master src)
   fi
-  for patch in ./patch/*.patch
-  do
-      if [ -f "${patch}" ]; then
-       echo -e "${YLW}Applying patch...${RST}"
-       (cd ${SRC} && git apply --stat ".${patch}" && git apply ".${patch}" && cd ../)
-      fi
-  done
   if [ -x "$(command -v "${BIN}")" ]; then
     v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
   else
@@ -37,6 +30,13 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   fi
   v2="$(cd ${SRC} && git rev-parse HEAD && cd ../)"
   if [ "${v1}" != "${v2}" ]; then
+    for patch in ./patch/*.patch
+    do
+      if [ -f "${patch}" ]; then
+        echo -e "${YLW}Applying patch...${RST}"
+        (cd ${SRC} && git apply --stat ".${patch}" && git apply ".${patch}" && cd ../)
+      fi
+    done
     echo -e "${YLW}Building hugo binary...${RST}"
     (go clean -C ${SRC} && export CGO_ENABLED="1")
     (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.dev" --tags extended -o ".${BIN}")
