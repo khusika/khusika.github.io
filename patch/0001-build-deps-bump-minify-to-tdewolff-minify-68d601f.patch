@@ -1,0 +1,46 @@
+From 9ef54ce180808b8321cca5d641983813d05a77cd Mon Sep 17 00:00:00 2001
+From: Khusika Dhamar Gusti <mail@khusika.dev>
+Date: Wed, 2 Aug 2023 17:09:32 +0700
+Subject: [PATCH] build(deps): bump minify to tdewolff/minify@68d601f
+
+Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
+---
+ go.mod | 4 ++--
+ go.sum | 4 ++++
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/go.mod b/go.mod
+index e4c873e50..236b67ecb 100644
+--- a/go.mod
++++ b/go.mod
+@@ -61,8 +61,8 @@ require (
+ 	github.com/spf13/cobra v1.7.0
+ 	github.com/spf13/fsync v0.9.0
+ 	github.com/spf13/pflag v1.0.5
+-	github.com/tdewolff/minify/v2 v2.12.7
+-	github.com/tdewolff/parse/v2 v2.6.6
++	github.com/tdewolff/minify/v2 v2.12.9-0.20230801103210-68d601fccd01
++	github.com/tdewolff/parse/v2 v2.6.7
+ 	github.com/yuin/goldmark v1.5.5
+ 	go.uber.org/atomic v1.11.0
+ 	go.uber.org/automaxprocs v1.5.3
+diff --git a/go.sum b/go.sum
+index d4ff1c7b0..28af7012e 100644
+--- a/go.sum
++++ b/go.sum
+@@ -441,8 +441,12 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
+ github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
+ github.com/tdewolff/minify/v2 v2.12.7 h1:pBzz2tAfz5VghOXiQIsSta6srhmTeinQPjRDHWoumCA=
+ github.com/tdewolff/minify/v2 v2.12.7/go.mod h1:ZRKTheiOGyLSK8hOZWWv+YoJAECzDivNgAlVYDHp/Ws=
++github.com/tdewolff/minify/v2 v2.12.9-0.20230801103210-68d601fccd01 h1:EVuMT2Ezu0MwQwtHY7G+X/AfaAkO91TZg5fQ3akK2NU=
++github.com/tdewolff/minify/v2 v2.12.9-0.20230801103210-68d601fccd01/go.mod h1:YRgk7CC21LZnbuke2fmYnCTq+zhCgpb0yJACOTUNJ1E=
+ github.com/tdewolff/parse/v2 v2.6.6 h1:Yld+0CrKUJaCV78DL1G2nk3C9lKrxyRTux5aaK/AkDo=
+ github.com/tdewolff/parse/v2 v2.6.6/go.mod h1:woz0cgbLwFdtbjJu8PIKxhW05KplTFQkOdX78o+Jgrs=
++github.com/tdewolff/parse/v2 v2.6.7 h1:WrFllrqmzAcrKHzoYgMupqgUBIfBVOb0yscFzDf8bBg=
++github.com/tdewolff/parse/v2 v2.6.7/go.mod h1:XHDhaU6IBgsryfdnpzUXBlT6leW/l25yrFBTEb4eIyM=
+ github.com/tdewolff/test v1.0.7/go.mod h1:6DAvZliBAAnD7rhVgwaM7DE5/d9NMOAJ09SqYqeK4QE=
+ github.com/tdewolff/test v1.0.9 h1:SswqJCmeN4B+9gEAi/5uqT0qpi1y2/2O47V/1hhGZT0=
+ github.com/tdewolff/test v1.0.9/go.mod h1:6DAvZliBAAnD7rhVgwaM7DE5/d9NMOAJ09SqYqeK4QE=
+-- 
+2.34.1
+
