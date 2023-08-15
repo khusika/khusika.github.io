@@ -44,7 +44,7 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     if [ -d "./.git" ]; then
       echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
       (git add "${BIN}")
-      (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ${SRC} && git rev-parse --short HEAD && cd ../)" -m "[deploy]")
+      (git commit -s -S -m "hugo: Update to gohugoio/hugo@$(cd ${SRC} && git rev-parse --short HEAD && cd ../)" -m "[deploy]" -m "$(cd ${SRC} && git log --format="%C(auto) %h %s" "${v1}"..HEAD && cd ../)")
     fi
     if ! [ "$(cd ${SRC} && git status --porcelain | wc -l)" = "0" ]; then
       echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
