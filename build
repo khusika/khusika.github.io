@@ -18,7 +18,7 @@ fi
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
   if [ -d "${SRC}/.git" ]; then
       echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
-      (cd ${SRC} && git fetch origin master && git checkout -f origin/master && cd ../)
+      (git -C ${SRC} fetch origin master && git -C ${SRC} checkout -f origin/master)
     else
       echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
       (git clone https://github.com/gohugoio/hugo -b master src)
@@ -28,15 +28,15 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
   else
     v1="0"
   fi
-  v2="$(cd ${SRC} && git rev-parse HEAD && cd ../)"
-  m1="$(cd ${SRC} && git rev-parse --short HEAD && cd ../)"
-  m2="$(cd ${SRC} && git log --format="%h %s" "${v1}"..HEAD && cd ../)"
+  v2="$(git -C ${SRC} rev-parse HEAD)"
+  m1="$(git -C ${SRC} rev-parse --short HEAD)"
+  m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
   if [ "${v1}" != "${v2}" ]; then
     for patch in ./patch/*.patch
     do
       if [ -f "${patch}" ]; then
         echo -e "${YLW}Applying patch...${RST}"
-        (cd ${SRC} && git apply --stat ".${patch}" && git apply ".${patch}" && cd ../)
+        (git -C ${SRC} apply --stat ".${patch}" && git -C ${SRC} apply ".${patch}")
       fi
     done
     echo -e "${YLW}Building hugo binary...${RST}"
@@ -48,9 +48,9 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
       (git add "${BIN}")
       (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "[deploy]" -m "${m2}")
     fi
-    if ! [ "$(cd ${SRC} && git status --porcelain | wc -l)" = "0" ]; then
+    if ! [ "$(git -C ${SRC} status --porcelain | wc -l)" = "0" ]; then
       echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
-      (cd ${SRC} && git restore . && cd ../)
+      (git -C ${SRC} restore .)
     fi
     echo -e "${RED}Build: ${YLW}Completed${RST}"
   else
