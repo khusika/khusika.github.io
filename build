@@ -29,8 +29,6 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     v1="0"
   fi
   v2="$(git -C ${SRC} rev-parse HEAD)"
-  m1="$(git -C ${SRC} rev-parse --short HEAD)"
-  m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
   if [ "${v1}" != "${v2}" ]; then
     for patch in ./patch/*.patch
     do
@@ -45,6 +43,8 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     (upx --best --lzma "${BIN}")
     if [ -d "./.git" ]; then
       echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
+      m1="$(git -C ${SRC} rev-parse --short HEAD)"
+      m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
       (git add "${BIN}")
       (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "[deploy]" -m "${m2}")
     fi
