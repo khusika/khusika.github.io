@@ -43,10 +43,14 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     (upx --best --lzma "${BIN}")
     if [ -d "./.git" ]; then
       echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
-      m1="$(git -C ${SRC} rev-parse --short HEAD)"
-      m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
       (git add "${BIN}")
-      (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "[deploy]" -m "${m2}")
+      m1="$(git -C ${SRC} rev-parse --short HEAD)"
+      if [ "${v1}" = "0" ]; then
+        (git commit -s -m "bin: Add hugo based on gohugoio/hugo@${m1}" -m "[deploy]")
+      else
+        m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
+        (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "[deploy]" -m "${m2}")
+      fi
     fi
     if ! [ "$(git -C ${SRC} status --porcelain | wc -l)" = "0" ]; then
       echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
