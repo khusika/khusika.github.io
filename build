@@ -45,11 +45,12 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
       echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
       (git add "${BIN}")
       m1="$(git -C ${SRC} rev-parse --short HEAD)"
+      m2="[deploy]\n\nBuilt with:\n> go $(go version | { read -r _ _ v _; echo "${v#go}"; })\n> $(upx --version | head -n1)"
       if [ "${v1}" = "0" ]; then
-        (git commit -s -m "bin: Add hugo based on gohugoio/hugo@${m1}" -m "[deploy]")
+        (git commit -s -m "bin: Add hugo based on gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")")
       else
-        m2="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
-        (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "[deploy]" -m "${m2}")
+        m3="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
+        (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")" -m "${m3}")
       fi
     fi
     if ! [ "$(git -C ${SRC} status --porcelain | wc -l)" = "0" ]; then
