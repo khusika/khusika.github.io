@@ -41,5 +41,4 @@ jobs:
       - name: Build Hugo Binary
         run: |
           ./build
-          git remote set-url origin git@github.com:khusika/khusika.github.io.git
           git push origin master
