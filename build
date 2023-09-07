@@ -9,6 +9,7 @@ YLW="\033[01;33m"
 RST="\033[0m"
 BIN="./bin/$(go env GOARCH)/hugo"
 SRC="./src"
+URL="https://github.com/gohugoio/hugo"
 
 if ! [ -x "$(command -v upx)" ]; then
   echo -e "${RED}Build failed: ${YLW}\e]8;;https://upx.github.io\aUPX\e]8;;\a does not exist."
@@ -16,20 +17,20 @@ if ! [ -x "$(command -v upx)" ]; then
 fi
 
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
-  if [ -d "${SRC}/.git" ]; then
-      echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
-      (git -C ${SRC} fetch origin master && git -C ${SRC} checkout -f origin/master)
-    else
-      echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
-      (git clone https://github.com/gohugoio/hugo -b master src)
-  fi
   if [ -x "$(command -v "${BIN}")" ]; then
     v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
   else
     v1="0"
   fi
-  v2="$(git -C ${SRC} rev-parse HEAD)"
+  v2="$(git ls-remote ${URL} HEAD | awk '{ print $1}')"
   if [ "${v1}" != "${v2}" ]; then
+    if [ -d "${SRC}/.git" ]; then
+        echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
+        (git -C ${SRC} fetch origin master && git -C ${SRC} checkout -f origin/master)
+      else
+        echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
+        (git clone ${URL} -b master src)
+    fi
     for patch in ./patch/*.patch
     do
       if [ -f "${patch}" ]; then
