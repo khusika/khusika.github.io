@@ -41,6 +41,7 @@ jobs:
           root: ./docs
           log_level: INFO
           css: true
+          blacklist: all.min.css
 
       - name: Upload Docs
         if: |
