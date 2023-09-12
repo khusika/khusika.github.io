@@ -125,16 +125,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     description = "Hi, I'm Khusika. I am an amateur developer from Indonesia. I'm interested in open source development, especially with low-architecture. As well as being interested in vector designs using [Inkscape](https://inkscape.org/). Apart from that, I also like to play mobile games on Android. I will share some of my activities that you might like here in a [blog post](https://khusika.dev/posts/)."
     # description of your status
     [[params.about.status]]
-      faIcon = "fas fa-building"
+      faIcon = "fa-solid fa-building"
       title = "Company"
       desc = "khusika.dev"
     [[params.about.status]]
-      faIcon = "fas fa-briefcase fa-fw"
+      faIcon = "fa-solid fa-briefcase fa-fw"
       title = "Occupation"
       desc = "Freelancer"
     [[params.about.status]]
       title = "Location"
-      faIcon = "fas fa-map-marker-alt"
+      faIcon = "fa-solid fa-map-marker-alt"
       desc = "Indonesia"
     # description of your parameter
     [[params.about.parameter]]
@@ -200,7 +200,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # title name
       name = "Khusika"
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "<i class='fas fa-laptop-code fa-fw'></i>"
+      pre = "<i class='fa-solid fa-laptop-code fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # whether to use typeit animation for title name
