@@ -41,7 +41,4 @@ jobs:
       - name: Build Hugo Binary
         run: |
           ./build
-
-      - name: Push Changes
-        run: |
           git push origin master
