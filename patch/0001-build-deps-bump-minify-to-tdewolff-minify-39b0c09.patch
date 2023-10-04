@@ -1,7 +1,7 @@
-From fd57dc990050931df2cc69c50a5db465be8d1f84 Mon Sep 17 00:00:00 2001
+From 70b99a2cd0d9a12366934849c1e0279b168207fd Mon Sep 17 00:00:00 2001
 From: Khusika Dhamar Gusti <mail@khusika.dev>
 Date: Sun, 27 Aug 2023 20:27:19 +0700
-Subject: [PATCH] build(deps): bump minify to tdewolff/minify@dfaa2fc
+Subject: [PATCH] build(deps): bump minify to tdewolff/minify@39b0c09
 
 Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
 ---
@@ -10,7 +10,7 @@ Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
  2 files changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index ab62f10bb..f8474445e 100644
+index 2a045b75e..71d9828d1 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -61,8 +61,8 @@ require (
@@ -19,21 +19,21 @@ index ab62f10bb..f8474445e 100644
  	github.com/spf13/pflag v1.0.5
 -	github.com/tdewolff/minify/v2 v2.12.7
 -	github.com/tdewolff/parse/v2 v2.6.6
-+	github.com/tdewolff/minify/v2 v2.12.10-0.20230909235411-dfaa2fcdeeb0
++	github.com/tdewolff/minify/v2 v2.12.10-0.20230929132537-39b0c095450f
 +	github.com/tdewolff/parse/v2 v2.6.8
  	github.com/yuin/goldmark v1.5.6
  	go.uber.org/atomic v1.11.0
  	go.uber.org/automaxprocs v1.5.3
 diff --git a/go.sum b/go.sum
-index a08bd7c1b..ebaf9b2ce 100644
+index af083fe5a..b66d7469e 100644
 --- a/go.sum
 +++ b/go.sum
-@@ -441,8 +441,12 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
+@@ -437,8 +437,12 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
  github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
  github.com/tdewolff/minify/v2 v2.12.7 h1:pBzz2tAfz5VghOXiQIsSta6srhmTeinQPjRDHWoumCA=
  github.com/tdewolff/minify/v2 v2.12.7/go.mod h1:ZRKTheiOGyLSK8hOZWWv+YoJAECzDivNgAlVYDHp/Ws=
-+github.com/tdewolff/minify/v2 v2.12.10-0.20230909235411-dfaa2fcdeeb0 h1:WBcFxOOPgDKTJSmmntt08+oBdXxzf7VJq2xGSBaxxxA=
-+github.com/tdewolff/minify/v2 v2.12.10-0.20230909235411-dfaa2fcdeeb0/go.mod h1:qOqdlDfL+7v0/fyymB+OP497nIxJYSvX4MQWA8OoiXU=
++github.com/tdewolff/minify/v2 v2.12.10-0.20230929132537-39b0c095450f h1:CuI07oEoBvEAYgjATevvKpCNgh5ZEQ1IuOZDGf87qiw=
++github.com/tdewolff/minify/v2 v2.12.10-0.20230929132537-39b0c095450f/go.mod h1:qOqdlDfL+7v0/fyymB+OP497nIxJYSvX4MQWA8OoiXU=
  github.com/tdewolff/parse/v2 v2.6.6 h1:Yld+0CrKUJaCV78DL1G2nk3C9lKrxyRTux5aaK/AkDo=
  github.com/tdewolff/parse/v2 v2.6.6/go.mod h1:woz0cgbLwFdtbjJu8PIKxhW05KplTFQkOdX78o+Jgrs=
 +github.com/tdewolff/parse/v2 v2.6.8 h1:mhNZXYCx//xG7Yq2e/kVLNZw4YfYmeHbhx+Zc0OvFMA=
