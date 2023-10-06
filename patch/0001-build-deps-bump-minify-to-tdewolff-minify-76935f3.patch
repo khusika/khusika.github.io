@@ -1,0 +1,40 @@
+From 6aa3e71a906ec883f9ae4f6be56079dfaa4eb6d3 Mon Sep 17 00:00:00 2001
+From: Khusika Dhamar Gusti <mail@khusika.dev>
+Date: Sun, 27 Aug 2023 20:27:19 +0700
+Subject: [PATCH] build(deps): bump minify to tdewolff/minify@76935f3
+
+Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
+---
+ go.mod | 2 +-
+ go.sum | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/go.mod b/go.mod
+index 29c25cdb4..8a343fd92 100644
+--- a/go.mod
++++ b/go.mod
+@@ -61,7 +61,7 @@ require (
+ 	github.com/spf13/cobra v1.7.0
+ 	github.com/spf13/fsync v0.9.0
+ 	github.com/spf13/pflag v1.0.5
+-	github.com/tdewolff/minify/v2 v2.12.9
++	github.com/tdewolff/minify/v2 v2.12.10-0.20231006153333-76935f3b55b3
+ 	github.com/tdewolff/parse/v2 v2.6.8
+ 	github.com/yuin/goldmark v1.5.6
+ 	go.uber.org/atomic v1.11.0
+diff --git a/go.sum b/go.sum
+index 9cb52433b..8dadc927c 100644
+--- a/go.sum
++++ b/go.sum
+@@ -434,6 +434,8 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
+ github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
+ github.com/tdewolff/minify/v2 v2.12.9 h1:dvn5MtmuQ/DFMwqf5j8QhEVpPX6fi3WGImhv8RUB4zA=
+ github.com/tdewolff/minify/v2 v2.12.9/go.mod h1:qOqdlDfL+7v0/fyymB+OP497nIxJYSvX4MQWA8OoiXU=
++github.com/tdewolff/minify/v2 v2.12.10-0.20231006153333-76935f3b55b3 h1:sRiSvZWSzRMwwK4efKc1fCGpsP7e0wi8srYfDnQyvEY=
++github.com/tdewolff/minify/v2 v2.12.10-0.20231006153333-76935f3b55b3/go.mod h1:IX+vt5HNKc+RFIQj7aI4D6RQ9p41vjay9lGorpHNC34=
+ github.com/tdewolff/parse/v2 v2.6.8 h1:mhNZXYCx//xG7Yq2e/kVLNZw4YfYmeHbhx+Zc0OvFMA=
+ github.com/tdewolff/parse/v2 v2.6.8/go.mod h1:XHDhaU6IBgsryfdnpzUXBlT6leW/l25yrFBTEb4eIyM=
+ github.com/tdewolff/test v1.0.9 h1:SswqJCmeN4B+9gEAi/5uqT0qpi1y2/2O47V/1hhGZT0=
+-- 
+2.34.1
+
