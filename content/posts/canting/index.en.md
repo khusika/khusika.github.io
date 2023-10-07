@@ -37,7 +37,7 @@ Canting is an android kernel based on Google kernel-common merged over CAF-kerne
 * I/O Schedulers: noop, cfq
 * Compat vDSO from Pixel kernel
 * TCP Congestion Algorithm: bbr, westwood, reno, cubic
-* [WireGuard](https://forum.xda-developers.com/t/wireguard-kernel-rom-integration.3711635/) VPN support
+* [WireGuard](https://xdaforums.com/t/wireguard-kernel-rom-integration.3711635/) VPN support
 * Boeffla wakelock blocker
 * [Simple Low Memory Killer](https://github.com/kerneltoast/simple_lmk)
 * Sound Control: Speaker, Microphone, Headphone (Per-channel control)
@@ -51,21 +51,21 @@ Canting is an android kernel based on Google kernel-common merged over CAF-kerne
 ## Device Support
 ### canting-3.18.y
 * ~~**MSM8953**~~ _abandoned_
-  * [Redmi Note 4X](https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/kernel-canting-0-1-t3865604)
-  * [Mi A1](https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3865600)
+  * [Redmi Note 4X](https://xdaforums.com/t/kernel-mido-3-18-y-canting-1-2-24-03-2019.3865604/)
+  * [Mi A1](https://xdaforums.com/t/kernel-tissot-3-18-y-canting-1-2-24-03-2019.3865600/)
 
 ### canting-4.9.y
 * **MSM8953**
-  * [Mi A1](https://forum.xda-developers.com/mi-a1/development/kernel-canting-0-1-t3871134)
+  * [Mi A1](https://xdaforums.com/t/kernel-tissot-4-9-y-canting-4-6-29-10-2019.3871134/)
 * **SDM845**
-  * [canting-4.9 for Mi 8](https://forum.xda-developers.com/mi-8/development/kernel-canting-0-1-t3907882)
-  * [canting-4.9 for Mi Mix 2S](https://forum.xda-developers.com/xiaomi-mi-mix-2s/development/kernel-canting-0-1-t3907884)
-  * [canting-4.9 for Poco F1](https://forum.xda-developers.com/poco-f1/development/kernel-canting-0-1-t3907883)
+  * [canting-4.9 for Mi 8](https://xdaforums.com/t/kernel-dipper-4-9-y-canting-3-6-22-08-2021.3907882/)
+  * [canting-4.9 for Mi Mix 2S](https://xdaforums.com/t/kernel-polaris-4-9-y-canting-3-6-22-08-2021.3907884/)
+  * [canting-4.9 for Poco F1](https://xdaforums.com/t/kernel-beryllium-4-9-y-canting-3-6-22-08-2021.3907883/)
 
 ## How to Build
 This section describes how to set up your local work environment to build the Canting Kernel. You must use Ubuntu/Debian.
 ### Set-up Environment
-1. Instal required packaged for Ubuntu based distro, according to the [source.android.com](https://source.android.com/setup/build/initializing#installing-required-packages-ubuntu-1404) and [xda-developers.com](https://forum.xda-developers.com/chef-central/android/guide-how-to-build-android-kernel-t3654336). Install the following packaged:
+1. Instal required packaged for Ubuntu based distro, according to the [source.android.com](https://source.android.com/setup/build/initializing#installing-required-packages-ubuntu-1404) and [xdaforums.com](https://xdaforums.com/t/guide-noobs-familiar-how-to-build-android-kernel-with-features.3654336/). Install the following packaged:
 ```bash
 sudo apt-get install git ccache automake lzop bison gperf build-essential zip curl zlib1g-dev zlib1g-dev:i386 g++-multilib python-networkx libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make optipng
 ```
@@ -117,6 +117,6 @@ cp '/canting/out/arch/arm64/boot/Image.gz-dtb' '/canting-kernel-dipper'
 zip -r9 kernel.zip * -x README.md kernel.zip
 ```
 ## References
-- [Albe96](https://forum.xda-developers.com/member.php?u=7334959), 2017. **[How To Build Android Kernel With Features](https://forum.xda-developers.com/chef-central/android/guide-how-to-build-android-kernel-t3654336)**.
+- [Albe96](https://xdaforums.com/m/albe96.7334959/), 2017. **[How To Build Android Kernel With Features](https://xdaforums.com/t/guide-noobs-familiar-how-to-build-android-kernel-with-features.3654336/)**.
 - [Android Open Source Project](https://source.android.com/), 2020. **[Establishing a Build Environment](https://source.android.com/setup/build/initializing#installing-required-packages-ubuntu-1404)**.
-- [Nathanchance](https://forum.xda-developers.com/member.php?u=6842057), 2017. **[How to compile an Android kernel](https://forum.xda-developers.com/android/software-hacking/reference-how-to-compile-android-kernel-t3627297)**.
+- [Nathanchance](https://xdaforums.com/m/nathanchance.6842057/), 2017. **[How to compile an Android kernel](https://xdaforums.com/t/reference-how-to-compile-an-android-kernel.3627297/)**.
