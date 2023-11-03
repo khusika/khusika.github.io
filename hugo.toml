@@ -161,7 +161,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # title shown in home page (HTML format is supported)
       title = "Khusika Dhamar Gusti"
       # subtitle shown in home page
-      subtitle = "<i>Hi! Nice to meet you!</i>"
+      subtitle = "XDA Recognized Developer & Contributor"
       # whether to use typeit animation for subtitle
       typeit = false
       # whether to show social links
@@ -170,7 +170,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       disclaimer = ""
     # Home page posts
     [params.home.posts]
-      enable = true
+      enable = false
       # special amount of posts in each home posts page
       paginate = 6
       # display image-preview
