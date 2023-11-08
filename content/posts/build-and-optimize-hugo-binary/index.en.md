@@ -39,19 +39,19 @@ I wrote this only for `linux/amd64` environment
 {{< /admonition >}}
 
 1. First of all, these are required packages to build Hugo binary:
- - [GoLang](https://go.dev/dl/) _Use go1.21.x_
+ - [GoLang](https://go.dev/dl/)
  - [UPX](https://upx.github.io/)
 
 2. Install required packages
 
    a. Setup GoLang
    ```bash
-   wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
+   wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
    ```
 
    b. Setup UPX
    ```bash
-   wget https://github.com/upx/upx/releases/download/v4.1.0/upx-4.1.0-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-4.1.0-amd64_linux.tar.xz --transform 's/upx-4.1.0-amd64_linux/upx/'
+   wget https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-4.2.1-amd64_linux.tar.xz --transform 's/upx-4.2.1-amd64_linux/upx/'
    ```
 
 3. Add all environment into `.profile`
