@@ -28,7 +28,7 @@ Below here are some of projects and contributions done by me:
 
 * [Pixys OS](https://pixysos.com/): I'm officially a device [maintainer](https://pixysos.com/team/khusika) for [Poco X3 Pro](https://pixysos.com/vayu) as per [this change](https://github.com/PixysOS/official_devices/pull/109). I'm also actively contributing to Pixys OS through [my gerrit changes](https://gerrit.pixysos.com/q/owner:mail%2540khusika.dev).
 
-* I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail%2540khusika.com). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
+* I've submited various of kernel fixes to the [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail@khusika.dev). The useful patches i've ever submited are `vDSO32` integration and also kernel compilation fixes with `CC_WERROR` on xiaomi devices.
 
 
 ### Daily Drivers
