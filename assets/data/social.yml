@@ -1,0 +1,56 @@
+github:
+  Weight: 1
+  Prefix: https://github.com/
+  Title: GitHub
+  Icon:
+    Simpleicons: github
+
+xda:
+  Weight: 2
+  Prefix: https://xdaforums.com/m/
+  Title: XDA-Developers
+  Newtab: true
+  Icon:
+    Simpleicons: xdadevelopers
+
+twitter:
+  Weight: 3
+  Prefix: https://twitter.com/
+  Title: Twitter
+  Icon:
+    Simpleicons: twitter
+
+instagram:
+  Weight: 4
+  Prefix: https://www.instagram.com/
+  Title: Instagram
+  Icon:
+    Simpleicons: instagram
+
+facebook:
+  Weight: 5
+  Prefix: https://facebook.com/
+  Title: facebook
+  Icon:
+    Simpleicons: facebook
+
+telegram:
+  Weight: 6
+  Prefix: https://t.me/
+  Title: Telegram
+  Icon:
+    Simpleicons: telegram
+
+discord:
+  Weight: 7
+  Prefix: https://discordapp.com/users/
+  Title: Discord
+  Icon:
+    Simpleicons: discord
+
+email:
+  Weight: 8
+  Template: mailto:%v
+  Title: Email
+  Icon:
+    Simpleicons: gmail
