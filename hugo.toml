@@ -201,7 +201,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # title name
       name = "Khusika"
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "<i class='fa-solid fa-laptop-code fa-fw'></i>"
+      pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # whether to use typeit animation for title name
@@ -219,13 +219,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     # whether to show copyright info
     copyright = true
     # whether to show the author
-    author = true
+    author = false
     # site creation time
     since = 2019
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
-    license= '<a rel="license external nofollow noopener noreffer" href="/privacy" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="/terms" target="_blank">Terms</a>'
+    license= '<a rel="license external nofollow noopener noreffer" href="/terms" target="_blank">Terms</a>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="/privacy" target="_blank">Privacy</a>'
 
   # Section (all posts) page config
   [params.section]
