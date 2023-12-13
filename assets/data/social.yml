@@ -30,7 +30,7 @@ instagram:
 facebook:
   Weight: 5
   Prefix: https://facebook.com/
-  Title: facebook
+  Title: Facebook
   Icon:
     Simpleicons: facebook
 
@@ -54,3 +54,10 @@ email:
   Title: Email
   Icon:
     Simpleicons: gmail
+
+paypal:
+  Weight: 9
+  Prefix: https://paypal.me/
+  Title: PayPal
+  Icon:
+    Simpleicons: paypal
