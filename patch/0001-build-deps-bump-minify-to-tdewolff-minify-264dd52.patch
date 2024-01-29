@@ -1,4 +1,4 @@
-From 35ddefbac0407dc272f223a83b97994229ab7d17 Mon Sep 17 00:00:00 2001
+From 9bd54a1712c414577cc44d00f68bdc1e95cc6586 Mon Sep 17 00:00:00 2001
 From: Khusika Dhamar Gusti <mail@khusika.dev>
 Date: Sun, 7 Jan 2024 14:36:58 +0700
 Subject: [PATCH] build(deps): bump minify to tdewolff/minify@264dd52
@@ -10,12 +10,12 @@ Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
  2 files changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index 6cb4ad377..48e985180 100644
+index e8beedbfb..7c572aa93 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -62,8 +62,8 @@ require (
  	github.com/spf13/cobra v1.8.0
- 	github.com/spf13/fsync v0.9.0
+ 	github.com/spf13/fsync v0.10.0
  	github.com/spf13/pflag v1.0.5
 -	github.com/tdewolff/minify/v2 v2.20.13
 -	github.com/tdewolff/parse/v2 v2.7.8
@@ -23,12 +23,12 @@ index 6cb4ad377..48e985180 100644
 +	github.com/tdewolff/parse/v2 v2.7.10
  	github.com/yuin/goldmark v1.6.0
  	github.com/yuin/goldmark-emoji v1.0.2
- 	go.uber.org/atomic v1.11.0
+ 	go.uber.org/automaxprocs v1.5.3
 diff --git a/go.sum b/go.sum
-index 58edbe3ff..18a8cea12 100644
+index 3c1cfe7ff..8ff722718 100644
 --- a/go.sum
 +++ b/go.sum
-@@ -330,8 +330,12 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
+@@ -426,8 +426,12 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
  github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
  github.com/tdewolff/minify/v2 v2.20.13 h1:TDWS1orkBJjq6Sz9NjEvHEeUnAvlfU7jgStGQBwBPGM=
  github.com/tdewolff/minify/v2 v2.20.13/go.mod h1:qnIJbnG2dSzk7LIa/UUwgN2OjS8ir6RRlqc0T/1q2xY=
