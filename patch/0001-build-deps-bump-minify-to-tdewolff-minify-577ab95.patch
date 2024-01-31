@@ -1,0 +1,57 @@
+From e9eb765c82a3f86679d77a7a7df907b4b0b8b801 Mon Sep 17 00:00:00 2001
+From: Khusika Dhamar Gusti <mail@khusika.dev>
+Date: Sun, 7 Jan 2024 14:36:58 +0700
+Subject: [PATCH] build(deps): bump minify to tdewolff/minify@577ab95
+
+Signed-off-by: Khusika Dhamar Gusti <mail@khusika.dev>
+---
+ go.mod |  4 ++--
+ go.sum | 10 ++++------
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+diff --git a/go.mod b/go.mod
+index c74972d0b..382f5b6db 100644
+--- a/go.mod
++++ b/go.mod
+@@ -62,8 +62,8 @@ require (
+ 	github.com/spf13/cobra v1.8.0
+ 	github.com/spf13/fsync v0.10.0
+ 	github.com/spf13/pflag v1.0.5
+-	github.com/tdewolff/minify/v2 v2.20.13
+-	github.com/tdewolff/parse/v2 v2.7.8
++	github.com/tdewolff/minify/v2 v2.20.16
++	github.com/tdewolff/parse/v2 v2.7.11
+ 	github.com/yuin/goldmark v1.6.0
+ 	github.com/yuin/goldmark-emoji v1.0.2
+ 	go.uber.org/automaxprocs v1.5.3
+diff --git a/go.sum b/go.sum
+index 4795d0d68..799bc316f 100644
+--- a/go.sum
++++ b/go.sum
+@@ -357,8 +357,6 @@ github.com/mattn/go-runewidth v0.0.9 h1:Lm995f3rfxdpd6TSmuVCHVb/QhupuXlYr8sCI/Qd
+ github.com/mattn/go-runewidth v0.0.9/go.mod h1:H031xJmbD/WCDINGzjvQ9THkh0rPKHF+m2gUSrubnMI=
+ github.com/mitchellh/hashstructure v1.1.0 h1:P6P1hdjqAAknpY/M1CGipelZgp+4y9ja9kmUZPXP+H0=
+ github.com/mitchellh/hashstructure v1.1.0/go.mod h1:xUDAozZz0Wmdiufv0uyhnHkUTN6/6d8ulp4AwfLKrmA=
+-github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
+-github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
+ github.com/mitchellh/mapstructure v1.5.1-0.20231216201459-8508981c8b6c h1:cqn374mizHuIWj+OSJCajGr/phAmuMug9qIX3l9CflE=
+ github.com/mitchellh/mapstructure v1.5.1-0.20231216201459-8508981c8b6c/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
+ github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 h1:RWengNIwukTxcDr9M+97sNutRR1RKhG96O6jWumTTnw=
+@@ -426,10 +424,10 @@ github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO
+ github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
+ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
+ github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
+-github.com/tdewolff/minify/v2 v2.20.13 h1:TDWS1orkBJjq6Sz9NjEvHEeUnAvlfU7jgStGQBwBPGM=
+-github.com/tdewolff/minify/v2 v2.20.13/go.mod h1:qnIJbnG2dSzk7LIa/UUwgN2OjS8ir6RRlqc0T/1q2xY=
+-github.com/tdewolff/parse/v2 v2.7.8 h1:1cnVqa8L63xFkc2vfRsZTM6Qy35nJpTvQ2Uvdv3vbvs=
+-github.com/tdewolff/parse/v2 v2.7.8/go.mod h1:3FbJWZp3XT9OWVN3Hmfp0p/a08v4h8J9W1aghka0soA=
++github.com/tdewolff/minify/v2 v2.20.16 h1:/C8dtRkxLTIyUlKlBz46gDiktCrE8a6+c1gTrnPFz+U=
++github.com/tdewolff/minify/v2 v2.20.16/go.mod h1:/FvxV9KaTrFu35J9I2FhRvWSBxcHj8sDSdwBFh5voxM=
++github.com/tdewolff/parse/v2 v2.7.11 h1:v+W45LnzmjndVlfqPCT5gGjAAZKd1GJGOPJveTIkBY8=
++github.com/tdewolff/parse/v2 v2.7.11/go.mod h1:3FbJWZp3XT9OWVN3Hmfp0p/a08v4h8J9W1aghka0soA=
+ github.com/tdewolff/test v1.0.11-0.20231101010635-f1265d231d52/go.mod h1:6DAvZliBAAnD7rhVgwaM7DE5/d9NMOAJ09SqYqeK4QE=
+ github.com/tdewolff/test v1.0.11-0.20240106005702-7de5f7df4739 h1:IkjBCtQOOjIn03u/dMQK9g+Iw9ewps4mCl1nB8Sscbo=
+ github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
+-- 
+2.34.1
+
