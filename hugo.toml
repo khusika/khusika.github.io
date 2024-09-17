@@ -16,8 +16,6 @@ enableRobotsTXT = true
 enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
-# UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
-googleAnalytics = ""
 
 ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstoken", "error-remote-getjson"]
 
@@ -88,6 +86,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Raja Brawijaya", "Canting Kernel"]
   # whether to enable CSS and JS source mapping
   SourceMap = false
+
+
+  # Author config
+  [params.author]
+    name = "Khusika Dhamar Gusti"
+    email = "mail@khusika.dev"
+    link = "/about/"
 
   # PWA config
   [params.pwa]
@@ -536,12 +541,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     startLevel = 2
     endLevel = 6
 
-# Author config
-[author]
-  name = "Khusika Dhamar Gusti"
-  email = "mail@khusika.dev"
-  link = "/about/"
-
 # Sitemap config
 [sitemap]
   changefreq = "weekly"
@@ -552,6 +551,11 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 [Permalinks]
   # posts = ":year/:month/:filename"
   posts = ":filename"
+
+[services.googleAnalytics]
+  # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
+  # UA-PROPERTY_ID 或者是 G-MEASUREMENT_ID 的 google analytics 代码
+  ID = ""
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
