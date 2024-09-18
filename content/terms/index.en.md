@@ -1,9 +1,9 @@
 ---
 title: "Terms and Conditions"
-subtitle: "Terms and Conditions for khusika.dev"
+subtitle: "Terms and Conditions for khusika.id"
 date: 2021-06-09T13:47:57+07:00
 draft: false
-description: "Terms and Conditions for khusika.dev"
+description: "Terms and Conditions for khusika.id"
 resources:
 - name: "featured-image"
   src: "featured-image.webp"
@@ -36,7 +36,7 @@ For the purposes of these Terms and Conditions:
   * Country refers to: Indonesia
 
   * Company (referred to as either "the Company", "We", "Us" or "Our" in this
-    Agreement) refers to khusika.deev.
+    Agreement) refers to khusika.id.
 
   * Device means any device that can access the Service such as a computer, a
     cellphone or a digital tablet.
@@ -53,7 +53,7 @@ For the purposes of these Terms and Conditions:
     data, information, products or services) provided by a third-party that
     may be displayed, included or made available by the Service.
 
-  * Website refers to khusika.deev, accessible from <https://khusika.dev>
+  * Website refers to khusika.id, accessible from <https://khusika.id>
 
   * You means the individual accessing or using the Service, or the company,
     or other legal entity on behalf of which such individual is accessing or
@@ -230,4 +230,4 @@ Service.
 If you have any questions about these Terms and Conditions, You can contact
 us:
 
-  * By email: mail@khusika.dev
+  * By email: mail@khusika.id

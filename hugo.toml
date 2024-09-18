@@ -1,4 +1,4 @@
-baseURL = "https://khusika.dev"
+baseURL = "https://khusika.id"
 # [en, zh-cn, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
 # theme
@@ -91,7 +91,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # Author config
   [params.author]
     name = "Khusika Dhamar Gusti"
-    email = "mail@khusika.dev"
+    email = "mail@khusika.id"
     link = "/about/"
 
   # PWA config
@@ -127,12 +127,12 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "Hi, I'm Khusika. I am an amateur developer from Indonesia. I'm interested in open source development, especially with low-architecture. As well as being interested in vector designs using [Inkscape](https://inkscape.org/). Apart from that, I also like to play mobile games on Android. I will share some of my activities that you might like here in a [blog post](https://khusika.dev/posts/)."
+    description = "Hi, I'm Khusika. I am an amateur developer from Indonesia. I'm interested in open source development, especially with low-architecture. As well as being interested in vector designs using [Inkscape](https://inkscape.org/). Apart from that, I also like to play mobile games on Android. I will share some of my activities that you might like here in a [blog post](https://khusika.id/posts/)."
     # description of your status
     [[params.about.status]]
       faIcon = "fa-solid fa-building"
       title = "Company"
-      desc = "khusika.dev"
+      desc = "khusika.id"
     [[params.about.status]]
       faIcon = "fa-solid fa-briefcase fa-fw"
       title = "Occupation"
@@ -185,10 +185,10 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   [params.social]
     GitHub = "khusika"
     Twitter = "khusikadev"
-    Instagram = "khusika.dev"
-    Facebook = "khusika.dev"
+    Instagram = "khusika.id"
+    Facebook = "khusika.id"
     Telegram = "khusika"
-    Email = "mail@khusika.dev"
+    Email = "mail@khusika.id"
     xda = "khusika.5123347"
     discord = "701078971294548041"
     paypal = "khusika"
