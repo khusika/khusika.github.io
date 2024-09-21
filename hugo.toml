@@ -91,7 +91,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # Author config
   [params.author]
     name = "Khusika Dhamar Gusti"
-    email = "mail@khusika.id"
+    email = "khusikadhamar@gmai.com"
     link = "/about/"
 
   # PWA config
@@ -188,9 +188,8 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     Instagram = "khusika.id"
     Facebook = "khusika.id"
     Telegram = "khusika"
-    Email = "mail@khusika.id"
+    Email = "khusikadhamar@gmail.com"
     xda = "khusika.5123347"
-    discord = "701078971294548041"
     paypal = "khusika"
 
   # Header config

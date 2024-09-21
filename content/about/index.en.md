@@ -68,4 +68,4 @@ Sometimes i play games on Android, below here are games that i often play:
   - Server: Asia
 
 ---
-If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:mail@khusika.id) or [telegram](https://t.me/khusika).
+If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:khusikadhamar@gmail.com) or [telegram](https://t.me/khusika).
