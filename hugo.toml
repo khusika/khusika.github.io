@@ -361,17 +361,17 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       enable = true
       # Disqus comment config (https://disqus.com/)
       [params.page.comment.disqus]
-        enable = false
+        enable = true
         # Disqus shortname to use Disqus in posts
         shortname = "khusika"
       # Vssue comment config (https://github.com/meteorlxy/vssue)
       # Vssue 评论系统设置 (https://github.com/meteorlxy/vssue)
       [params.page.comment.vssue]
-        enable = true
-        platform = "github"
-        owner = "khusika"
-        repo = "comments"
-        clientId = "85f66799bb256a5064be"
+        enable = false
+        platform = ""
+        owner = ""
+        repo = ""
+        clientId = ""
         clientSecret = ""
       # Gitalk comment config (https://github.com/gitalk/gitalk)
       [params.page.comment.gitalk]
