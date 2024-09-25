@@ -41,22 +41,15 @@ telegram:
   Icon:
     Simpleicons: telegram
 
-discord:
-  Weight: 7
-  Prefix: https://discordapp.com/users/
-  Title: Discord
-  Icon:
-    Simpleicons: discord
-
 email:
-  Weight: 8
+  Weight: 7
   Template: mailto:%v
   Title: Email
   Icon:
     Simpleicons: gmail
 
 paypal:
-  Weight: 9
+  Weight: 8
   Prefix: https://paypal.me/
   Title: PayPal
   Icon:
