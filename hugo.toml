@@ -81,7 +81,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # site description
-  description = "Khusika is an android developer from Indonesia"
+  description = "Khusika is an Android developer from Indonesia and actively serves as a Forum Staff Member on the XDA Forums."
   # site keywords
   keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Raja Brawijaya", "Canting Kernel"]
   # whether to enable CSS and JS source mapping
@@ -127,7 +127,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "Hi, I'm Khusika. I am an amateur developer from Indonesia. I'm interested in open source development, especially with low-architecture. As well as being interested in vector designs using [Inkscape](https://inkscape.org/). Apart from that, I also like to play mobile games on Android. I will share some of my activities that you might like here in a [blog post](https://khusika.id/posts/)."
+    description = "Hi, I'm Khusika, an amateur developer from [Indonesia](https://en.wikipedia.org/wiki/Indonesia). I have a keen interest in open-source development, particularly with low-architecture projects. In addition, I am passionate about creating vector designs using [Inkscape](https://inkscape.org/). Aside from these interests, I also enjoy playing mobile games on the Android platform. I will be sharing some of my activities and projects that might be of interest to you here in a [blog post](https://khusika.id/posts/)."
     # description of your status
     [[params.about.status]]
       faIcon = "fa-solid fa-building"
@@ -166,7 +166,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # title shown in home page (HTML format is supported)
       title = "Khusika Dhamar Gusti"
       # subtitle shown in home page
-      subtitle = "Agroindustrial Engineering"
+      subtitle = "XDA Forum Staff Member"
       # whether to use typeit animation for subtitle
       typeit = false
       # whether to show social links

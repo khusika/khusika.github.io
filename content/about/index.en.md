@@ -35,10 +35,11 @@ Below here are some of projects and contributions done by me:
 
 * Phone:
   
-  - Xiaomi 12 (cupid)
-  - ~~Poco X3 Pro (vayu)~~
-  - ~~Mi 8 (dipper)~~
-  - ~~Mi A1 (tissot)~~
+  - Redmi Note 13 4G NFC (Sapphiren)
+  - ~~Xiaomi 12 (Cupid)~~
+  - ~~Poco X3 Pro (Vayu)~~
+  - ~~Mi 8 (Dipper)~~
+  - ~~Mi A1 (Tissot)~~
 
 * Laptop:
   
@@ -50,7 +51,7 @@ Below here are some of projects and contributions done by me:
 
 ### Daily Games
 
-Sometimes i play games on Android, below here are games that i often play:
+Occasionally, I indulge in playing games on my Android device. Listed below are the games that I frequently enjoy:
 
 * [Bleach: Brave Souls](https://play.google.com/store/apps/details?id=com.klab.bleach)
   
@@ -68,4 +69,4 @@ Sometimes i play games on Android, below here are games that i often play:
   - Server: Asia
 
 ---
-If you have any question related to my articles or projects, feel free too reach out to me via [e-mail](mailto:khusikadhamar@gmail.com) or [telegram](https://t.me/khusika).
+Should you have any questions related to my articles or projects, please feel free to reach out to me via [e-mail](mailto:khusikadhamar@gmail.com) or [Telegram](https://t.me/khusika).
