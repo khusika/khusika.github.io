@@ -2,7 +2,7 @@
 title: "My Journey with Custom Domains"
 subtitle: ""
 date: 2024-10-31T10:10:10+07:00
-draft: false
+draft: true
 author: "Khusika"
 authorLink: ""
 description: "My story with domain migration"
