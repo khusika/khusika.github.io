@@ -30,7 +30,7 @@ Optimizing the sizes of Hugo binary may useful for saving your storage, especial
 
 Based on those articles, we can apply it to optimize Hugo binary and save more sizes. Take a look into my tweet below:
 
-{{< oembed "tweet" "https://twitter.com/khusikadhamar/status/1655029405402669056" >}}
+{{< oembed "tweet" "https://x.com/khusikadev/status/1655029405402669056" >}}
 
 ## Install Required Packages
 
@@ -46,12 +46,12 @@ I wrote this only for `linux/amd64` environment
 
    a. Setup GoLang
    ```bash
-   wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
+   wget https://go.dev/dl/go1.22.11.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.22.11.linux-amd64.tar.gz
    ```
 
    b. Setup UPX
    ```bash
-   wget https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-4.2.1-amd64_linux.tar.xz --transform 's/upx-4.2.1-amd64_linux/upx/'
+   wget https://github.com/upx/upx/releases/download/v4.2.4/upx-4.2.4-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-4.2.4-amd64_linux.tar.xz --transform 's/upx-4.2.4-amd64_linux/upx/'
    ```
 
 3. Add all environment into `.profile`
