@@ -129,7 +129,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "Hi, I'm Khusika, an amateur developer from [Indonesia](https://en.wikipedia.org/wiki/Indonesia). I have a keen interest in open-source development, particularly with low-architecture projects. In addition, I am passionate about creating vector designs using [Inkscape](https://inkscape.org/). Aside from these interests, I also enjoy playing mobile games on the Android platform. I will be sharing some of my activities and projects that might be of interest to you here in a [blog post](https://khusika.id/posts/)."
+    description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). I have a keen interest in open-source development, especially low-architecture projects, as well as creating vector designs using [Inkscape](https://inkscape.org/)."
     # description of your status
     [[params.about.status]]
       faIcon = "fa-solid fa-building"
@@ -138,11 +138,11 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     [[params.about.status]]
       faIcon = "fa-solid fa-briefcase fa-fw"
       title = "Occupation"
-      desc = "Freelancer"
+      desc = "Freelancer / Master's Students"
     [[params.about.status]]
       title = "Location"
       faIcon = "fa-solid fa-map-marker-alt"
-      desc = "Indonesia"
+      desc = "Surabaya, Indonesia"
     # description of your parameter
     [[params.about.parameter]]
       language = "Android OS Development"
