@@ -22,6 +22,10 @@ license: '<a rel="license external nofollow noopener noreffer" href="https://cre
 See how to embed Facebook page, post, and video in Hugo as shortcodes.
 <!--more-->
 
+{{< admonition warning "Update Jan 2025" >}}
+This article is no longer applicable and may be subject to revision in the future.
+{{< /admonition >}}
+
 {{< admonition warning "Messages from Facebook" >}}
 Facebook announced [**v11.0**](https://developers.facebook.com/docs/graph-api/changelog/version11.0) of the Graph API and Marketing APIs. With this update, there are new requirements to be able to access [**oEmbed APIs**](https://developers.facebook.com/docs/plugins/oembed/). To continue accessing the oEmbed APIs, you will have to [submit your app](https://developers.facebook.com/docs/plugins/oembed/) for review by **September 6th, 2021**. If you want to request new access to the oEmbed APIs, you will also need to submit your app(s) for review.
 {{< /admonition >}}
@@ -128,18 +132,6 @@ c. Sample input of Facebook Video
 
 4. The rendered output will be like this:
 
-{{< admonition warning "Update May 2023" true >}}
-Sample output may not work because Facebook API has been deactivated
+{{< admonition warning "Update Jan 2024" true >}}
+Removed for future revision
 {{</ admonition >}}
-
-a. Sample output of Facebook Page
-
-{{< oembed "fb" "page" "https://www.facebook.com/FacebookforDevelopers" >}}
-
-b. Sample output of Facebook Post
-
-{{< oembed "fb" "post" "https://www.facebook.com/FacebookforDevelopers/photos/a.441861428552/10151617410093553" >}}
-
-c. Sample output of Facebook Video
-
-{{< oembed "fb" "video" "https://www.facebook.com/FacebookforDevelopers/videos/2201055573317594" >}}
