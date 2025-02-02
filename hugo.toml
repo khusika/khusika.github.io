@@ -174,7 +174,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = ""
+      disclaimer = "Hi! 👋 Welcome to my space!"
     # Home page posts
     [params.home.posts]
       enable = true
