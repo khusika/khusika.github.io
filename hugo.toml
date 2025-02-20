@@ -83,9 +83,9 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # site description
-  description = "Khusika is an Android developer from Indonesia and actively serves as a Forum Staff Member on the XDA Forums."
+  description = "Khusika is an Android developer from Indonesia and actively serves as a Forum Staff Member on the XDA Forums. Currently, Khusika is pursuing a Master's degree at Airlangga University."
   # site keywords
-  keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Raja Brawijaya", "Canting Kernel"]
+  keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Universitas Airlangga", "Pengembangan Sumber Daya Manusia", "Raja Brawijaya", "Canting Kernel"]
   # whether to enable CSS and JS source mapping
   SourceMap = false
 
@@ -132,17 +132,17 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). I have a keen interest in open-source development, especially low-architecture projects, as well as creating vector designs using [Inkscape](https://inkscape.org/)."
     # description of your status
     [[params.about.status]]
-      faIcon = "fa-solid fa-building"
+      faIcon = "fa-solid fa-school"
       title = "Company"
-      desc = "khusika.id"
+      desc = "Airlangga University"
     [[params.about.status]]
       faIcon = "fa-solid fa-briefcase fa-fw"
       title = "Occupation"
-      desc = "Freelancer / Master's Students"
+      desc = "Master's Students"
     [[params.about.status]]
-      title = "Location"
-      faIcon = "fa-solid fa-map-marker-alt"
-      desc = "Surabaya, Indonesia"
+      title = "Major"
+      faIcon = "fa-solid fa-graduation-cap"
+      desc = "Human Resource Development"
     # description of your parameter
     [[params.about.parameter]]
       language = "Android OS Development"
