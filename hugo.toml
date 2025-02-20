@@ -2,7 +2,6 @@ baseURL = "https://khusika.id"
 # [en, zh-cn, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
 # theme
-# 主题
 theme = "FeelIt"
 # themes directory
 themesDir = "themes"
@@ -65,22 +64,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
 [params]
   # LoveIt theme version
-  # LoveIt 主题版本
   version = "1.0.X"
   # site default theme ("light", "dark", "auto")
-  # 网站默认主题 ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = "https://github.com/khusika/khusika.github.io"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
-  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
   # date format
-  # 日期格式
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
-  # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
   # site description
   description = "Khusika is an Android developer from Indonesia and actively serves as a Forum Staff Member on the XDA Forums. Currently, Khusika is pursuing a Master's degree at Airlangga University."
