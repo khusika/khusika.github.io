@@ -22,11 +22,11 @@ Below here are some of projects and contributions done by me:
 
 * [Hugo FeelIt](https://github.com/khusika/FeelIt): is a clean, elegant but advanced blog theme for [Hugo](https://gohugo.io/).
 
-* [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): This application is designed to provide an attendance system based on a QR-code scanner. I contributed as a _front-end_ developer in the creation of this application under the [Rajabrawijaya Organization](https://rajabrawijaya.ub.ac.id/).
+* [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): The application was developed under the [Rajabrawijaya 2017 committee](https://rajabrawijaya.ub.ac.id/), with the primary objective of providing an attendance system utilizing a QR code scanner. During this period, I contributed as a front-end developer in the creation of this application.
 
-* [XDA-Developers](https://xdaforums.com/m/khusika.5123347/): I have earned the titles of [_Recognized Developer_](https://xdaforums.com/t/recognized-developer-code-of-conduct-minimum-requirements.4510165/) and [_Recognized Contributor_](https://xdaforums.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966) within the XDA Forums. During my time here, I have created various open-source projects, including ROMs, kernels, and mods. In early 2024, I was honored to join the forum as a [_Forum Moderator_](https://docs.google.com/document/d/1lK5rP103OL3StU3q9iqwX9LU_k8XABeSQIAT3EHCqgM/pub), further contributing to this community.
+* [XDA-Developers](https://xdaforums.com/m/khusika.5123347/): I have earned the titles of [_Recognized Developer_](https://xdaforums.com/t/recognized-developer-code-of-conduct-minimum-requirements.4510165/) and [_Recognized Contributor_](https://xdaforums.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966) within the XDA Forums. During my time here, I have created various open-source projects, including ROMs, kernels, and mods. In early 2024, I was honored to join the forum as a [_Forum Moderator_](https://docs.google.com/document/d/1lK5rP103OL3StU3q9iqwX9LU_k8XABeSQIAT3EHCqgM/pub) and continue to actively contribute to the Forum.
 
-* [Pixys OS](https://pixysos.com/): I served as a device [maintainer](https://pixysos.com/team/khusika) for the Poco X3 Pro, as highlighted in [this change](https://github.com/PixysOS/official_devices/pull/109). Additionally, I am actively contributing to Pixys OS through my [my gerrit changes](https://gerrit.pixysos.com/q/owner:mail%2540khusika.dev).
+* [Pixys OS](https://pixysos.com/): I served as a device [maintainer](https://pixysos.com/team/khusika) for the Poco X3 Pro, as highlighted in [this change](https://github.com/PixysOS/official_devices/pull/109). Additionally, I actively contributed to Pixys OS through [my gerrit changes](https://gerrit.pixysos.com/q/owner:mail%2540khusika.dev). However, I am no longer involved in this project and community.
 
 * I have submitted various kernel fixes to [lineageos.org](https://lineageos.org/) through [my code-review](https://review.lineageos.org/q/owner:mail@khusika.dev) contributions. Some of the most significant patches I have provided include the integration of `vDSO32` and kernel compilation fixes with `CC_WERROR` for Xiaomi devices. These contributions aim to enhance the functionality and stability of the platform.
 
@@ -50,7 +50,7 @@ Below here are some of projects and contributions done by me:
 
 ### Daily Games
 
-Occasionally, I indulge in playing games on my Android device. Listed below are the games that I frequently enjoy:
+Sometimes I like to play games on my Android phone. Listed below are the games that I frequently enjoy:
 
 * [Bleach: Brave Souls](https://play.google.com/store/apps/details?id=com.klab.bleach)
   
@@ -62,9 +62,9 @@ Occasionally, I indulge in playing games on my Android device. Listed below are 
   - ID: 11413118
   - Server: Asia-Pacific
 
-* [Super Mecha Champions](https://play.google.com/store/apps/details?id=com.netease.g93na)
+* ~~[Super Mecha Champions](https://play.google.com/store/apps/details?id=com.netease.g93na)~~ _shutdown_
   
-  - ID: ~~1582536~~_sold_
+  - ID: ~~1582536~~ _sold_
   - Server: Asia
 
 ---
