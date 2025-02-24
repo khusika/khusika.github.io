@@ -46,12 +46,12 @@ I wrote this only for `linux/amd64` environment
 
    a. Setup GoLang
    ```bash
-   wget https://go.dev/dl/go1.22.11.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.22.11.linux-amd64.tar.gz
+   wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz && sudo tar -C /usr/local -xzf go1.24.0.linux-amd64.tar.gz
    ```
 
    b. Setup UPX
    ```bash
-   wget https://github.com/upx/upx/releases/download/v4.2.4/upx-4.2.4-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-4.2.4-amd64_linux.tar.xz --transform 's/upx-4.2.4-amd64_linux/upx/'
+   wget https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-amd64_linux.tar.xz && sudo tar -C /usr/local -xf upx-5.0.0-amd64_linux.tar.xz --transform 's/upx-5.0.0-amd64_linux/upx/'
    ```
 
 3. Add all environment into `.profile`
