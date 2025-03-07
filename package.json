@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "purgecss": "^6.0.0"
+    "purgecss": "^7.0.2"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
