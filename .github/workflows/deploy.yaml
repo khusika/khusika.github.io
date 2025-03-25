@@ -23,6 +23,13 @@ jobs:
         with:
           scandir: './build'
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+        run: |
+            npm ci
+
       - name: Build Page
         if: |
           !contains(github.event.head_commit.message, 'build:')
@@ -30,7 +37,6 @@ jobs:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
         run: |
-            npm ci
             npm run deploy
 
       - name: Validate HTML
