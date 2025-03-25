@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "purgecss": "^7.0.2"
+    "purgecss": "^7.0.2",
+    "vnu-jar": "^24.10.17"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
@@ -8,6 +9,7 @@
     "debug": "npm run buildjs && ./bin/$(go env GOARCH)/hugo server --gc -D -M --environment production",
     "deploy": "npm run buildjs && rm -f -r docs && ./bin/$(go env GOARCH)/hugo --gc --minify -d docs && npm run purgecss && npm run purgefont && rm -f -r ./docs/lib/katex",
     "purgecss": "npx purgecss --config ./purgecss.config.js -o './docs/css/'",
-    "purgefont": "npx purgecss --config ./purgefont.config.js -o './docs/lib/fontawesome-free/all.min.css'"
+    "purgefont": "npx purgecss --config ./purgefont.config.js -o './docs/lib/fontawesome-free/all.min.css'",
+    "validatehtml": "node validate.js"
   }
 }

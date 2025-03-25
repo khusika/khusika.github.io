@@ -37,8 +37,7 @@ jobs:
         if: |
           !contains(github.event.head_commit.message, 'build:')
         run: |
-            wget -P ./bin https://github.com/validator/validator/releases/download/latest/vnu.jar
-            java -jar ./bin/vnu.jar --verbose --skip-non-html --also-check-css --errors-only ./docs
+            npm run validatehtml
 
       - name: Upload Docs
         if: |
