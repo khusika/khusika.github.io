@@ -42,30 +42,19 @@ Below here are some of projects and contributions done by me:
 
 * Laptop:
   
+  - Model: HP Victus 15-fa0008TX
   - CPU: 12th Gen Intel(R) Core(TM) i7-12700H
   - GPU: NVIDIA GeForce RTX 3050
   - Storage: 512 GB PCIe® NVMe™ TLC M.2 SSD
   - RAM: Corsair Vengeance 32GB (2 x 16GB) DDR4 3200MHz CMSX32GX4M2A3200C22
 
-
-### Daily Games
-
-Sometimes I like to play games on my Android phone. Listed below are the games that I frequently enjoy:
-
-* [Bleach: Brave Souls](https://play.google.com/store/apps/details?id=com.klab.bleach)
+* SBC:
   
-  - ID: 75424574
-  - Server: Global
-
-* [Punishing: Gray Raven](https://play.google.com/store/apps/details?id=com.kurogame.gplay.punishing.grayraven.en)
-  
-  - ID: 11413118
-  - Server: Asia-Pacific
-
-* ~~[Super Mecha Champions](https://play.google.com/store/apps/details?id=com.netease.g93na)~~ _shutdown_
-  
-  - ID: ~~1582536~~ _sold_
-  - Server: Asia
+  - Model: OrangePi 5 Ultra
+  - CPU: Rockchip RK3588
+  - GPU: Integrated ARM Mali-G610
+  - Storage: 512 GB PCIe® NVMe™ TLC M.2 SSD
+  - RAM: Dedicated 16GB LPDDR5
 
 ---
 Should you have any questions related to my articles or projects, please feel free to reach out to me via [e-mail](mailto:khusikadhamar@gmail.com) or [Telegram](https://t.me/khusika).
