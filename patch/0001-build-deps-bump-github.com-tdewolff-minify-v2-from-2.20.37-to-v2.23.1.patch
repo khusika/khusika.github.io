@@ -1,4 +1,4 @@
-From 48cacd47d7d67f5e69fd66d241d6f703cee06dae Mon Sep 17 00:00:00 2001
+From 8ea85efbf117cfe262e3a05c9efa042dbebb82d0 Mon Sep 17 00:00:00 2001
 From: Khusika Dhamar Gusti <khusikadhamar@gmail.com>
 Date: Tue, 25 Mar 2025 05:02:21 +0700
 Subject: [PATCH] build(deps): bump github.com/tdewolff/minify/v2 from 2.20.37
@@ -11,7 +11,7 @@ Signed-off-by: Khusika Dhamar Gusti <khusikadhamar@gmail.com>
  2 files changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/go.mod b/go.mod
-index 9423c6f68..c38bbe831 100644
+index 7ac1780d5..e6948842c 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -66,8 +66,8 @@ require (
@@ -23,10 +23,10 @@ index 9423c6f68..c38bbe831 100644
 +	github.com/tdewolff/minify/v2 v2.23.1
 +	github.com/tdewolff/parse/v2 v2.7.23
  	github.com/tetratelabs/wazero v1.9.0
- 	github.com/yuin/goldmark v1.7.8
+ 	github.com/yuin/goldmark v1.7.9
  	github.com/yuin/goldmark-emoji v1.0.5
 diff --git a/go.sum b/go.sum
-index 5712679f0..384eee347 100644
+index 234dc465f..c218c1698 100644
 --- a/go.sum
 +++ b/go.sum
 @@ -451,11 +451,16 @@ github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOf
