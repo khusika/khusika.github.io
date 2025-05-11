@@ -45,7 +45,7 @@ Below here are some of projects and contributions done by me:
   - Model: HP Victus 15-fa0008TX
   - CPU: 12th Gen Intel(R) Core(TM) i7-12700H
   - GPU: NVIDIA GeForce RTX 3050
-  - Storage: 512 GB PCIe® NVMe™ TLC M.2 SSD
+  - Storage: 512 GB WD PC SN810 M.2 NVMe
   - RAM: Corsair Vengeance 32GB (2 x 16GB) DDR4 3200MHz CMSX32GX4M2A3200C22
 
 * SBC:
@@ -53,7 +53,7 @@ Below here are some of projects and contributions done by me:
   - Model: OrangePi 5 Ultra
   - CPU: Rockchip RK3588
   - GPU: Integrated ARM Mali-G610
-  - Storage: 512 GB PCIe® NVMe™ TLC M.2 SSD
+  - Storage: 512 GB KYO KAIZEN M.2 NVMe
   - RAM: Dedicated 16GB LPDDR5
 
 ---
