@@ -30,7 +30,9 @@ Optimizing the sizes of Hugo binary may useful for saving your storage, especial
 
 Based on those articles, we can apply it to optimize Hugo binary and save more sizes. Take a look into my tweet below:
 
-{{< oembed "tweet" "https://x.com/khusikadev/status/1655029405402669056" >}}
+{{< admonition warning "Update Jun 2025" >}}
+The tweet has been removed as the original post is no longer available.
+{{< /admonition >}}
 
 ## Install Required Packages
 
