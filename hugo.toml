@@ -179,7 +179,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # Social config in home page
   [params.social]
     GitHub = "khusika"
-    Twitter = "khusikadev"
     Instagram = "khusika.id"
     Facebook = "khusika.id"
     Telegram = "khusika"

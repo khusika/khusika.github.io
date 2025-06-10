@@ -13,43 +13,36 @@ xda:
   Icon:
     Simpleicons: xdadevelopers
 
-twitter:
-  Weight: 3
-  Prefix: https://twitter.com/
-  Title: Twitter
-  Icon:
-    Simpleicons: twitter
-
 instagram:
-  Weight: 4
+  Weight: 3
   Prefix: https://www.instagram.com/
   Title: Instagram
   Icon:
     Simpleicons: instagram
 
 facebook:
-  Weight: 5
+  Weight: 4
   Prefix: https://facebook.com/
   Title: Facebook
   Icon:
     Simpleicons: facebook
 
 telegram:
-  Weight: 6
+  Weight: 5
   Prefix: https://t.me/
   Title: Telegram
   Icon:
     Simpleicons: telegram
 
 email:
-  Weight: 7
+  Weight: 6
   Template: mailto:%v
   Title: Email
   Icon:
     Simpleicons: gmail
 
 paypal:
-  Weight: 8
+  Weight: 7
   Prefix: https://paypal.me/
   Title: PayPal
   Icon:
