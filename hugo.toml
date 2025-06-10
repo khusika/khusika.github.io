@@ -76,7 +76,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
   # site description
-  description = "Khusika is an Android developer from Indonesia and actively serves as a Forum Staff Member on the XDA Forums. Currently, Khusika is pursuing a Master's degree at Airlangga University."
+  description = "Khusika is an Indonesian Android developer currently pursuing a Master's degree at Airlangga University."
   # site keywords
   keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Universitas Airlangga", "Pengembangan Sumber Daya Manusia", "Raja Brawijaya", "Canting Kernel"]
   # whether to enable CSS and JS source mapping
@@ -161,13 +161,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       # title shown in home page (HTML format is supported)
       title = "Khusika Dhamar Gusti"
       # subtitle shown in home page
-      subtitle = "XDA Forum Staff Member"
+      subtitle = "Hi! 👋 Welcome to my space!"
       # whether to use typeit animation for subtitle
       typeit = false
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = "Hi! 👋 Welcome to my space!"
+      disclaimer = ""
     # Home page posts
     [params.home.posts]
       enable = false
