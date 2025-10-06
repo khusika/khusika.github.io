@@ -1,0 +1,6 @@
+/assets/js/
+/docs
+/node_modules/
+/resources/_gen/
+/src
+.hugo_build.lock

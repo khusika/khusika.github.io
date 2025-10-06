@@ -1,0 +1,4 @@
+[submodule "themes/FeelIt"]
+	path = themes/FeelIt
+	url = git@github.com:khusika/FeelIt.git
+	branch = upstreamfix

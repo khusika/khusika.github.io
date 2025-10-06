@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Copyright (C) 2023 Khusika Dhamar Gusti
+
+RED="\033[01;31m"
+YLW="\033[01;33m"
+RST="\033[0m"
+BIN="./bin/$(go env GOARCH)/hugo"
+SRC="./src"
+URL="https://github.com/gohugoio/hugo"
+
+if ! [ -x "$(command -v upx)" ]; then
+  echo -e "${RED}Build failed: ${YLW}\e]8;;https://upx.github.io\aUPX\e]8;;\a does not exist."
+  exit
+fi
+
+if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
+  if [ -x "$(command -v "${BIN}")" ]; then
+    v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
+  else
+    v1="0"
+  fi
+  v2="$(git ls-remote ${URL} HEAD | awk '{ print $1}')"
+  if [ "${v1}" != "${v2}" ]; then
+    if [ -d "${SRC}/.git" ]; then
+        echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
+        (git -C ${SRC} fetch origin master && git -C ${SRC} checkout -f origin/master)
+      else
+        echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
+        (git clone ${URL} -b master src)
+    fi
+    for patch in ./patch/*.patch
+    do
+      if [ -f "${patch}" ]; then
+        echo -e "${YLW}Applying patch...${RST}"
+        (git -C ${SRC} apply --stat ".${patch}" && git -C ${SRC} apply ".${patch}")
+      fi
+    done
+    echo -e "${YLW}Building hugo binary...${RST}"
+    (go clean -C ${SRC})
+    (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.id" --tags extended -o ".${BIN}")
+    (upx --best --lzma "${BIN}")
+    if [ -d "./.git" ]; then
+      echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
+      (git add "${BIN}")
+      m1="$(git -C ${SRC} rev-parse --short HEAD)"
+      m2="[deploy]\n\nBuilt with:\n> go $(go version | { read -r _ _ v _; echo "${v#go}"; })\n> $(upx --version | head -n1)"
+      if [ "${v1}" = "0" ]; then
+        (git commit -s -m "bin: Add hugo based on gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")")
+      else
+        m3="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
+        (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")" -m "${m3}")
+      fi
+    fi
+    if ! [ "$(git -C ${SRC} status --porcelain | wc -l)" = "0" ]; then
+      echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
+      (git -C ${SRC} restore .)
+    fi
+    echo -e "${RED}Build: ${YLW}Completed${RST}"
+  else
+    echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version"
+    exit
+  fi
+else
+  echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}"
+  exit
+fi

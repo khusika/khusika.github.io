@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "purgecss": "^7.0.2",
+    "vnu-jar": "^24.10.17"
+  },
+  "scripts": {
+    "reinstall": "rm -rf node_modules && npm ci",
+    "buildjs": "mkdir -p assets/js && sed '94,309d;467,589d;591,642d;696,697d;716d;722,727d;734d' themes/FeelIt/assets/js/theme.js > assets/js/theme.js",
+    "debug": "npm run buildjs && ./bin/$(go env GOARCH)/hugo server --gc -D -M --environment production",
+    "deploy": "npm run buildjs && rm -f -r docs && ./bin/$(go env GOARCH)/hugo --gc --minify -d docs && node purgecss.js && rm -f -r ./docs/lib/katex"
+  }
+}

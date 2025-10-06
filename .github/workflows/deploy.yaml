@@ -1,0 +1,69 @@
+name: Pages Deployment
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    if: |
+      !contains(github.event.head_commit.message, '[ci skip]')
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Run ShellCheck
+        if: |
+          contains(github.event.head_commit.message, 'build:')
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './build'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build Page
+        if: |
+          !contains(github.event.head_commit.message, 'build:')
+        env:
+          HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
+          HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
+        run: |
+            npm ci
+            npm run deploy
+
+      - name: Validate HTML
+        if: |
+          !contains(github.event.head_commit.message, 'build:')
+        run: |
+            node validate.js
+
+      - name: Upload Docs
+        if: |
+          contains(github.event.head_commit.message, '[deploy]')
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+
+  deploy:
+    if: |
+      contains(github.event.head_commit.message, '[deploy]')
+    needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

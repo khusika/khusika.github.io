@@ -1,0 +1,587 @@
+baseURL = "https://khusika.id"
+# [en, zh-cn, fr, pl, ...] determines default content language
+defaultContentLanguage = "en"
+# theme
+theme = "FeelIt"
+# themes directory
+themesDir = "themes"
+
+# website title
+title = "Khusika"
+
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
+
+ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstoken", "error-remote-getjson"]
+
+weight = 1
+# language code
+languageCode = "en"
+# language name
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage = false
+# copyright description used only for seo schema
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+# Menu config
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link.
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about/"
+    title = ""
+    weight = 3
+
+[pagination]
+  # default amount of posts in each pages
+  pagerSize = 12
+
+[params]
+  # LoveIt theme version
+  version = "1.0.X"
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "auto"
+  # public git repo url only then enableGitInfo is true
+  gitRepo = "https://github.com/khusika/khusika.github.io"
+  # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
+  fingerprint = ""
+  # date format
+  dateFormat = "2006-01-02"
+  # website images for Open Graph and Twitter Cards
+  images = ["/logo.png"]
+  # site description
+  description = "Khusika is an Indonesian Android developer currently pursuing a Master's degree at Airlangga University."
+  # site keywords
+  keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Universitas Airlangga", "Pengembangan Sumber Daya Manusia", "Raja Brawijaya", "Canting Kernel"]
+  # whether to enable CSS and JS source mapping
+  SourceMap = false
+
+
+  # Author config
+  [params.author]
+    name = "Khusika Dhamar Gusti"
+    email = "khusikadhamar@gmai.com"
+    link = "/about/"
+
+  # PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
+    # service-worker version
+    version = "1.0.1"
+
+  # App icon config
+  [params.app]
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    title = "Khusika"
+    # whether to omit favicon resource links
+    noFavicon = false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = "/logo.svg"
+    # Android browser theme color
+    themeColor = "#333333"
+    # Safari mask icon color
+    iconColor = "#333333"
+    # Windows v8-10 tile color
+    tileColor = "#333333"
+
+  # About page config
+  [params.about]
+    # whether to enable profile on about page
+    # depends on .Site.Params.home.profile.enable
+    enable = true
+    # whether to enable param layout
+    param = true
+    # title for param layout
+    paramTitle = "Personal Information"
+    # general description of your site
+    # can be write with markdown style
+    description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). I have a keen interest in open-source development, especially low-architecture projects, as well as creating vector designs using [Inkscape](https://inkscape.org/)."
+    # description of your status
+    [[params.about.status]]
+      faIcon = "fa-solid fa-school"
+      title = "Company"
+      desc = "Airlangga University"
+    [[params.about.status]]
+      faIcon = "fa-solid fa-briefcase fa-fw"
+      title = "Occupation"
+      desc = "Master's Students"
+    [[params.about.status]]
+      title = "Major"
+      faIcon = "fa-solid fa-graduation-cap"
+      desc = "Human Resource Development"
+    # description of your parameter
+    [[params.about.parameter]]
+      language = "Android OS Development"
+      level = "90"
+    [[params.about.parameter]]
+      language = "Logo Design"
+      level = "70"
+    [[params.about.parameter]]
+      language = "Gamer"
+      level = "50"
+
+  # Home page config
+  [params.home]
+    # amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.webp"
+      # title shown in home page (HTML format is supported)
+      title = "Khusika Dhamar Gusti"
+      # subtitle shown in home page
+      subtitle = "Hi! 👋 Welcome to my space!"
+      # whether to use typeit animation for subtitle
+      typeit = false
+      # whether to show social links
+      social = true
+      # disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = false
+      # special amount of posts in each home posts page
+      paginate = 6
+      # display image-preview
+      imagePreview = true
+
+  # Social config in home page
+  [params.social]
+    GitHub = "khusika"
+    Instagram = "khusika.id"
+    Facebook = "khusika.id"
+    Telegram = "khusika"
+    Email = "khusikadhamar@gmail.com"
+    xda = "khusika.5123347"
+    paypal = "khusika"
+
+  # Header config
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "Khusika"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+      # whether to show RSS icon
+      rss = true
+
+  # Footer config
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = ''
+    # whether to show Hugo and theme info
+    hugo = true
+    # whether to show copyright info
+    copyright = true
+    # whether to show the author
+    author = false
+    # site creation time
+    since = 2019
+    # ICP info only in China (HTML format is supported)
+    icp = ""
+    # license info (HTML format is supported)
+    license= '<a rel="license external nofollow noopener noreffer" href="/terms" target="_blank">Terms</a>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="/privacy" target="_blank">Privacy</a>'
+
+  # Section (all posts) page config
+  [params.section]
+    # special amount of posts in each section page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "January, 1"
+    # amount of RSS pages
+    rss = 10
+
+  # List (category or tag) page config
+  [params.list]
+    # special amount of posts in each list page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "January, 1"
+    # amount of RSS pages
+    rss = 10
+
+  # oEmbed config for Facebook and Instagram
+  [params.oembed]
+    # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+    privacy = false
+    [params.oembed.facebook]
+      # Facebook Aplication Identity and Client Token (<APPID>|<CLIENTTOKEN>)
+      accessToken = ""
+    [params.oembed.x]
+      enableDNT = false
+
+  # Page config
+  [params.page]
+    # whether to hide a page from home page
+    hiddenFromHomePage = false
+    # whether to hide a page from search results
+    hiddenFromSearch = false
+    # whether to enable twemoji
+    twemoji = false
+    # whether to enable lightgallery
+    lightgallery = false
+    # whether to enable the ruby extended syntax
+    ruby = true
+    # whether to enable the fraction extended syntax
+    fraction = true
+    # whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # whether to use the fontawesome as cdn source
+    cdnfontawesome = false
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # whether to show link to improve the article
+    improveArticle = "https://github.com/khusika/khusika.github.io/edit/master/content/"
+    # whether to show the full text content in RSS
+    rssFullText = false
+    # Table of the contents config
+    [params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+    # Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = false
+      # default block delimiter is $$ ... $$ and \\[ ... \\]
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # default inline delimiter is $ ... $ and \\( ... \\)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # KaTeX extension copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      mhchem = true
+    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # access token of Mapbox GL JS
+      accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+      # style for the light theme
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      # style for the dark theme
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      navigation = true
+      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      geolocate = true
+      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      scale = true
+      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      fullscreen = true
+    # Social share links in post page
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = true
+      Whatsapp = true
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = true
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Digg = false
+      Stumbleupon = false
+      Flipboard = false
+      Weibo = false
+      Renren = false
+      Myspace = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
+    # Comment config
+    [params.page.comment]
+      enable = true
+      # Disqus comment config (https://disqus.com/)
+      [params.page.comment.disqus]
+        enable = true
+        # Disqus shortname to use Disqus in posts
+        shortname = "khusika"
+      # Vssue comment config (https://github.com/meteorlxy/vssue)
+      # Vssue 评论系统设置 (https://github.com/meteorlxy/vssue)
+      [params.page.comment.vssue]
+        enable = false
+        platform = ""
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # Gitalk comment config (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = "khusika"
+        repo = "khusika.github.io"
+        clientId = ""
+        clientSecret = ""
+        distractionFreeMode = "true"
+      # Valine comment config (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = ""
+        meta= ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = "https://leancloud.hugoloveit.com"
+        # emoji data file name, default is "google.yml"
+        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # located in "themes/LoveIt/assets/data/emoji/" directory
+        # you can store your own data files in the same path under your project:
+        # "assets/data/emoji/"
+        emoji = ""
+      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = ""
+      # Telegram comments config (https://comments.app/)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = true
+        outlined = false
+      # Commento comment config (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
+      # Utterances comment config (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+    # Third-party library config
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # located in "assets/"
+        # Or
+        # someCSS = "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # located in "assets/"
+        # Or
+        # someJavascript = "https://cdn.example.com/some.js"
+
+  # TypeIt config
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    duration = -1
+
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = "RnCxcNQlTbsaZ1ETZuIEJcl1mKtFt6W5cXLI7WmVSAU"
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+
+  # Site SEO config
+  [params.seo]
+    # image URL
+    image = ""
+    # thumbnail URL
+    thumbnailUrl = ""
+
+  # Analytics config
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      # [UA-XXXXXXXX-X] google analytics code
+      id = ""
+      # whether to use gtag linked
+      gtag = false
+      # whether to anonymize IP
+      anonymizeIP = true
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # server url for your tracker if you're self hosting
+      server = ""
+
+  # Cookie consent config
+  [params.cookieconsent]
+    enable = false
+    # text strings used for Cookie consent banner
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+  # CDN config for third-party library files
+  [params.cdn]
+    # CDN data file name, disabled by default
+    # ("jsdelivr.yml")
+    # located in "themes/LoveIt/assets/data/cdn/" directory
+    # you can store your own data files in the same path under your project:
+    # "assets/data/cdn/"
+    data = "jsdelivr.yml"
+
+  # Compatibility config
+  [params.compatibility]
+    # whether to use Polyfill.io to be compatible with older browsers
+    polyfill = false
+    # whether to use object-fit-images to be compatible with older browsers
+    objectFit = false
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+  # Table Of Contents settings
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# Sitemap config
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  # posts = ":year/:month/:contentbasename"
+  posts = ":contentbasename"
+
+[services.googleAnalytics]
+  # UA-PROPERTY_ID or G-MEASUREMENT_ID google analytics code
+  # UA-PROPERTY_ID 或者是 G-MEASUREMENT_ID 的 google analytics 代码
+  ID = ""
+
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  # privacy of the Google Analytics
+  # Google Analytics 相关隐私
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  # privacy of the Intagram (replaced by params.oembed.instagram)
+  [privacy.instagram]
+    # ...
+  [privacy.x]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Options to make output .md files
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+# Options to make output .md files
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+# Options to make hugo output files
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  term = ["RSS"]
+  taxonomy = ["HTML"]
