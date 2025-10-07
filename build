@@ -9,55 +9,65 @@ YLW="\033[01;33m"
 RST="\033[0m"
 BIN="./bin/$(go env GOARCH)/hugo"
 SRC="./src"
+BASE_URL="https://khusika.id"
 URL="https://github.com/gohugoio/hugo"
-
-if ! [ -x "$(command -v upx)" ]; then
-  echo -e "${RED}Build failed: ${YLW}\e]8;;https://upx.github.io\aUPX\e]8;;\a does not exist."
-  exit
-fi
 
 if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
   if [ -x "$(command -v "${BIN}")" ]; then
     v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
   else
-    v1="0"
+    v1="$(curl -sL ${URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
+     if [ -z "${v1}" ]; then
+      v1="0"
+    fi
   fi
   v2="$(git ls-remote ${URL} HEAD | awk '{ print $1}')"
   if [ "${v1}" != "${v2}" ]; then
-    if [ -d "${SRC}/.git" ]; then
-        echo -e "${RED}Hugo source exist, ${YLW}checking out with the latest patch...${RST}"
-        (git -C ${SRC} fetch origin master && git -C ${SRC} checkout -f origin/master)
-      else
-        echo -e "${RED}Hugo source does not exist, ${YLW}cloning the repository...${RST}"
-        (git clone ${URL} -b master src)
+    echo -e "${RED}Hugo source does not exist or will be refreshed, ${YLW}downloading the repository zip...${RST}"
+    tmpdir="/tmp/hugo_src_$$"
+    mkdir -p "${tmpdir}"
+    archive="${tmpdir}/${v2}.zip"
+    download_url="${URL}/archive/${v2}.zip"
+    echo -e "${YLW}Downloading ${download_url}...${RST}"
+    if command -v wget >/dev/null 2>&1; then
+      wget -q -O "${archive}" "${download_url}"
+    elif command -v curl >/dev/null 2>&1; then
+      curl -sL -o "${archive}" "${download_url}"
+    else
+      echo -e "${RED}Error: neither wget nor curl is available to download the archive.${RST}"
+      exit 1
     fi
+    echo -e "${YLW}Extracting archive...${RST}"
+    mkdir -p "${tmpdir}/extract"
+    if command -v unzip >/dev/null 2>&1; then
+      unzip -q "${archive}" -d "${tmpdir}/extract"
+    else
+      echo -e "${RED}Error: unzip is not available to extract the archive.${RST}"
+      exit 1
+    fi
+    extracted_dir=$(find "${tmpdir}/extract" -maxdepth 1 -type d ! -path "${tmpdir}/extract" | head -n1)
+    if [ -z "${extracted_dir}" ]; then
+      echo -e "${RED}Error: extraction failed, no directory found in archive.${RST}"
+      exit 1
+    fi
+    rm -rf "${SRC}"
+    mv "${extracted_dir}" "${SRC}"
+    if [ -f "${SRC}/common/hugo/version.go" ]; then
+      echo -e "${YLW}Injecting commit ${v2} into ${SRC}/common/hugo/version.go...${RST}"
+      perl -0777 -pe "s/bi := getBuildInfo\(\)/bi := getBuildInfo();\n\tif bi == nil { bi = &buildInfo{} }\n\tbi.Revision = \"${v2}\"\n/s" -i "${SRC}/common/hugo/version.go"
+    fi
+    rm -f "${archive}"
+    rm -rf "${tmpdir}"
     for patch in ./patch/*.patch
     do
       if [ -f "${patch}" ]; then
         echo -e "${YLW}Applying patch...${RST}"
-        (git -C ${SRC} apply --stat ".${patch}" && git -C ${SRC} apply ".${patch}")
+        (cd "${SRC}" && patch -p1 < "../.${patch#./}") || true
       fi
     done
     echo -e "${YLW}Building hugo binary...${RST}"
     (go clean -C ${SRC})
     (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.id" --tags extended -o ".${BIN}")
-    (upx --best --lzma "${BIN}")
-    if [ -d "./.git" ]; then
-      echo -e "${RED}Git: ${YLW}Add binary into git...${RST}"
-      (git add "${BIN}")
-      m1="$(git -C ${SRC} rev-parse --short HEAD)"
-      m2="[deploy]\n\nBuilt with:\n> go $(go version | { read -r _ _ v _; echo "${v#go}"; })\n> $(upx --version | head -n1)"
-      if [ "${v1}" = "0" ]; then
-        (git commit -s -m "bin: Add hugo based on gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")")
-      else
-        m3="$(git -C ${SRC} log --format="%h %s" "${v1}"..HEAD)"
-        (git commit -s -m "hugo: Update to gohugoio/hugo@${m1}" -m "$(echo -e "${m2}")" -m "${m3}")
-      fi
-    fi
-    if ! [ "$(git -C ${SRC} status --porcelain | wc -l)" = "0" ]; then
-      echo -e "${RED}Build: ${YLW}Cleanup src local changes...${RST}"
-      (git -C ${SRC} restore .)
-    fi
     echo -e "${RED}Build: ${YLW}Completed${RST}"
   else
     echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version"

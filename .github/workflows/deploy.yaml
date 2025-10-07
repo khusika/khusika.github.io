@@ -2,35 +2,50 @@ name: Pages Deployment
 
 on:
   push:
-    branches: master
+    branches: main
+  schedule:
+    # Run every day at 00.00 UTC+7
+    - cron: '0 17 * * *'
 
 jobs:
   build:
     if: |
-      !contains(github.event.head_commit.message, '[ci skip]')
+      github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && !contains(github.event.head_commit.message, '[ci skip]'))
     runs-on: ubuntu-22.04
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
         with:
+          ref: main
           submodules: true
           fetch-depth: 0
 
       - name: Run ShellCheck
         if: |
-          contains(github.event.head_commit.message, 'build:')
+          github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, 'build:')
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: './build'
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+          check-latest: true
+          cache: false
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      - name: Build Hugo Binary
+        run: |
+          ./build
+
       - name: Build Page
         if: |
-          !contains(github.event.head_commit.message, 'build:')
+          github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')))
         env:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
@@ -40,20 +55,20 @@ jobs:
 
       - name: Validate HTML
         if: |
-          !contains(github.event.head_commit.message, 'build:')
+          github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')))
         run: |
             node validate.js
 
       - name: Upload Docs
         if: |
-          contains(github.event.head_commit.message, '[deploy]')
+          github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]'))
         uses: actions/upload-pages-artifact@v3
         with:
           path: './docs'
 
   deploy:
     if: |
-      contains(github.event.head_commit.message, '[deploy]')
+      github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]'))
     needs: build
     permissions:
       contents: read
