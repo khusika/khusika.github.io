@@ -12,23 +12,53 @@ SRC="./src"
 BASE_URL="https://khusika.id"
 URL="https://github.com/gohugoio/hugo"
 
-if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; then
-  if [ -x "$(command -v "${BIN}")" ]; then
-    v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
-  else
-    v1="$(curl -sL ${URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
-     if [ -z "${v1}" ]; then
-      v1="0"
+# Parse flags: use --check to enable v1/v2 comparison before building.
+CHECK=false
+for arg in "$@"; do
+  case "$arg" in
+    --check) CHECK=true ;;
+    *) ;;
+  esac
+done
+
+# Check supported OS/ARCH (grouped to avoid precedence issues)
+if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; }; then
+  SHOULD_BUILD=true
+
+  if [ "${CHECK}" = "true" ]; then
+    if [ -x "$(command -v "${BIN}")" ]; then
+      v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
+    else
+      v1="$(curl -sL ${URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
+      if [ -z "${v1}" ]; then
+        v1="0"
+      fi
     fi
+
+    # Determine remote HEAD commit for comparison
+    v2="$(git ls-remote ${URL} HEAD 2>/dev/null | awk '{ print $1}')" || v2=""
+
+    if [ -n "${v2}" ] && [ "${v1}" = "${v2}" ]; then
+      echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version${RST}"
+      SHOULD_BUILD=false
+    else
+      echo -e "${RED}Hugo source does not exist or will be refreshed, ${YLW}downloading the repository zip...${RST}"
+    fi
+  else
+    echo -e "${YLW}--check not supplied, skipping version check and building latest Hugo...${RST}"
   fi
-  v2="$(git ls-remote ${URL} HEAD | awk '{ print $1}')"
-  if [ "${v1}" != "${v2}" ]; then
-    echo -e "${RED}Hugo source does not exist or will be refreshed, ${YLW}downloading the repository zip...${RST}"
+
+  if [ "${SHOULD_BUILD}" = "true" ]; then
+    # Only determine v2 now if not already set by --check
+    if [ -z "${v2}" ]; then
+      v2="$(git ls-remote ${URL} HEAD 2>/dev/null | awk '{ print $1}')" || v2=""
+    fi
+
     tmpdir="/tmp/hugo_src_$$"
     mkdir -p "${tmpdir}"
     archive="${tmpdir}/${v2}.zip"
     download_url="${URL}/archive/${v2}.zip"
-    echo -e "${YLW}Downloading ${download_url}...${RST}"
+    echo -e "${YLW}Downloading ${download_url}${RST}"
     if command -v wget >/dev/null 2>&1; then
       wget -q -O "${archive}" "${download_url}"
     elif command -v curl >/dev/null 2>&1; then
@@ -52,8 +82,8 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     fi
     rm -rf "${SRC}"
     mv "${extracted_dir}" "${SRC}"
-    if [ -f "${SRC}/common/hugo/version.go" ]; then
-      echo -e "${YLW}Injecting commit ${v2} into ${SRC}/common/hugo/version.go...${RST}"
+    if [ -f "${SRC}/common/hugo/version.go" ] && [ -n "${v2}" ]; then
+      echo -e "${YLW}Injecting commitHash ${v2} into ${SRC}/common/hugo/version.go...${RST}"
       perl -0777 -pe "s/bi := getBuildInfo\(\)/bi := getBuildInfo();\n\tif bi == nil { bi = &buildInfo{} }\n\tbi.Revision = \"${v2}\"\n/s" -i "${SRC}/common/hugo/version.go"
     fi
     rm -f "${archive}"
@@ -69,9 +99,6 @@ if [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ] && [ "$(go
     (go clean -C ${SRC})
     (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.id" --tags extended -o ".${BIN}")
     echo -e "${RED}Build: ${YLW}Completed${RST}"
-  else
-    echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version"
-    exit
   fi
 else
   echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}"

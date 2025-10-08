@@ -41,7 +41,11 @@ jobs:
 
       - name: Build Hugo Binary
         run: |
-          ./build
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            ./build --check
+          else
+            ./build
+          fi
 
       - name: Build Page
         if: |
