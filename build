@@ -24,6 +24,7 @@ done
 # Check supported OS/ARCH (grouped to avoid precedence issues)
 if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { [ "$(go env GOARCH)" = "amd64" ] || [ "$(go env GOARCH)" = "arm64" ]; }; then
   SHOULD_BUILD=true
+  v2="$(git ls-remote ${URL} HEAD 2>/dev/null | awk '{ print $1}')" || v2=""
 
   if [ "${CHECK}" = "true" ]; then
     if [ -x "$(command -v "${BIN}")" ]; then
@@ -34,9 +35,6 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
         v1="0"
       fi
     fi
-
-    # Determine remote HEAD commit for comparison
-    v2="$(git ls-remote ${URL} HEAD 2>/dev/null | awk '{ print $1}')" || v2=""
 
     if [ -n "${v2}" ] && [ "${v1}" = "${v2}" ]; then
       echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version${RST}"
@@ -49,11 +47,6 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
   fi
 
   if [ "${SHOULD_BUILD}" = "true" ]; then
-    # Only determine v2 now if not already set by --check
-    if [ -z "${v2}" ]; then
-      v2="$(git ls-remote ${URL} HEAD 2>/dev/null | awk '{ print $1}')" || v2=""
-    fi
-
     tmpdir="/tmp/hugo_src_$$"
     mkdir -p "${tmpdir}"
     archive="${tmpdir}/${v2}.zip"
