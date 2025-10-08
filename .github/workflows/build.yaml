@@ -1,9 +1,9 @@
 name: Build Hugo
 
-on:
-  schedule:
+# on:
+  # schedule:
     # Run every day at 00.00 UTC+7
-    - cron: '0 17 * * *'
+    # - cron: '0 17 * * *'
 
 jobs:
   release:
