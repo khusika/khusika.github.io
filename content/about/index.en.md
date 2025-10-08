@@ -57,4 +57,4 @@ Below here are some of projects and contributions done by me:
   - RAM: Dedicated 16GB LPDDR5
 
 ---
-Should you have any questions related to my articles or projects, please feel free to reach out to me via [e-mail](mailto:khusikadhamar@gmail.com) or [Telegram](https://t.me/khusika).
+Should you have any questions related to my articles or projects, please feel free to reach out to me via [e-mail](mailto:mail@khusika.id) or [Telegram](https://t.me/khusika).

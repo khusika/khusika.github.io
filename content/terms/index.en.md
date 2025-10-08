@@ -230,4 +230,4 @@ Service.
 If you have any questions about these Terms and Conditions, You can contact
 us:
 
-  * By email: khusikadhamar@gmail.com
+  * By email: mail@khusika.id
