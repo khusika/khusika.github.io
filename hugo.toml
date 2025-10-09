@@ -122,7 +122,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     paramTitle = "Personal Information"
     # general description of your site
     # can be write with markdown style
-    description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). I have a keen interest in open-source development, especially low-architecture projects, as well as creating vector designs using [Inkscape](https://inkscape.org/)."
+    description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). My keen interests lie in the creative industries, particularly the integration of IoT solutions and the advancement of sustainable tourism development."
     # description of your status
     [[params.about.status]]
       faIcon = "fa-solid fa-school"
@@ -133,18 +133,18 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       title = "Occupation"
       desc = "Master's Students"
     [[params.about.status]]
-      title = "Major"
+      title = "Interest"
       faIcon = "fa-solid fa-graduation-cap"
-      desc = "Human Resource Development"
+      desc = "Creative Industries"
     # description of your parameter
     [[params.about.parameter]]
-      language = "Android OS Development"
+      language = "Tech Enthusiast"
       level = "90"
     [[params.about.parameter]]
-      language = "Logo Design"
+      language = "Rural Tourism Observer"
       level = "70"
     [[params.about.parameter]]
-      language = "Gamer"
+      language = "C₈H₁₀N₄O₂"
       level = "50"
 
   # Home page config

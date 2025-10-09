@@ -13,6 +13,11 @@ toc:
 
 lightgallery: false
 ---
+### Publications
+
+The items below highlight selected publications and scientific journal written by me.
+
+* [Cakrawarta](https://www.cakrawarta.com/): [_From the Outskirts, Creative Tourism Villages Embroider Sustainable Economies_](https://www.cakrawarta.com/dari-pinggiran-desa-wisata-kreatif-menyulam-ekonomi-berkelanjutan.html)
 
 ### Projects & Contributions
 
@@ -24,7 +29,7 @@ Below here are some of projects and contributions done by me:
 
 * [RAJApps](https://play.google.com/store/apps/details?id=com.pit.qrcodesrajabrawijaya): The application was developed under the [Rajabrawijaya 2017 committee](https://rajabrawijaya.ub.ac.id/), with the primary objective of providing an attendance system utilizing a QR code scanner. During this period, I contributed as a front-end developer in the creation of this application.
 
-* [XDA-Developers](https://xdaforums.com/m/khusika.5123347/): I have earned the titles of [_Recognized Developer_](https://xdaforums.com/t/recognized-developer-code-of-conduct-minimum-requirements.4510165/) and [_Recognized Contributor_](https://xdaforums.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966) within the XDA Forums. During my time here, I have created various open-source projects, including ROMs, kernels, and mods. In early 2024, I was honored to join the forum as a [_Forum Moderator_](https://docs.google.com/document/d/1lK5rP103OL3StU3q9iqwX9LU_k8XABeSQIAT3EHCqgM/pub) and continue to actively contribute to the Forum.
+* [XDA-Developers](https://xdaforums.com/m/khusika.5123347/): I earned the titles of [_Recognized Developer_](https://xdaforums.com/t/recognized-developer-code-of-conduct-minimum-requirements.4510165/) and [_Recognized Contributor_](https://xdaforums.com/t/how-to-apply-to-become-a-recognized-contributor-themer-on-xda.1646309/#post-25915966) within the XDA Forums. During my time there I created various open-source projects, including ROMs, kernels, and mods. In early 2024 I joined the forum as a [_Forum Moderator_](https://docs.google.com/document/d/1lK5rP103OL3StU3q9iqwX9LU_k8XABeSQIAT3EHCqgM/pub) and remained active until my retirement from the forum in 2025.
 
 * [Pixys OS](https://pixysos.com/): I served as a device [maintainer](https://pixysos.com/team/khusika) for the Poco X3 Pro, as highlighted in [this change](https://github.com/PixysOS/official_devices/pull/109). Additionally, I actively contributed to Pixys OS through [my gerrit changes](https://gerrit.pixysos.com/q/owner:mail%2540khusika.dev). However, I am no longer involved in this project and community.
 
