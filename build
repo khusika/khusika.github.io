@@ -30,7 +30,7 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     if [ -x "$(command -v "${BIN}")" ]; then
       v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
     else
-      v1="$(curl -sL ${URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
+      v1="$(curl -sL ${BASE_URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
       if [ -z "${v1}" ]; then
         v1="0"
       fi
@@ -39,6 +39,8 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     if [ -n "${v2}" ] && [ "${v1}" = "${v2}" ]; then
       echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version${RST}"
       SHOULD_BUILD=false
+      echo "canceled=true" >> "$GITHUB_OUTPUT"
+      exit
     else
       echo -e "${RED}Hugo source does not exist or will be refreshed, ${YLW}downloading the repository zip...${RST}"
     fi
@@ -95,5 +97,5 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
   fi
 else
   echo -e "${RED}Build failed: ${YLW}Detected $(go env GOOS)/$(go env GOARCH), unsupported OS and Arch version.${RST}"
-  exit
+  exit 1
 fi

@@ -39,17 +39,21 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build Hugo Binary
+      - name: Build Hugo Binary (schedule)
+        id: build-hugo
+        if: github.event_name == 'schedule'
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            ./build --check
-          else
-            ./build
-          fi
+          ./build --check
+
+      - name: Build Hugo Binary (push)
+        if: github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:'))
+        run: |
+          ./build
 
       - name: Build Page
         if: |
-          github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')))
+          (github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:'))))
+          && steps.build-hugo.outputs.canceled != 'true'
         env:
           HUGO_OEMBED_ACCESSTOKEN: ${{ secrets.HUGO_OEMBED_ACCESSTOKEN }}
           HUGO_VSSUE_CLIENTSECRET: ${{ secrets.HUGO_VSSUE_CLIENTSECRET }}
@@ -59,7 +63,8 @@ jobs:
 
       - name: Validate HTML
         if: |
-          github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')))
+          (github.event_name == 'schedule' || (github.event_name == 'push' && (github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:'))))
+          && steps.build-hugo.outputs.canceled != 'true'
         run: |
             node validate.js
 
