@@ -39,7 +39,9 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     if [ -n "${v2}" ] && [ "${v1}" = "${v2}" ]; then
       echo -e "${RED}Build canceled: ${YLW}Your hugo version is already with the latest version${RST}"
       SHOULD_BUILD=false
-      echo "canceled=true" >> "$GITHUB_OUTPUT"
+      if [ "${GITHUB_ACTIONS:-}" = "true" ] && [ -n "${GITHUB_OUTPUT:-}" ]; then
+        echo "canceled=true" >> "$GITHUB_OUTPUT"
+      fi
       exit
     else
       echo -e "${RED}Hugo source does not exist or will be refreshed, ${YLW}downloading the repository zip...${RST}"
