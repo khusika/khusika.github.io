@@ -70,7 +70,8 @@ jobs:
 
       - name: Upload Docs
         if: |
-          github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]'))
+          (github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]')))
+          && steps.build-hugo.outputs.canceled != 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: './docs'
