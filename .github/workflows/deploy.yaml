@@ -32,6 +32,8 @@ jobs:
           scandir: './build'
 
       - name: Setup Go
+        if: |
+          github.event_name != 'push' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')
         uses: actions/setup-go@v5
         with:
           go-version: '1.24'
@@ -39,6 +41,8 @@ jobs:
           cache: false
 
       - name: Setup Node
+        if: |
+          github.event_name != 'push' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')
         uses: actions/setup-node@v4
         with:
           node-version: 20
