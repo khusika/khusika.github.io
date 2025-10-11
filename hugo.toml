@@ -274,7 +274,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     # whether to show link to Raw Markdown content of the content
     linkToMarkdown = true
     # whether to show link to improve the article
-    improveArticle = "https://github.com/khusika/khusika.github.io/edit/master/content/"
+    improveArticle = "https://github.com/khusika/khusika.github.io/edit/main/content/"
     # whether to show the full text content in RSS
     rssFullText = false
     # Table of the contents config
