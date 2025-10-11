@@ -12,6 +12,10 @@ jobs:
     if: |
       github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && !contains(github.event.head_commit.message, '[ci skip]'))
     runs-on: ubuntu-22.04
+
+    outputs:
+      canceled: ${{ steps.build-hugo.outputs.canceled }}
+
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
@@ -78,7 +82,8 @@ jobs:
 
   deploy:
     if: |
-      github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]'))
+      (github.event_name == 'schedule' || (github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, '[deploy]')))
+      && needs.build.outputs.canceled != 'true'
     needs: build
     permissions:
       contents: read
