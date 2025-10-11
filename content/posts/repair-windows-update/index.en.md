@@ -15,7 +15,7 @@ tags: [windows, insider]
 categories: ["Blogs"]
 
 toc:
-  enable: false
+  auto: false
 math:
   enable: false
 lightgallery: true
