@@ -16,16 +16,18 @@ toc:
   auto: false
 math:
   enable: false
-lightgallery: false
+lightgallery: true
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
 This project provides a Linux stable kernel fork specifically tailored for OrangePi devices using the Rockchip RK3588 and RK3588S processors.
 <!--more-->
 
-The OrangePi kernel ecosystem has received a significant upgrade, now merging the latest Linux stable releases on top of the official OrangePi Rockchip BSP kernel branch. This development aims to provide greater compatibility, up-to-date security patches, and support for newer compilers and devices. Below are key details and improvements enabled by the ongoing work to keep OrangePi users at the forefront of ARM SBC capabilities.
+The OrangePi kernel ecosystem has received a significant upgrade, now merging the latest Linux stable releases on top of the official OrangePi Rockchip BSP kernel branch. This development, as illustrated in the attached picture below, showcases a modern and optimized OrangePi 5 Ultra environment running Ubuntu 22.04 LTS with the latest Linux 6.1.118 kernel, ensuring greater compatibility, up-to-date security patches, and robust support for new compilers and devices. These improvements help OrangePi users remain at the forefront of ARM SBC capabilities, combining advanced hardware monitoring and efficient resource management in daily use.
+
+![OrangePi 5 Ultra with Linux 6.1.118](terminal.webp "Screenshot of OrangePi Terminal")
 
 ## Linux Stable Integration Over OrangePi BSP
-The main development branch, [`dev/orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/dev/orange-pi-6.1-rk35xx), integrates upstream Linux stable releases (currently 6.1.x series) directly over the OrangePi-specific kernel. This means users benefit from:
+The main development branch, [`dev/orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/dev/orange-pi-6.1-rk35xx), integrates upstream Linux stable releases (currently [`linux-6.1.y`](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/log/?h=linux-6.1.y)) directly over the OrangePi-specific kernel. This means users benefit from:
 
 - All upstream Linux stable patches for improved security and hardware support.
 - Preservation of OrangePi and Rockchip-specific enhancements supplied in the BSP branch.
@@ -34,10 +36,10 @@ The main development branch, [`dev/orange-pi-6.1-rk35xx`](https://github.com/khu
 The branch is actively updated in sync with upstream, with commit history reflecting substantial merges from the official stable trees as well as routine backports and bugfixes.​
 
 ## Stable Rockchip Kernel + GCC 14.3 Fixes
-A separate branch, [`orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/orange-pi-6.1-rk35xx), serves as a reference for the community by providing a stable Rockchip kernel merged with OrangePi-specific code. This branch implements:
+A separate branch, [`orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/orange-pi-6.1-rk35xx), serves as a reference for the community by providing a stable Rockchip BSP kernel merged on top of the OrangePi kernel. This branch was created by merging the Rockchip Linux upstream tree ([`develop-6.1`](https://github.com/rockchip-linux/kernel/tree/develop-6.1)) into the OrangePi kernel branch, producing a Rockchip-stable baseline with OrangePi-specific fixes. The branch implements:
 
 - All vendor and mainline fixes for the RK35xx platform supported by OrangePi.
-- Additional compatibility and build fixes for the latest ARM GCC compiler (14.3), ensuring smooth compilation for recent toolchains.
+- Additional compatibility and build fixes for the latest [ARM GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads) (14.3.Rel1), ensuring smooth compilation for recent toolchains.
 - Stability and reliability improvements on top of regular Linux updates, allowing for production-level deployment and advanced development alike.
 
 ## Platform Support and Testing Status
@@ -52,7 +54,7 @@ This project is developed specifically for OrangePi single-board computers equip
 
 - Both branches bridge upstream Linux features with board-specific enhancements, so users enjoy the best of both worlds: robust hardware enablement and community-driven innovation.
 - The work includes proactive fixes for kernel build failures with newly released GCC toolchains—particularly relevant for developers transitioning to GCC 14.x.
-- These repositories serve as a reliable base for both end-users seeking ready-to-run images and maintainers building custom distributions or device support packages.
+- These repositories serve as a reliable base for both end-users seeking ready
 
 ## Getting Involved
 
