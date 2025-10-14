@@ -6,12 +6,14 @@ This repository contains the source code for my personal website, [khusika.id](h
 
 ## 🚀 Built With
 
-*   **Static Site Generator:** [Hugo](https://gohugo.io/)
+*   **Site Generator:** [Hugo](https://gohugo.io/)
 *   **Theme:** [FeelIt](https://github.com/khusika/FeelIt)
 *   **Hosting:** [GitHub Pages](https://pages.github.com/)
+*   **Domain:** [Qwords (.id)](https://www.qwords.com/)
 
 ## 📄 License
 
-The source code in this repository is licensed under the **MIT License**.
+This repository is licensed under a dual-license model:
 
-All content within the `content/` directory, including articles and images, is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+-   **Source Code**: All source code is licensed under the **[MIT License](https://github.com/khusika/khusika.github.io/blob/main/LICENSE-CODE)**.
+-   **Content**: All content within the `content/` directory, including articles and images, is licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://github.com/khusika/khusika.github.io/blob/main/LICENSE-CONTENT)**.
