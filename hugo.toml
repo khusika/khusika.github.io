@@ -42,13 +42,21 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     title = ""
     weight = 1
   [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
     identifier = "categories"
     pre = ""
     post = ""
     name = "Categories"
     url = "/categories/"
     title = ""
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "about"
     pre = ""
@@ -56,7 +64,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     name = "About"
     url = "/about/"
     title = ""
-    weight = 3
+    weight = 4
 
 [pagination]
   # default amount of posts in each pages
