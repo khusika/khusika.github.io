@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-03-02T08:32:25+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Implement Instagram Shortcode in Hugo"
 resources:
 - name: "featured-image"

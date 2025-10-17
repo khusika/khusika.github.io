@@ -4,6 +4,7 @@ subtitle: ""
 date: 2020-11-15T11:19:39+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "WebP Image Processing in Hugo"
 resources:
 - name: "featured-image"

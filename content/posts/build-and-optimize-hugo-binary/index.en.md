@@ -5,6 +5,7 @@ date: 2023-06-14T13:10:30+07:00
 lastmod: 2023-06-14T13:10:30+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 authorLink: ""
 description: "See how to build and optimize hugo binary to your system"
 resources:

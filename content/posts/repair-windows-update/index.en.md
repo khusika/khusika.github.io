@@ -5,7 +5,7 @@ date: 2023-11-07T07:09:05+07:00
 lastmod: 2023-11-07T07:09:05+07:00
 draft: false
 author: "Khusika"
-authorLink: ""
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Fix your Windows update"
 resources:
 - name: "featured-image"

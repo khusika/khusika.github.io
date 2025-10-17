@@ -4,6 +4,7 @@ subtitle: ""
 date: 2020-09-19T08:57:07+07:00 
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Things I Do On Focal Fossa"
 resources:
 - name: "featured-image"

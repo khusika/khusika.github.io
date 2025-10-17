@@ -4,6 +4,7 @@ subtitle: ""
 date: 2020-10-01T11:28:19+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "References for upgrading HP Pavillion 14-e014tx Hardware"
 resources:
 - name: "featured-image"

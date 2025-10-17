@@ -4,6 +4,7 @@ subtitle: ""
 date: "2019-09-03"
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Hi everyone! this is my first post."
 resources:
 - name: "featured-image"

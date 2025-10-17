@@ -4,6 +4,7 @@ subtitle: ""
 date: 2020-06-14T20:14:17+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Canting is a kernel based on Google Common merged over CAF."
 resources:
 - name: "featured-image"

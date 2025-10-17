@@ -4,7 +4,7 @@ subtitle: ""
 date: 2024-10-31T10:10:10+07:00
 draft: false
 author: "Khusika"
-authorLink: ""
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "My story with domain migration"
 resources:
 - name: "featured-image"

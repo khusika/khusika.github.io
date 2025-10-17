@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-06-06T20:01:45+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Implement Facebook Shortcode in Hugo"
 resources:
 - name: "featured-image"

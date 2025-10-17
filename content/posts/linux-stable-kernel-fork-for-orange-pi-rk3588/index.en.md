@@ -4,6 +4,7 @@ subtitle: ""
 date: 2025-10-11T22:31:36+07:00
 draft: false
 author: "Khusika"
+gravatarEmail: "khusikadhamar@gmail.com"
 description: "Linux stable kernel fork for Orange Pi RK3588 devices."
 resources:
 - name: "featured-image"
