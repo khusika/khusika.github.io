@@ -593,3 +593,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   section = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
   taxonomy = ["HTML"]
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 80
