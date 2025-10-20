@@ -90,19 +90,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # whether to enable CSS and JS source mapping
   SourceMap = false
 
+  # PWA config
+  [params.pwa]
+    # whether to enable PWA support
+    enable = true
 
   # Author config
   [params.author]
     name = "Khusika Dhamar Gusti"
     email = "khusikadhamar@gmai.com"
     link = "/about/"
-
-  # PWA config
-  [params.pwa]
-    # whether to enable PWA support
-    enable = true
-    # service-worker version
-    version = "1.0.1"
 
   # App icon config
   [params.app]
@@ -141,9 +138,9 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
       title = "Occupation"
       desc = "Master's Students"
     [[params.about.status]]
-      title = "Interest"
+      title = "Major"
       faIcon = "fa-solid fa-graduation-cap"
-      desc = "Creative Industries"
+      desc = "Human Resources Development"
     # description of your parameter
     [[params.about.parameter]]
       language = "Tech Enthusiast"

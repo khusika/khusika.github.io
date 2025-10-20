@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Me"
 subtitle: ""
 draft: false
 description: "About khusika.id"
