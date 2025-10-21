@@ -23,6 +23,12 @@ license: '<a rel="license external nofollow noopener noreffer" href="https://cre
 Canting is an android kernel based on Google kernel-common merged over CAF-kernel. Built to provide security and stability improvement. _Canting_ it self is a pen-like instrument used in the process of _batik_ making.
 <!--more-->
 
+{{< admonition warning "Project Discontinuation Notice" >}}
+Please be advised that as of October 2025, the Canting Kernel project is no longer under active development. The landscape of Android customization has grown increasingly complex, making it difficult to continue providing the level of support and updates this project deserves.
+
+The source code and all existing releases will remain publicly available for archival and educational purposes. However, no further updates, security patches, or support will be provided.
+{{< /admonition >}}
+
 ## Source Codes
 ### xiaomi-msm8953
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/releases/latest)[![Total Stars](https://img.shields.io/github/stars/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/stargazers)[![Total Forks](https://img.shields.io/github/forks/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/network/members)[![Issues](https://img.shields.io/github/issues/khusika/canting_kernel_xiaomi_msm8953?style=flat-square)](https://github.com/khusika/canting_kernel_xiaomi_msm8953/issues)
