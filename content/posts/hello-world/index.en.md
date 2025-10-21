@@ -22,4 +22,4 @@ license: '<a rel="license external nofollow noopener noreffer" href="https://cre
 ---
 Hi everyone! this is my first post.
 <!--more-->
-I'm start to writing about my experiences here, which can be about android development or my study of agro-industry. This blog is expected to present interesting information about what I know.
+I'm starting to write about my experiences here, covering topics ranging from Android development to my interests in applying agro-industry and creative industries to foster rural tourism. Through this blog, I hope to share interesting insights and information from what I have learned and explored.
