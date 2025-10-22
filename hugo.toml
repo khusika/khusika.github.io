@@ -86,7 +86,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   # site description
   description = "Khusika is an Indonesian Android developer currently pursuing a Master's degree at Airlangga University."
   # site keywords
-  keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Universitas Airlangga", "Pengembangan Sumber Daya Manusia", "Raja Brawijaya", "Canting Kernel"]
+  keywords = ["K_TECH", "android", "khusika", "android indonesia", "android developer", "Khusika Dhamar Gusti", "SMAMDA", "Universitas Brawijaya", "Teknologi Industri Pertanian", "Agroindustrial Technology", "Universitas Airlangga", "Pengembangan Sumber Daya Manusia", "Raja Brawijaya", "Canting Kernel", "Hugo FeelIt"]
   # whether to enable CSS and JS source mapping
   SourceMap = false
 
@@ -140,7 +140,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     [[params.about.status]]
       title = "Major"
       faIcon = "fa-solid fa-graduation-cap"
-      desc = "Human Resources Development"
+      desc = "Human Resource Development"
     # description of your parameter
     [[params.about.parameter]]
       language = "Tech Enthusiast"

@@ -27,6 +27,9 @@ Introducing **FeelIt**, a **clean**, **elegant**, and **feature-rich theme** for
 
 <!--more-->
 
+
+## Introduction
+
 For those building a website with Hugo, choosing the right theme is a crucial first step. A good theme not only defines the look and feel of your site but also provides the features you need to create and manage your content effectively.
 
 With that in mind, I'd like to talk about **FeelIt**, a theme I've been passionately developing. FeelIt is a fork of the popular and well-loved [**LoveIt**](https://github.com/dillonzq/LoveIt), originally created by [Dillon](https://github.com/dillonzq). While building upon the great foundation of LoveIt, I have taken FeelIt in a new direction, focusing on extensive UI/UX enhancements, new features, and ongoing maintenance.
