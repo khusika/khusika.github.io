@@ -125,9 +125,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     param = true
     # title for param layout
     paramTitle = "Personal Information"
-    # general description of your site
-    # can be write with markdown style
-    description = "Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). My keen interests lie in the creative industries, particularly the integration of IoT solutions and the advancement of sustainable tourism development."
     # description of your status
     [[params.about.status]]
       faIcon = "fa-solid fa-school"
