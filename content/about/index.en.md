@@ -14,7 +14,7 @@ toc:
 lightgallery: false
 ---
 
-Hi, I’m Khusika, an amateur developer from Indonesia. I graduated with a Bachelor of Engineering degree in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master's degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). My keen interests lie in the creative industries, particularly the integration of IoT solutions and the advancement of sustainable tourism development.
+Hi, I’m Khusika, an amateur developer from Indonesia. I hold a Bachelor of Engineering in [Agro-Industrial Technology](https://tip.ub.ac.id/en/) from [Brawijaya University](https://www.ub.ac.id/en/) and am currently pursuing a Master’s degree in [Human Resource and Development](https://pasca.unair.ac.id/s2-pengembangan-sumber-daya-manusia/) at [Airlangga University](https://unair.ac.id/). My interests center on the creative industries, with a particular focus on integrating IoT solutions and advancing sustainable tourism development.
 
 <!--more-->
 ### Publications

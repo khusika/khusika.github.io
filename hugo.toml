@@ -32,39 +32,35 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 [menu]
   [[menu.main]]
     identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
     name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link.
-    title = ""
     weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 3
+
+    [[menu.main]]
+      identifier = "allposts"
+      name = "All posts"
+      url = "/posts/"
+      weight = 1
+      parent = "posts"
+
+    [[menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/tags/"
+      weight = 2
+      parent = "posts"
+
+    [[menu.main]]
+      identifier = "categories"
+      name = "Categories"
+      url = "/categories/"
+      weight = 3
+      parent = "posts"
+
   [[menu.main]]
     identifier = "about"
-    pre = ""
-    post = ""
     name = "About"
     url = "/about/"
-    title = ""
-    weight = 4
+    weight = 2
 
 [pagination]
   # default amount of posts in each pages
