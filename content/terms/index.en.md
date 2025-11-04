@@ -4,9 +4,6 @@ subtitle: "Terms and Conditions for khusika.id"
 date: 2021-06-09T13:47:57+07:00
 draft: false
 description: "Terms and Conditions for khusika.id"
-resources:
-- name: "featured-image"
-  src: "featured-image.webp"
 
 comment:
   enable: false
