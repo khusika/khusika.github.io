@@ -20,7 +20,7 @@ math:
 lightgallery: true
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
-Hugo it self has built-in Instagram shortcode supports, but for some reason it can't be used anymore. In this article i will write about how to solve this problem in your Hugo environment.
+Hugo's built-in Instagram shortcode is broken. This article explains how to solve this problem in your Hugo environment.
 <!--more-->
 
 {{< admonition warning "Update Jan 2025" >}}

@@ -21,7 +21,7 @@ lightgallery: true
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
 
-Laptops are generally easy to perform minor upgrades on, but major hardware changes such as CPU and mainboard replacements are generally infeasible. In this section I will share my own expirience about upgrading HP Pavillion 14-e014tx also known as 15-e014tx.
+While major laptop upgrades are difficult, this article shares my experience upgrading the HP Pavilion 14-e014tx (15-e014tx) hardware.
 <!--more-->
 
 HP Pavillion 14-e014tx(similar with 15-e014tx series) brings minimum hardware specification for production use ([official product specification](https://support.hp.com/ee-en/document/c03773272)). For my daily use, this default hardware specification can not managed to build an android kernel well. Some of case will brings `Core Dump (Segmentation fault)`, because of that i was planning to upgrade some of upgradable hardware for production use.

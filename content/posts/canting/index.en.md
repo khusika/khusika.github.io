@@ -20,7 +20,7 @@ math:
 lightgallery: false
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
-Canting is an android kernel based on Google kernel-common merged over CAF-kernel. Built to provide security and stability improvement. _Canting_ it self is a pen-like instrument used in the process of _batik_ making.
+Canting is a security-focused Android kernel based on Google's kernel-common and CAF, named after a traditional batik tool.
 <!--more-->
 
 {{< admonition warning "Project Discontinuation Notice" >}}

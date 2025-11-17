@@ -20,7 +20,7 @@ math:
 lightgallery: false
 license: '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 ---
-I want to share a story about using a custom domain on the blog that I published. Before getting to the main topic, it's worth mentioning that this blog was initially deployed via GitHub Pages. I chose Hugo as the framework for this static website because its documentation is easily accessible and user-friendly.
+This is my story about using a custom domain for my Hugo blog, initially deployed via GitHub Pages.
 <!--more-->
 
 ## The Beginning
