@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "purgecss": "^7.0.2",
-    "vnu-jar": "^24.10.17"
+    "vnu-jar": "^25.11.19"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && npm ci",
