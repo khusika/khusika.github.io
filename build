@@ -28,7 +28,7 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
 
   if [ "${CHECK}" = "true" ]; then
     if [ -x "$(command -v "${BIN}")" ]; then
-      v1="$("${BIN}" version | sed -e 's/.*-\(.*\)+extended.*/\1/')"
+      v1="$("${BIN}" version | sed -e 's/.*-\([a-f0-9]\{7,40\}\).*/\1/')"
     else
       v1="$(curl -sL ${BASE_URL} 2>/dev/null | grep -oP 'title="Hugo.*? \(\K[^)]*' || true)"
       if [ -z "${v1}" ]; then
@@ -79,9 +79,9 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     fi
     rm -rf "${SRC}"
     mv "${extracted_dir}" "${SRC}"
-    if [ -f "${SRC}/common/hugo/version.go" ] && [ -n "${v2}" ]; then
-      echo -e "${YLW}Injecting commitHash ${v2} into ${SRC}/common/hugo/version.go...${RST}"
-      perl -0777 -pe "s/bi := getBuildInfo\(\)/bi := getBuildInfo();\n\tif bi == nil { bi = &buildInfo{} }\n\tbi.Revision = \"${v2}\"\n/s" -i "${SRC}/common/hugo/version.go"
+    if [ -f "${SRC}/common/hugo/hugo.go" ] && [ -n "${v2}" ]; then
+      echo -e "${YLW}Injecting commitHash ${v2} into ${SRC}/common/hugo/hugo.go...${RST}"
+      perl -0777 -pe "s/version \\+= \"-\" \\+ bi.Revision/version += \"-\" + \"${v2}\"/s" -i "${SRC}/common/hugo/hugo.go"
     fi
     rm -f "${archive}"
     rm -rf "${tmpdir}"
@@ -94,7 +94,7 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     done
     echo -e "${YLW}Building hugo binary...${RST}"
     (go clean -C ${SRC})
-    (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.id" --tags extended -o ".${BIN}")
+    (go build -C ${SRC} -ldflags="-s -w -X github.com/gohugoio/hugo/common/hugo.vendorInfo=khusika.id" --tags extended -o "../${BIN}")
     echo -e "${RED}Build: ${YLW}Completed${RST}"
   fi
 else
