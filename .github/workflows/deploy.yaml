@@ -27,9 +27,8 @@ jobs:
       - name: Run ShellCheck
         if: |
           github.event_name == 'push' && github.event.head_commit != null && contains(github.event.head_commit.message, 'build:')
-        uses: ludeeus/action-shellcheck@master
-        with:
-          scandir: './build'
+        run: |
+          shellcheck ./build
 
       - name: Setup Go
         if: |
