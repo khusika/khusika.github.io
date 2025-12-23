@@ -81,6 +81,7 @@ if { [ "$(go env GOOS)" = "linux" ] || [ "$(go env GOOS)" = "android" ]; } && { 
     mv "${extracted_dir}" "${SRC}"
     if [ -f "${SRC}/common/hugo/hugo.go" ] && [ -n "${v2}" ]; then
       echo -e "${YLW}Injecting commitHash ${v2} into ${SRC}/common/hugo/hugo.go...${RST}"
+      perl -0777 -pe "s/commitHash = bi.Revision/commitHash = \"${v2}\"/s" -i "${SRC}/common/hugo/hugo.go"
       perl -0777 -pe "s/version \\+= \"-\" \\+ bi.Revision/version += \"-\" + \"${v2}\"/s" -i "${SRC}/common/hugo/hugo.go"
     fi
     rm -f "${archive}"
