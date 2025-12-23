@@ -24,7 +24,7 @@ WebP offers superior image compression for the web. This article discusses imple
 <!--more-->
 
 {{< admonition warning "Update April 2021" true >}}
-As of this commit "[_33d5f8: Add Add webp image encoding support_](https://github.com/gohugoio/hugo/commits/33d5f805923eb50dfb309d024f6555c59a339846)", Hugo version 0.83.0 and later can use WebP image processing. Based on those commit, currently only used when encoding to Webp in extended version.
+As of this commit "[_33d5f8: Add Add webp image encoding support_](https://github.com/gohugoio/hugo/commits/33d5f805923eb50dfb309d024f6555c59a339846)", Hugo version 0.83.0 and later can use WebP image processing. Based on those commit, currently only used when encoding to Webp in ~extended version~ (no longer needed since [v0.153.0](https://github.com/gohugoio/hugo/releases/tag/v0.153.0)).
 {{</ admonition >}}
 
 ## Why WebP?
@@ -50,5 +50,5 @@ in Hugo 0.82 and later, [`media.Types`](https://github.com/gohugoio/hugo/commit/
 {{</ admonition >}}
 
 {{< admonition info "Pre-built Hugo Binaries" false >}}
-[:(far fa-file-archive fa-fw): hugo.bin](https://github.com/khusika/khusika.github.io/raw/master/bin/amd64/hugo) - _linux/amd64 extended version_
+~:(far fa-file-archive fa-fw): hugo.bin - _linux/amd64 extended version_~ removed
 {{</ admonition >}}
