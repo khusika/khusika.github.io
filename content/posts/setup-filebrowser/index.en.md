@@ -11,7 +11,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.webp"
 
-tags: ["docker", "filebrowser", "onlyoffice", "cloudflare", "self-hosting"]
+tags: ["docker", "filebrowser", "onlyoffice", "cloudflare"]
 categories: ["Blogs"]
 
 toc:
@@ -28,7 +28,7 @@ Learn to deploy a secure personal cloud with Filebrowser-Quantum, OnlyOffice, an
 
 ## Introduction to the Components
 
-*   **Filebrowser**: A web-based file manager that lets you upload, download, manage, and share your files. We'll be using the [gtstef/filebrowser](https://hub.docker.com/r/gtstef/filebrowser) fork, which includes some nice enhancements.
+*   **Filebrowser-Quantum**: A web-based file manager that lets you upload, download, manage, and share your files. We'll be using the [gtstef/filebrowser](https://hub.docker.com/r/gtstef/filebrowser) fork, which includes some nice enhancements.
 *   **OnlyOffice Document Server**: An open-source office suite that provides online editors for text documents, spreadsheets, and presentations. We'll integrate it with Filebrowser to edit documents directly in the browser.
 *   **Cloudflare Tunnel**: A service that creates a secure, outbound-only connection between your server and the Cloudflare network. This allows you to expose your services to the internet without opening up any ports on your firewall, protecting you from direct attacks.
 
@@ -38,7 +38,7 @@ Before you begin, make sure you have the following installed on your server:
 
 *   **Docker**: [Install Docker](https://docs.docker.com/engine/install/)
 *   **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
-*   A **Cloudflare account** and a domain name connected to it.
+*   A **Cloudflare account** and a domain name connected to it. You will need two separate subdomains (or domains): one for Filebrowser and one for OnlyOffice.
 
 ## 1. Project Structure
 
@@ -83,7 +83,7 @@ This service creates a secure tunnel from your server to the Cloudflare network,
 services:
   cloudflared:
     env_file: "./.env"
-    image: cloudflare/cloudflared:2025.11.1
+    image: cloudflare/cloudflared:latest
     container_name: cloudflare-tunnel
     hostname: "cloudflare-tunnel"
     restart: unless-stopped
@@ -119,7 +119,7 @@ This is the core file manager service. It's a feature-rich web application for m
 ```yaml
   filebrowser:
     env_file: "./.env"
-    image: gtstef/filebrowser:1.1.6-beta
+    image: gtstef/filebrowser:latest
     pull_policy: missing
     container_name: filebrowser
     networks:
@@ -156,7 +156,7 @@ This service provides the powerful document editing suite that integrates with F
 
 ```yaml
   onlyoffice:
-    image: onlyoffice/documentserver:9.2.1
+    image: onlyoffice/documentserver:latest
     container_name: onlyoffice
     depends_on:
       - postgres
@@ -334,14 +334,22 @@ OFFICE_SECRET=your_strong_jwt_secret
 TZ_ID=Asia/Jakarta
 ```
 
+{{< admonition info "Info" >}}
+For more available environment variables, you can refer to the [Filebrowser-Quantum environment-variables](https://filebrowserquantum.com/en/docs/reference/environment-variables/).
+{{< /admonition >}}
+
 **How to get your `CLOUDFLARE_SECRET`:**
-1.  Go to the Cloudflare Zero Trust dashboard.
-2.  Navigate to `Access` -> `Tunnels`.
-3.  Create a new tunnel, give it a name, and select "Docker" as the connector.
+1.  Go to the [Cloudflare Zero Trust](https://one.dash.cloudflare.com/) dashboard.
+2.  Navigate to `Nerworks` -> `Connectors`.
+3.  `Create a tunnel`, give it a name, and select "Docker" as the connector.
 4.  Copy the token provided and paste it into your `.env` file.
 5.  After creating the tunnel, go to the "Public Hostnames" tab and add hostnames for Filebrowser (e.g., `drive.yourdomain.com`) and OnlyOffice (e.g., `docs.yourdomain.com`).
     *   Point the Filebrowser hostname to the service `http://localhost:80`.
     *   Point the OnlyOffice hostname to the service `http://localhost:81`.
+
+{{< admonition info "Info" >}}
+For a more detailed guide, refer to the [official cloudflare-tunnel documentation](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/).
+{{< /admonition >}}
 
 ## 5. Running the Stack
 
