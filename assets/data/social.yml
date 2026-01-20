@@ -27,22 +27,29 @@ facebook:
   Icon:
     Simpleicons: facebook
 
-telegram:
+threads:
   Weight: 5
+  Prefix: https://www.threads.com/
+  Title: Threads
+  Icon:
+    Simpleicons: threads
+
+telegram:
+  Weight: 6
   Prefix: https://t.me/
   Title: Telegram
   Icon:
     Simpleicons: telegram
 
 email:
-  Weight: 6
+  Weight: 7
   Template: mailto:%v
   Title: Email
   Icon:
     Simpleicons: gmail
 
 paypal:
-  Weight: 7
+  Weight: 8
   Prefix: https://paypal.me/
   Title: PayPal
   Icon:
