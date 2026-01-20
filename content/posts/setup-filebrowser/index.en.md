@@ -47,19 +47,18 @@ First, let's create a directory for our project and the necessary subdirectories
 ```bash
 mkdir my-cloud
 cd my-cloud
-mkdir -p filebrowser/data/icons filebrowser/Home onlyoffice/data onlyoffice/log onlyoffice/welcome postgresql/data
-touch docker-compose.yml .env config.json
+mkdir -p filebrowser
+touch docker-compose.yml .env filebrowser/config.json
 ```
 
 This will be the structure:
 ```
 my-cloud/
-├── docker-compose.yml
+├── docker-compose.yaml
 ├── .env
-├── config.json
 ├── filebrowser/
 │   ├── data/
-│   │   └── icons/
+│   │   └── config.json
 │   └── Home/
 ├── onlyoffice/
 │   ├── data/
@@ -323,8 +322,8 @@ Create a `.env` file to store your secrets and environment-specific configuratio
 CLOUDFLARE_SECRET=YOUR_CLOUDFLARE_TUNNEL_TOKEN
 
 # Filebrowser Config
-FB_CONFIG=/home/filebrowser/config.json
-FB_DB=/home/filebrowser/data/filebrowser.db
+FB_CONFIG=~/my-cloud/filebrowser/config.json
+FB_DB=~/my-cloud/filebrowser/data/filebrowser.db
 FB_PWD=your_strong_admin_password
 
 # OnlyOffice JWT Secret
@@ -338,20 +337,21 @@ TZ_ID=Asia/Jakarta
 For more available environment variables, you can refer to the [Filebrowser-Quantum environment-variables](https://filebrowserquantum.com/en/docs/reference/environment-variables/).
 {{< /admonition >}}
 
-**How to get your `CLOUDFLARE_SECRET`:**
+## 5. Cloudflare Tunnel Configuration
+
 1.  Go to the [Cloudflare Zero Trust](https://one.dash.cloudflare.com/) dashboard.
 2.  Navigate to `Nerworks` -> `Connectors`.
 3.  `Create a tunnel`, give it a name, and select "Docker" as the connector.
-4.  Copy the token provided and paste it into your `.env` file.
+4.  Copy the token provided and paste it into your `.env` file under `CLOUDFLARE_SECRET`.
 5.  After creating the tunnel, go to the "Public Hostnames" tab and add hostnames for Filebrowser (e.g., `drive.yourdomain.com`) and OnlyOffice (e.g., `docs.yourdomain.com`).
-    *   Point the Filebrowser hostname to the service `http://localhost:80`.
-    *   Point the OnlyOffice hostname to the service `http://localhost:81`.
+    *   Point the Filebrowser hostname to the service `http://YOUR_SERVER_IP:80`.
+    *   Point the OnlyOffice hostname to the service `http://YOUR_SERVER_IP:81`.
 
 {{< admonition info "Info" >}}
 For a more detailed guide, refer to the [official cloudflare-tunnel documentation](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/).
 {{< /admonition >}}
 
-## 5. Running the Stack
+## 6. Running the Stack
 
 With all the configuration in place, you can now start all the services.
 
