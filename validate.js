@@ -18,6 +18,7 @@ execFile(
         '-jar',
         vnuJar,
         '--verbose',
+        '--Werror',
         '--skip-non-html',
         '--also-check-css',
         '--errors-only',
