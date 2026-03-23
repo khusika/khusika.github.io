@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Fetch Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           submodules: true
@@ -33,18 +33,18 @@ jobs:
       - name: Setup Go
         if: |
           github.event_name != 'push' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
-          go-version: '1.24'
+          go-version: '1.25'
           check-latest: true
           cache: false
 
       - name: Setup Node
         if: |
           github.event_name != 'push' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Setup Java
         if: |
