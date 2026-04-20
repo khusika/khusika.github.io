@@ -24,7 +24,6 @@ execFile(
         '--errors-only',
         docsPath
     ],
-    { shell: true },
     (error, stdout, stderr) => {
         if (error) {
             console.error('Validation failed:', stderr.trim());
