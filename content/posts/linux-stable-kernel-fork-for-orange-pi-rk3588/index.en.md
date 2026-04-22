@@ -28,6 +28,11 @@ The OrangePi kernel ecosystem has received a significant upgrade, now merging th
 ![OrangePi 5 Ultra with Linux 6.1.118](terminal.webp "Screenshot of OrangePi Terminal")
 
 ## Linux Stable Integration Over OrangePi BSP
+
+{{< admonition warning "Support Notice" true >}}
+This part of the project has been **abandoned** as the project's focus has shifted to the [Stable Rockchip Kernel](#stable-rockchip-kernel--gcc-152-fixes).
+{{</ admonition >}}
+
 The main development branch, [`dev/orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/dev/orange-pi-6.1-rk35xx), integrates upstream Linux stable releases (currently [`linux-6.1.y`](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/log/?h=linux-6.1.y)) directly over the OrangePi-specific kernel. This means users benefit from:
 
 - All upstream Linux stable patches for improved security and hardware support.
@@ -36,11 +41,12 @@ The main development branch, [`dev/orange-pi-6.1-rk35xx`](https://github.com/khu
 
 The branch is actively updated in sync with upstream, with commit history reflecting substantial merges from the official stable trees as well as routine backports and bugfixes.​
 
-## Stable Rockchip Kernel + GCC 14.3 Fixes
-A separate branch, [`orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/orange-pi-6.1-rk35xx), serves as a reference for the community by providing a stable Rockchip BSP kernel merged on top of the OrangePi kernel. This branch was created by merging the Rockchip Linux upstream tree ([`develop-6.1`](https://github.com/rockchip-linux/kernel/tree/develop-6.1)) into the OrangePi kernel branch, producing a Rockchip-stable baseline with OrangePi-specific fixes. The branch implements:
+## Stable Rockchip Kernel + GCC 15.2 Fixes
+
+A separate branch, [`orange-pi-6.1-rk35xx`](https://github.com/khusika/linux_stable-orangepi/commits/orange-pi-6.1-rk35xx), serves as a reference for the community by providing a stable Rockchip BSP kernel merged on top of the OrangePi kernel. This branch was created by merging the Rockchip Linux upstream tree ([`rk-6.1-rkr6.1`](https://github.com/rockchip-linux/kernel/tree/d8e42edcd660498d2361dd77503cf1165579df04)) into the OrangePi kernel branch, producing a Rockchip-stable baseline with OrangePi-specific fixes. The branch implements:
 
 - All vendor and mainline fixes for the RK35xx platform supported by OrangePi.
-- Additional compatibility and build fixes for the latest [ARM GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads) (14.3.Rel1), ensuring smooth compilation for recent toolchains.
+- Additional compatibility and build fixes for the latest [ARM GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads) (15.2.Rel1), ensuring smooth compilation for recent toolchains.
 - Stability and reliability improvements on top of regular Linux updates, allowing for production-level deployment and advanced development alike.
 
 ## Platform Support and Testing Status
