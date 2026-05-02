@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: Copyright 2023-2026 Khusika Dhamar Gusti
 #
-# Copyright (C) 2023 Khusika Dhamar Gusti
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 RED="\033[01;31m"
 YLW="\033[01;33m"
