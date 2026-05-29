@@ -19,14 +19,15 @@ enableEmoji = true
 ignoreErrors = ["err-missing-comment-accesstoken", "err-missing-oembed-accesstoken", "error-remote-getjson"]
 
 weight = 1
-# language code
-languageCode = "en"
-# language name
-languageName = "English"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = false
 # copyright description used only for seo schema
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+# Language config
+[languages.en]
+  label     = 'English'
+  locale    = 'en-US'
 
 # Menu config
 [menu]
