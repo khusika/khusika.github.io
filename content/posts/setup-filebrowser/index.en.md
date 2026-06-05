@@ -60,12 +60,10 @@ my-cloud/
 │   ├── data/
 │   │   └── config.json
 │   └── Home/
-├── onlyoffice/
-│   ├── data/
-│   ├── log/
-│   └── welcome/
-└── postgresql/
-    └── data/
+└── onlyoffice/
+    ├── data/
+    ├── log/
+    └── welcome/
 ```
 
 ## 2. Docker Compose Configuration
@@ -155,14 +153,12 @@ This service provides the powerful document editing suite that integrates with F
 
 ```yaml
   onlyoffice:
+    build:
+      context: .
+      target: documentserver-community
     image: onlyoffice/documentserver:latest
     container_name: onlyoffice
-    depends_on:
-      - postgres
-      - rabbitmq
     environment:
-      DATABASE_URL: "postgres://onlyoffice:onlyoffice@postgres/onlyoffice"
-      AMQP_URI: "amqp://guest:guest@rabbitmq"
       JWT_ENABLED: "true"
       JWT_SECRET: ${OFFICE_SECRET}
     ports:
@@ -181,49 +177,8 @@ This service provides the powerful document editing suite that integrates with F
       retries: 5
       start_period: 60s
 ```
-- `depends_on`: This ensures that `postgres` and `rabbitmq` are started before OnlyOffice.
 - `JWT_SECRET`: This must be the same secret key provided to Filebrowser to secure the integration.
 - `ports`: We map the internal port `80` to the host's port `81`, which Cloudflare Tunnel will use.
-
-### Supporting Services (Postgres & RabbitMQ)
-
-OnlyOffice requires a database and a message broker to function correctly.
-
-```yaml
-  postgres:
-    image: postgres:15
-    container_name: postgres
-    environment:
-      POSTGRES_DB: onlyoffice
-      POSTGRES_USER: onlyoffice
-      POSTGRES_PASSWORD: onlyoffice
-    volumes:
-      - ./postgresql/data:/var/lib/postgresql/data
-    networks:
-      - onlyoffice-network
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U onlyoffice"]
-      interval: 10s
-      retries: 3
-      start_period: 10s
-      timeout: 10s
-
-  rabbitmq:
-    image: rabbitmq:3
-    container_name: rabbitmq
-    networks:
-      - onlyoffice-network
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "status"]
-      interval: 10s
-      retries: 3
-      start_period: 10s
-      timeout: 10s
-```
-- **PostgreSQL**: A robust open-source object-relational database system.
-- **RabbitMQ**: A popular message broker.
 
 ### Networks
 
@@ -234,7 +189,7 @@ networks:
   onlyoffice-network:
     driver: bridge
 ```
-- The `onlyoffice-network` is a bridge network that Filebrowser, OnlyOffice, Postgres, and RabbitMQ use to communicate internally. `cloudflared` does not need to be on this network as it uses the host network.
+- The `onlyoffice-network` is a bridge network that Filebrowser and OnlyOffice use to communicate internally. `cloudflared` does not need to be on this network as it uses the host network.
 
 ## 3. Filebrowser Configuration
 
