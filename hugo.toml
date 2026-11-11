@@ -2,7 +2,7 @@ baseURL = "https://khusika.id"
 # [en, zh-cn, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
 # theme
-theme = "FeelIt"
+theme = "Stack"
 # themes directory
 themesDir = "themes"
 

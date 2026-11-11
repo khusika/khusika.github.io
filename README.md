@@ -7,7 +7,7 @@ This repository contains the source code for my personal website, [khusika.id](h
 ## 🚀 Built With
 
 *   **Site Generator:** [Hugo](https://gohugo.io/)
-*   **Theme:** [FeelIt](https://github.com/khusika/FeelIt)
+*   **Theme:** [Stack](https://github.com/CaiJimmy/hugo-theme-stack)
 *   **Hosting:** [GitHub Pages](https://pages.github.com/)
 *   **Domain:** [Qwords (.id)](https://www.qwords.com/)
 

@@ -1,4 +1,4 @@
-[submodule "themes/FeelIt"]
-	path = themes/FeelIt
-	url = git@github.com:khusika/FeelIt.git
-	branch = main
+[submodule "themes/Stack"]
+	path = themes/Stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack
+	branch = master
