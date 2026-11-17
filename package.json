@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "purgecss": "^8.0.0",
+    "purgecss": "^9.1.0",
     "vnu-jar": "^26.11.17"
   },
   "scripts": {
