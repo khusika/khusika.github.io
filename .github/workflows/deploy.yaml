@@ -54,6 +54,16 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Dart Sass
+        if: |
+          github.event_name != 'push' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'build:')
+        run: |
+          SASS_VERSION="1.108.2"
+          mkdir -p "$RUNNER_TOOL_CACHE/dart-sass"
+          curl -sL "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-arm64.tar.gz" \
+            | tar -xz -C "$RUNNER_TOOL_CACHE/dart-sass" --strip-components=1
+          echo "$RUNNER_TOOL_CACHE/dart-sass" >> "$GITHUB_PATH"
+
       - name: Build Hugo Binary (schedule)
         id: build-hugo
         if: github.event_name == 'schedule'
